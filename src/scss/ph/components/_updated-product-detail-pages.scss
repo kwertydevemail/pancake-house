@@ -1,0 +1,414 @@
+.c-my-mix, 
+.c-bundle-l, 
+.c-bundle-xl, 
+.c-bundle-xxl {
+    background-color: $color-p100;
+    padding: 0;
+    .o-container {
+        padding: 0;
+        @include maxpoint($tablet) {
+            padding: 0 0 0 48px;
+        }
+    }
+    &-content {
+        position: relative;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 0;
+        @include maxpoint($tablet) {
+            padding: 34px 0 0 44px;
+        }
+        &_display {
+            padding: 24.72px 24px 0;
+            width: 100%;
+            @include maxpoint($tablet) {
+                padding: 48px 20px 47px 41px;
+                background-image: linear-gradient(to bottom, #333 45%, rgba(255, 255, 255, 0) 20%);
+                background-position: left;
+                background-size: 2px 6px;
+                background-repeat: repeat-y;
+                width: 400px;
+            }
+            @include maxpoint(1000px) {
+                width: 522px;
+            }
+            & > p {
+                letter-spacing: -0.02em;
+                color: $color-t250;
+                margin-bottom: 16px;
+                font-size: 16px;
+                line-height: 18.2px;
+                @include maxpoint($tablet) {
+                    margin-bottom: 30px;
+                }
+                &:nth-child(n+2) {
+                    font-size: 14px;
+                    letter-spacing: -0.01em;
+                    @include maxpoint($tablet) {
+                        font-size: 16px;
+                        letter-spacing: -0.02em;
+                    }
+
+                }
+                &.italize {
+                    font-size: 13px;
+                    color: $color-t200;
+                    letter-spacing: -0.01em;
+                    @include maxpoint($tablet) {
+                        max-width: 456px;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 32px;
+                    @include maxpoint($tablet) {
+                        margin-bottom: unset;
+                    }
+                }
+                &:first-child {
+                    //margin-top: 16px;
+                    @include maxpoint($tablet) {
+                        margin: 0 0 32px 0;
+                        max-width: 401px;
+                        width: 100%;
+                        line-height: 130%;
+                    }
+                }
+            }
+            figure {
+                width: 326px;
+                height: 318px;
+                position: relative;
+                margin:0;
+                @include maxpoint($tablet) {
+                    width: 343px;
+                    margin: 0 0 16px 0;
+                }
+                @include maxpoint(1000px) {
+                    width: 459px;
+                    height: 418px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    @include maxpoint($tablet) {
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        & > .o-header-title-slant {
+            font-size: 32px;
+            padding: 13.56px 16.81px 11.36px;
+            top: -15px;
+            position: relative;
+            margin: 0 27.5px;
+            left: 0;
+            max-width: 260px;
+            @include maxpoint($tablet) {
+                top: -55px;
+                font-size: 50px;
+                padding: 18px 25px;
+                left: 38px;
+                position: absolute;
+                margin: 0;
+                max-width: unset;
+            }
+        }
+        &_form {
+            width: 100%;
+            padding: 0 24px 0;
+            @include maxpoint($tablet) {
+                padding: 0 0 80px 0;
+            }
+            .o-header-title {
+                padding-left: 0;
+                margin: 0 0 24px 0;
+                font-size: 28px;
+                letter-spacing: -0.02em;
+                @include maxpoint($tablet) {
+                    font-size: 34px;
+                    margin: 0 0 32px 0;
+                    padding-left: 20px;
+                }
+            }
+            & > span {
+                font-family: $secondary-font;
+                color: $color-t250;
+                font-size: 20px;
+                line-height: 25px;
+                display: block;
+                padding-left: 0;
+                margin-bottom: 24px;
+                @include maxpoint($tablet) {
+                    margin-bottom: 16px;
+                    padding-left: 20px;
+                }
+            }
+            &--details {
+                border-top: 1px solid $color-t50;
+                padding: 32px 0 0;
+                margin: 0;
+
+                @include maxpoint($tablet) {
+                    padding: 40px 0 0;
+                    margin: 0 24px 0 20px;
+                }
+
+                .o-form-timeline {
+                    .o-form-group {
+                        label {
+                            // padding-left: 17px;
+                            margin-left: 17px;
+                            padding-left: 0;
+
+                            @include maxpoint($desktop) {
+                                // padding-left: 0;
+                                margin-left: 0;
+                            }
+                        }
+
+                        .o-form-timeline_count {
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        .o-form-dropdown_input {
+                            width: 285px;
+
+                            @include maxpoint($desktop) {
+                                width: 300px;
+                            }
+                        }
+
+                        .o-form-group_input {
+                            width: 269px;
+
+                            @include maxpoint($desktop) {
+                                width: 100%;
+                            }
+                        }
+
+                        .o-form-operator {
+                            padding-left: 17px;
+
+                            @include maxpoint($desktop) {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+                .line-subtext {
+                    display: none;
+                    @include maxpoint($tablet) {
+                        display: block;
+                    }
+                }
+                & > p {
+                    color: $color-t250;
+                    font-size: 15px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+                &__multi {
+                    display: flex;
+                    flex-wrap: wrap;
+                    label {
+                        width: 100%;
+                    }
+                    .o-form-dropdown_input {
+                        margin: 0 0 24px 0;
+                        @include maxpoint($tablet) {
+                            margin: 0 24px 24px 0;
+                            max-width: 212px;
+                        }
+                    }
+                }
+                .order-summary {
+                    &.active {
+                        background-color: $color-t25;
+                        & > .h3, p, .h5, .order-summary-list {
+                            display: block;
+                        }
+                        .order-summary-total {
+                            display: flex;
+                        }
+                    }
+                    & > .h3, 
+                    p, 
+                    .h5, 
+                    .order-summary-list, .order-summary-total {
+                        display: none;
+                    }
+                    margin: 0 -24px;
+                    width: calc(100% + 48px);
+                    // padding: 24px 24px 32px;
+                    // padding: 8px 24px 24px 32px;
+                    padding: 32px 24px 32px 24px;
+                    @include maxpoint($tablet) {
+                        max-width: 598px;
+                        width: 100%;
+                        // margin: 0 -20px 0 0;
+                        margin: 0 0 0 -37px;
+                        padding: 26px 39px 34px;
+                    }
+                    & > .h3 {
+                        font-size: 24px;
+                        line-height: 30px;
+                        font-weight: bold;
+                        margin-bottom: 2px;
+                    }
+                    & > p {
+                        font-size: 16px;
+                        line-height: 130%;
+                        margin-bottom: 26px;
+                        color: $color-t250;
+                    }
+                    & > .h5 {
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 130%;
+                        margin-bottom: 15px;
+                    }
+                    &-list {
+                        padding-bottom: 32px;
+                        border-bottom: 1px solid $color-t50;
+                        margin-bottom: 16px;
+                        @include maxpoint($tablet) {
+                            margin-bottom: 29px;
+                        }
+                        li {
+                            letter-spacing: -0.01em;
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 130%;
+                            font-family: $secondary-font;
+                            display: flex;
+                            align-items: center;
+                            color: $color-t250;
+                            position: relative;
+                            &.item-indent {
+                                padding-left: 16px;
+                                @include maxpoint($tablet) {
+                                    padding-left: 35px;
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            &.filled {
+                                margin-bottom: 11px;
+                                @include maxpoint($tablet) {
+                                    margin-bottom: 8px;
+                                }
+                                &::after {
+                                    content: '-';
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    letter-spacing: -0.02em;
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    font-family: $secondary-font;
+                                    position: absolute;
+                                }
+                            }
+                        }
+                        &_title {
+                            margin-bottom: 11px;
+                            @include maxpoint($tablet) {
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                    &-total  {
+                        margin-bottom: 40px;
+                        @include maxpoint($tablet) {
+                            margin-bottom: 31px;
+                        }
+                        & > h5 {
+                            font-size: 18px;
+                            line-height: 23px;
+                        }
+                        & > span {
+                            font-family: $secondary-font;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 20px;  
+                            letter-spacing: -0.02em;
+                            color: $color-n250;
+                        }
+                    }
+                    .o-button {
+                        width: 100%;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-bundle-l, .c-bundle-xl {
+    &-content {
+        
+        &_display {
+            
+            figure {
+               
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 50% 85%;
+                }
+            }
+        }
+    }
+}
+
+.last-padding {
+    padding: 5.5px 0 0 52px;
+
+    @include maxpoint($desktop) {
+        padding: 5.5px 0 32px 52px;
+    }
+}
+
+.custom-padding-bottom {
+    padding: 5.5px 0 0 52px;
+
+    @include maxpoint($desktop) {
+        padding: 5.5px 0 8px 52px;
+    }
+}
+
+.last-margin {
+    margin: 0 !important;
+
+    @include maxpoint($desktop) {
+        margin: 0 24px 24px 0 !important;
+    }
+}
+
+.c-my-mix,
+.c-bundle-l, 
+.c-bundle-xl, 
+.c-bundle-xxl {
+    .last-padding {
+        padding: 5.5px 0 34px 36px;
+        @include maxpoint($desktop) {
+            padding: 5.5px 0 32px 52px;
+        }
+    }
+    .order-summary {
+        padding: 0 24px 32px 24px;
+        &.active {
+            padding: 32px 24px 32px 24px;
+        }
+        @include maxpoint($tablet) {
+            padding: 0 39px 34px;
+        }
+    }
+}

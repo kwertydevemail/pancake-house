@@ -1,0 +1,158 @@
+.c-partners {
+    background-color: $color-n200;
+    padding: 0;
+    .o-header-title-slant {
+        transform: rotate(-9.2deg);
+        letter-spacing: -0.02em;
+        max-width: 264px;
+        text-transform: uppercase;
+        line-height: 36px;
+        font-size: 26px;
+        padding: 18.46px 50.61px 18.46px 18.61px;
+        left: 30px;
+        top: 21px;
+        @include maxpoint($tablet) {
+            top: 10px;
+            left: 0;
+            padding: 10.46px 18.61px;
+            font-size: 29px;
+            line-height: 32.5px;
+        }
+    }
+    .o-container {
+        padding: 0 24px;
+        max-width: 1160px;
+        z-index: 2;
+        position: relative;
+        @include maxpoint(1160px) {
+            padding: 0;
+        }
+    }
+    .c-partners-wrapper {
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+    }
+    &-club {
+        $club: &;
+        display: flex;
+        margin: 0 auto;
+        max-width: 327px;
+        @include maxpoint(540px) {
+            margin: unset;
+            max-width: unset;
+        }
+        &_panel {
+            position: relative;
+            background-color: $color-n200;
+            height: 109px;
+            width: 109px;
+            @include maxpoint(540px) {
+                width: 12.5%;
+                height: 110px;
+            }
+            @include maxpoint($tablet) {
+                height: 144px;
+            }
+            &--card {
+                overflow: hidden;
+                position: relative;
+                z-index: 3;
+                height: 100%;
+                width: 100%;
+                display: block;
+                figure {
+                    height: 100%;
+                    width: 100%;
+                    background-color: $color-n000;
+                    img {
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+            &::before, &::after {
+                content: '';
+                top: 0;
+                position: absolute;
+                width: 100%;
+                height: 109px;
+                @include maxpoint(540px) {
+                    height: 111px;
+                }
+                @include maxpoint($tablet) {
+                    height: 145px;
+                }
+            }
+            &:nth-child(even) {
+                &::after, &::before {
+                    background-color: $color-n225;
+                }
+                &::after {
+                    left: 100%;
+                }
+                &::before {
+                    right: 100%;
+                }
+            }
+            &:nth-child(n+8) {
+                @include maxpoint(540px) {
+                    &::before {
+                        background-color: $color-n225;
+                        right: 100%;
+                    }
+                }
+            }
+            &:last-child {
+                background-color: $color-n225;
+                &::after {
+                    background-color: $color-n200;
+                }
+            }
+        }
+        &.top-asset {
+            #{ $club }_panel {
+                background-color: $color-n225;
+                height: 32px;
+                &:nth-child(n+4) {
+                    height: 109px;
+                }
+                @include maxpoint(540px) {
+                    background-color: $color-n200;
+                    height: 105px;
+                }
+                &::after, &::before {
+                    height: 100%;
+                    @include maxpoint(540px) {
+                        height: 105px;
+                        content: unset;
+                    }
+                }
+                &:nth-child(odd) {
+                    &::before, &::after {
+                        content: '';
+                        background-color: $color-n200;
+                        @include maxpoint(540px) {
+                            background-color: $color-n225;
+                        }
+                    }
+                    &::after {
+                        left: 100%;
+                    }
+                    &::before {
+                        right: 100%;
+                    }
+                }
+                &:last-child {
+                    background-color: $color-n200;
+                    &::after {
+                        background-color: $color-n225;
+                    }
+                    @include maxpoint(540px) {
+                        background-color: $color-n225;
+                    }
+                }
+            }
+        }
+    }
+}

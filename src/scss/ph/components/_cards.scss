@@ -1,0 +1,46 @@
+.info-card {
+    padding: 24px;
+    min-height: 109px;
+    background-color: $color-t25;
+    border-radius: 3px;
+    width: 100%;
+    margin-left: 14px;
+    @include maxpoint($tablet) {
+        max-width: 214px;
+        margin-left: 0;
+    }
+    &_icon {
+        flex: auto;
+        margin-right: 16px;
+        width: 32px;
+    }
+    &_detail {
+        flex: auto;
+        width: 100%;
+        .h6, span {
+            color: $color-t250;
+            font-size: 14px;
+        }
+        .h6 {
+            line-height: 17.71px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        span {
+            font-family: $secondary-font;
+            line-height: 18.2px;
+            letter-spacing: -0.01em;
+            font-weight: normal;
+            font-style: normal;
+            margin-bottom: 8px;
+            word-break: break-word;
+            &:nth-child(3) {
+                word-break: break-word;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+        }
+    }
+}

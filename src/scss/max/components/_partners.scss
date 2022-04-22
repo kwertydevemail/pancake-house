@@ -1,0 +1,125 @@
+.c-partners {
+    // background-color: $color-n200;
+    background-image: url('images/layout/max-bg-mgi.png');
+    background-size: cover;
+
+    padding: 40px 0 28px;
+
+    @include maxpoint($tablet) {
+        padding: 64px 0 20px;
+    }
+
+    .header {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 110%;
+        margin-bottom: 24px;
+
+        text-align: center;
+        color: #ED1C24;
+
+        @include maxpoint($tablet) {
+            margin-bottom: 30px;
+            font-size: 34px;
+        }
+    }
+
+    .c-partners-wrapper {
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+    }
+    &-club {
+        $club: &;
+        display: flex;
+        margin: 0 auto;
+        max-width: 327px;
+
+        @include maxpoint($mobile) {
+            margin: 0;
+            max-width: 343px;
+        }
+
+        @include maxpoint(540px) {
+            margin: unset;
+            max-width: unset;
+        }
+
+        @media only screen and (max-width: 820px) and (min-width: 738px) {
+            margin: unset;
+            max-width: unset;
+            padding: 0 128px;
+        }
+
+        @include maxpoint($tablet) {
+            padding: 0 158px 0 158px;
+        }
+
+        &_panel:hover {
+            background: #FFFFFF;
+        }
+
+        &_panel:active {
+            background: #F7F7F7;
+            border: 1px solid #FFCC00;
+        }
+
+        &_panel {
+            position: relative;
+            width: 104px;
+            height: 104px;
+
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            background: #F7F7F7;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+
+            @media only screen and (max-width: 820px) and (min-width: 768px) {
+                &:not(:nth-of-type(4n + 4)) {
+                    margin-right: 15.5px;
+                }
+            }
+
+            @include maxpoint($mobile) {
+                &:not(:nth-of-type(3n + 3)) {
+                    margin-right: 15.5px;
+                    @include maxpoint($tablet) {
+                        margin-right: 0px;
+                    }
+                }
+            }
+
+            @include maxpoint($tablet) {
+                width: 21.052637%;
+                height: 176px;
+                margin-bottom: 44px;
+                &:not(:nth-of-type(4n + 4)) {
+                    margin-right: 5.26315%;
+                }
+            }
+
+            @media (min-width:1024px) and (max-width:1026px) {
+                height: 122.09px;
+            }
+
+            &--card {
+                overflow: hidden;
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                display: block;
+                padding: 22px;
+                figure {
+                    width: 100%;
+                    img {
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}

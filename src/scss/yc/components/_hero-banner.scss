@@ -1,0 +1,361 @@
+.c-hero-banner {
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    background: rgb(245,179,53);
+    background: -moz-linear-gradient(180deg, rgba(245,179,53,1) 0%, rgba(241,138,0,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(245,179,53,1) 0%, rgba(241,138,0,1) 100%);
+    background: linear-gradient(180deg, rgba(245,179,53,1) 0%, rgba(241,138,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5b335",endColorstr="#f18a00",GradientType=1);
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        background: url('images/hero-banner/bg-hero-mb.png') no-repeat;
+        background-size: contain;
+        bottom: 0;
+        width: 380px;
+        height: 1135px;
+        @include maxpoint($tablet) {
+            background: url('images/hero-banner/bg-hero.png') no-repeat;
+            width: 893.5px;
+            height: 665.2px;
+        }
+    }
+    .o-container {
+        padding: 0;
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+    & > div > figure {
+        position: absolute;
+        top: -10px;
+        width: 255px;
+        height: 429px;
+        @include maxpoint($tablet) {
+            width: 396px;
+            height: 689px;
+            top: -80px;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            &:first-child {
+                display: none;
+                @include maxpoint($tablet) {
+                    display: block;
+                }
+            }
+            &:last-child {
+                display: block;
+                @include maxpoint($tablet) {
+                    display: none;
+                }
+            }
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: -100px;
+            left: 0;
+            width: 375px;
+            height: 708px;
+            background-image: url('images/hero-banner/box-hero-mb.png');
+            @include maxpoint($tablet) {
+                top: 0;
+                width: 588px;
+                height: 836px;
+                background-image: url('images/hero-banner/box-hero.png');
+            }
+        }
+    }
+    &-content {
+        min-height: 750px;
+        position: relative;
+        z-index: 2;
+        padding: 212px 0 44px;
+        @media screen and (min-width: 1125px) {
+            min-height: 630px;
+            padding: 212px 0 40px;
+        }
+        @media screen and (min-width: 1137px) {
+            padding: 0 0 121px;
+        }
+        .h1 {
+            margin: 0 0 0 auto;
+            transform: rotate(-8.82deg);
+            position: absolute;
+            left: 387px;
+            top: 40px;
+            display: none;
+            width: 450px;
+            @include maxpoint($tablet) {
+                display: block;
+            }
+            @include maxpoint(950px) {
+                width: 705px;
+            }
+            @media screen and (min-width: 1125px) {
+                width: 788.65px;
+                top: 70px;
+            }
+            span {
+                color: $color-t250;
+                text-transform: uppercase;
+                position: relative;
+                font-size: 40px;
+                line-height: 42.9px;
+                @include maxpoint(950px) {
+                    font-size: 52px;
+                }
+                @include maxpoint(990px) {
+                    line-height: 67.9px;
+                    font-size: 72px;
+                }
+                // removed broken lines on banner as requested
+                // &::after, &::before {
+                //     content: '';
+                //     position: absolute;
+                //     width: 100%;
+                //     height: 2px;
+                //     border-bottom: 2px dashed $color-t250;
+                //     left: 0;
+                // }
+                // &::after {
+                //     top: 110px;
+                //     @include maxpoint(950px) {
+                //         top: 118px;
+                //     }
+                //     @include maxpoint(990px) {
+                //         top: 131px;
+                //     }
+                // }
+                // &::before {
+                //     width: calc(100% + 35px);
+                //     top: 38px;
+                //     @include maxpoint(950px) {
+                //         top: 50px;
+                //     }
+                //     @include maxpoint(990px) {
+                //         top: 63px;
+                //     }
+                // }
+            }
+        }
+        &_details {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            max-width: 1181px;
+            margin-left: auto;
+            justify-content: flex-start;
+            @include maxpoint($tablet) {
+                justify-content: flex-end;
+            }
+            @media screen and (max-width: 1136px) {
+                flex-wrap: wrap;
+            }
+            .h2 {
+                display: block;
+                margin: 0 0px 20px 20px;
+                width: 348px;
+                transform: rotate(-8.82deg);
+                letter-spacing: unset;
+                @include maxpoint($tablet) {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-panel {
+        background-color: #fff;
+        border-left: 10px solid $color-p100;
+        padding: 21px 25px;
+        position: relative;
+        height: 100px;
+        margin: 0 51px 0 24px;
+        width: 327px;
+        @include maxpoint($tablet) {
+            margin: 0 51px 0 0;
+            width: 343px;
+        }
+        @media screen and (max-width: 1136px) {
+            margin-right: 24px;
+            margin-bottom: 75px;
+        }
+        p {
+            font-family: $secondary-font;
+            font-weight: 400;
+            color: $color-t175;
+            font-size: 11px;
+            line-height: 14px;
+            letter-spacing: -0.02em;
+            max-width: 227px;
+        }
+        &_price {
+            position: absolute;
+            bottom: -50%;
+            background-color: $color-p250;
+            border-radius: 102px;
+            box-shadow: 24px 24px 24px rgba(233, 233, 233, 0.29);
+            width: 82.4px;
+            height: 82.4px;
+            right: 0;
+            @include maxpoint($tablet) {
+                width: 102px;
+                height: 102px;
+                right: -35px;
+            }
+            span {
+                font-family: $secondary-font;
+                color: #fff;
+                font-weight: normal;
+                font-size: 10px;
+                letter-spacing: -0.01em;
+                text-transform: uppercase;
+                line-height: 13px;
+                margin: 10px 0 3px;
+                @include maxpoint($tablet) {
+                    line-height: 13.91px;
+                    letter-spacing: -0.02em;
+                    font-size: 11px;
+                    margin-bottom: 5px;
+                    margin: 0 0 5px;
+                }
+            }
+            .h3 {
+                color: $color-p100;
+                letter-spacing: -0.02em;
+                font-family: $primary-font;
+                font-size: 24px;
+                line-height: 30px;
+                @include maxpoint($tablet) {
+                    line-height: 37.4px;
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+    &-card {
+        width: 100%;
+        margin: 36px 24px 0;
+        @include maxpoint($tablet) {
+            width: auto;
+            margin: 0 -16px;
+        }
+        &_item {
+            padding: 0;
+            margin-bottom: 24px;
+            &:last-child {
+                margin-bottom: 0;
+                figure {
+                    box-shadow: none;
+                }
+            }
+            @include maxpoint($tablet) {
+                padding: 0 16px;
+                margin-bottom: 0;
+                figure {
+                    box-shadow: -24px 24px 54px rgba(156, 110, 0, 0.8);
+                }
+            }
+            figure {
+                position: relative;
+                box-shadow: -24px 24px 54px rgba(156, 110, 0, 0.8);
+                height: 161px;
+                width: 100%;
+                @include maxpoint($tablet) {
+                    height: 241px;
+                    width: 241px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                figcaption {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #fff;
+                    padding: 11px 18px;
+                    width: 179px;
+                    transition: .3s ease;
+                    overflow: hidden;
+                    height: 66px;
+                    @include maxpoint($tablet) {
+                        height: 45px;
+                    }
+                    &::before {
+                        content: url('images/ic-arrow-right.svg');
+                        right: 15px;
+                        position: absolute;
+                        top: 13px;
+                        @include maxpoint($tablet) {
+                            top: 16px;
+                        }
+                    }
+                    .h5 {
+                        font-size: 18px;
+                        line-height: 23px;
+                        @include maxpoint($tablet) {
+                            line-height: 120%;
+                            font-size: 20px;
+                        }
+                    }
+                    p {
+                        opacity: 1;
+                        visibility: visible;
+                        transition: .3s ease;
+                        color: #989898;
+                        font-size: 13px;
+                        line-height: 16px;
+                        @include maxpoint($tablet) {
+                            opacity: 0;
+                            font-size: 11px;
+                            visibility: hidden;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                figure figcaption {
+                    height: 66px;
+                    p {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.os-mac {
+    .c-hero-banner-content .h1 span {
+        &::before {
+            top: 45px;
+            @include maxpoint(950px) {
+                top: 60px;
+            }
+            @include maxpoint(990px) {
+                top: 78px;
+            }
+        }
+        &::after {
+            top: 115px;
+            @include maxpoint(950px) {
+                top: 130px;
+            }
+            @include maxpoint(990px) {
+                top: 149px;
+            }
+        }
+    }
+}

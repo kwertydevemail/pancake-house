@@ -1,0 +1,424 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @include maxpoint(tablet){
+        justify-content: center;
+    }
+    
+}
+
+.c-nav-date-mobile  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+    p, .h7 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0 7px 0 0;
+        color: $color-n000;
+        font-weight: 300;
+    }
+
+    .h7 {
+        color: $color-p100;
+    }
+
+    @include maxpoint($desktop) {
+        display: none;
+    }
+}
+
+.c-nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(100% - 28px);
+    @include maxpoint($desktop) {
+        height: unset;
+    }
+    &__logo-date {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        width: 50%;
+        position: relative;
+        z-index: 3;
+
+        @include maxpoint($desktop) {
+            width: 100%;
+            flex-direction: row;
+        }
+
+        @media (min-width:1024px) and (max-width:1026px) {
+            width: 60%;
+        }
+
+        .logo {
+            position: absolute;
+            margin: -15px 0 0 -18px;
+            width: 141px;
+            height: 82px;
+            @include maxpoint($desktop) {
+                margin: -19px 32px 0 0;
+                width: 165px;
+                height: 96px;
+            }
+        }
+
+        .date-time {
+            width: 100%;
+            margin-left: 209px;
+            display: none;
+            
+            @include maxpoint($desktop) {
+                display: block;
+            }
+            @include maxpoint($desktop) {
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - 209px);
+            }
+            p {
+                color: $color-n000;
+                font-weight: 300;
+                font-style: normal;
+                font-size: 18px;
+                line-height: 110%;
+                font-family: $secondary-font;
+            }
+            
+        }
+    }
+    
+    &_address {
+        display: none;
+        margin-top: 15px;
+        @include maxpoint($desktop) {
+            flex-direction: column;
+        }
+        @include maxpoint(1105px) {
+            flex-direction: row;
+        }
+        .h5 {
+            color: $color-n000;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            font-family: $secondary-font;
+            margin-right: 5px;
+            width: 80px;
+        }
+        input, & > span {
+            &.active {
+                display: block;
+            }
+        }
+        input, & > span {
+            display: none;
+            background-color: transparent;
+            border: 0;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            font-family: $secondary-font;
+            padding: 0;
+            color: $color-n000;
+            font-weight: 300;
+            margin-right: 17.75px;
+            &:focus {
+                border-bottom: 1px solid #fff;
+            }
+        }
+        .o-button {
+            background-color: transparent;
+            padding: 0;
+            width: 115px;
+            span {
+                color: $color-n000;
+            }
+            i {
+                margin-right: 5px;
+            }
+        }
+        &.address-mobile {
+            display: none;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 0;
+        @include maxpoint($desktop) {
+            padding-top: 5px;
+        }
+        li {
+            margin-right: 18px;
+            position: relative;
+            @include maxpoint(375px) {
+                margin-right: 34px;
+            }
+
+            .o-button {
+                background-color: #A2000F;
+            }
+
+            .span {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 120%;
+                color: #FFFFFF;
+                font-family: $secondary-font;
+                opacity: 0.9;
+            }
+            .span:nth-child(2) {
+                font-weight: bold;
+                color: #FFFFFF;
+                opacity: 0.9;
+            }
+            .cart-counter {
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                font-weight: bold;
+                font-size: 8px;
+                line-height: 100%;
+                text-align: center;
+                font-family: $secondary-font;
+                font-style: normal;
+                color: $color-nwhite;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                background-color: $color-nblack;
+                // border: 2px solid $color-n250;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include maxpoint($desktop) {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            .icon {
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                @include maxpoint($desktop) {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .search-icon {
+                @extend .icon;
+                background: url("images/ic-max-search.svg") no-repeat;
+                background-size: contain;
+            }
+
+            .close-search-icon {
+                @extend .icon;
+                background: url("images/ic-max-close-search.svg") no-repeat;
+                background-size: contain;
+            }
+            
+            .home-icon {
+                @extend .icon;
+                background: url("images/ic-max-home.svg") no-repeat;
+                background-size: contain;
+            }
+            .home-icon:hover {
+                background: url("images/ic-max-home-hover.svg") no-repeat;
+                background-size: contain;
+            }
+            .cart-icon {
+                @extend .icon;
+                background: url("images/ic-max-cart.svg") no-repeat;
+                background-size: contain;
+            }
+            .cart-icon:hover {
+                background: url("images/ic-max-cart-hover.svg") no-repeat;
+                background-size: contain;
+            }
+            .cart-icon.active {
+                background: url("images/ic-max-cart-active.svg") no-repeat;
+                background-size: contain;
+            }
+            .menu-icon {
+                @extend .icon;
+                background: url("images/ic-max-hamburger-menu.svg") no-repeat;
+                background-size: contain;
+            }
+            .menu-icon:hover {
+                background: url("images/ic-max-menu-hover.svg") no-repeat;
+                background-size: contain;
+            }
+
+            .menu-icon.active {
+                background: url("images/ic-max-menu-active.svg") no-repeat;
+                background-size: contain;
+            }
+            
+            &.active {
+                .c-nav-menu__links--submenu {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                .menu-icon {
+                    background: url("images/ic-max-menu-active.svg") no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            .show {
+                display: block;
+            }
+        
+            .hide {
+                display: none;
+            }
+        }
+        &--submenu {
+            width: 264px;
+            background-color: $color-pdarkred;
+            position: absolute;
+            right: -64px;
+            padding: 16px 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: .2s ease;
+            top: 42px;
+            box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.03) !important;
+            @include maxpoint($tablet) {
+                top: 46px;
+            }
+            @include maxpoint($desktop) {
+                top: 58px;
+            }
+            li {
+                margin: 0;
+            }
+            & > li {
+                &.active {
+                    .c-nav-menu__links--innerSubmenu {
+                        max-height: 105px;
+                    }
+                }
+            }
+            a {
+                font-size: 14px;
+                font-family: $secondary-font;
+                font-style: normal;
+                letter-spacing: 0.09em;
+                font-weight: 900;
+                line-height: 100%;
+                color: $color-n000;
+                text-transform: uppercase;
+                width: 100%;
+                padding: 8px 32px;
+                display: block;
+            }
+            .user-holder {
+                border-bottom: 1px solid $color-n150;
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8px 32px 24px;
+                    span {
+                        padding: 4px 0;
+                        &:first-child {
+                            font-size: 12px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+                & + li a {
+                    padding: 24px 32px 8px;
+                }
+            }
+        }
+        &--innerSubmenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            & > li {
+                &:last-child {
+                    padding-bottom: 0;
+                }
+                a {
+                    text-transform: unset;
+                    line-height: 18.2px;
+                    letter-spacing: -0.01em;
+                    font-weight: 300;
+                    padding: 8px 32px 8px 48px;
+                }
+            }
+        }
+
+        li:last-child {
+            margin: 0;
+        }
+    }
+    
+}
+
+.c-header.with-address {
+    max-height: 98px;
+    
+    @include maxpoint($desktop) {
+        max-height: 77px;
+    }
+    .c-nav-menu {
+        flex-wrap: wrap;
+        display: flex;
+        @include maxpoint ($desktop) {
+            flex-wrap: nowrap;
+        }
+        .logo {
+            width: 141px;
+            height: 82px;
+            @include maxpoint($desktop) {
+                width: 177px;
+                height: 86px;
+            }
+        }
+        &_address {
+            display: flex;
+        }
+    }
+    .address-mobile {
+        display: flex;
+        margin-top: 16px;
+        width: 100%;
+        @include maxpoint($desktop) {
+            display: none;
+        }
+        .h5 {
+            max-height: 36px;
+        }
+        & > span {
+            width: calc(100% - 85px);
+            margin-right: 0;
+            max-height: 36px;
+        }
+        .o-button {
+            max-height: 14px;
+            text-align: center;
+            margin-left: 85px;
+            margin-bottom: 5px;
+        }
+    }
+}

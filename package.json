@@ -1,0 +1,27 @@
+{
+  "name": "femake-skeleton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "dev@make.technology, eugenealvizo@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^2.19.0",
+    "jquery": "^3.6.0",
+    "js-datepicker": "^5.18.0",
+    "laravel-mix": "^6.0.43",
+    "sweetalert2": "^11.0.11",
+    "tiny-slider": "^2.9.3",
+    "resolve-url-loader": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.6.0"
+  }
+}

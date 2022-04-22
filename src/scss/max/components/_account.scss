@@ -1,0 +1,2232 @@
+.c-account {
+    min-height:  300px;
+    padding: 32px 0 0;
+
+    &.my-order-bg {
+        &::before{
+            content: '';
+            background: url('images/layout/max-delivery-mb-account.png') no-repeat;
+            background-size: contain;
+            background-position-y: 60px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+    
+            @include maxpoint($tablet){
+                background: url('images/layout/max-delivery-bg.png');
+                background-size: cover;
+                background-position-y: -94px;
+                height: 540px;
+            }
+        }
+    }
+
+    &.default-bg {
+        &::before{
+            content: '';
+            background: url('images/layout/max-account-mb-bg-account.png') no-repeat;
+            background-size: contain;
+            background-position-y: 60px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+    
+            @include maxpoint($tablet){
+                background: url('images/layout/max-account-bg.png');
+                background-size: cover;
+                background-position-y: 52px;
+                height: 726px;
+            }
+        }
+
+        .o-container {
+            padding: 0;
+            @include maxpoint($tablet) {
+                padding: 64px 64px 0px 64px;
+            }
+        }
+
+        .c-account-content_panel {
+            min-height: 610.32px;
+            @media only screen and (max-width: 378px) and (min-width: 375px) {
+                padding: 24px 16px 80px 16px;
+            }
+            &.active {
+                margin-bottom: unset;
+            }
+
+            .o-header-title-slant {
+                font-size: 28px;
+                margin-bottom: 40px;
+                @include maxpoint($tablet) {
+                    font-size: 34px;
+                }
+            }
+        }
+
+    }
+
+    > .o-container{
+        background: unset;
+        max-width: 1366px;
+        padding-right: 0;
+        @include maxpoint('1367px'){
+            padding: 64px 0px 54px 64px;
+        }
+    }
+
+    .c-breadcrumbs{
+        background: #FEFDF4;
+        padding: 18px 16px;
+        margin-top: -32px;
+        margin-bottom: 40px;
+
+        @include maxpoint($tablet){
+            padding: 16px 0 18px;
+            margin-top: 0;
+            margin-bottom: 0;
+            z-index: 1000000;
+        }
+
+        .c-list-tab {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .o-container{
+            > a{
+                padding: 0;
+            }
+            > ul{
+                align-items: center;
+
+                .color_grey {
+                    color: #939598;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 120%;
+                } 
+
+                li{
+                    &:first-child{
+                        padding-right: 8px;
+                        &::before{
+                            top: 58%;
+                        }
+                        > a{
+                            top: -2px;
+                            position: relative;
+                        }
+                    }
+                    &:nth-child(3) {
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    &:nth-child(4) {
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    &:nth-child(5) {
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    &:last-child{
+                        padding-left: 13px;
+                    }
+                    > a{
+                        font-weight: 900;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: #241F20;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    @include maxpoint($tablet) {
+        padding: 0;
+    }
+    .o-container {
+        padding: 0;
+        @include maxpoint($tablet) {
+            padding: 64px;
+        }
+    }
+    &-content {
+        &_nav {
+            overflow: auto;
+            width: 100%;
+            z-index: 1;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            @include maxpoint($tablet) {
+                width: 220px;
+            }
+            & > li {
+                background-color: #F7F7F7;
+                font-family: $secondary-font;
+
+                transition: .2s ease;
+                margin-right: 8px;
+                padding: 21px 29.54px;
+
+                font-style: normal;
+                font-weight: 900;
+                font-size: 12px;
+                line-height: 100%;
+                color: #241F20;
+                min-height: 54px;
+                height: 54px;
+                width: 119.67px;
+                min-width: 119.67px;
+
+                @include maxpoint($tablet) {
+                    // margin-bottom: 8px;
+                    padding: 19px 24px 16px;
+                    min-height: 54px;
+                    height: 54px;
+                    margin-right: 0;
+                    line-height: 150%;
+                    width: unset;
+                    min-width: unset;
+
+                    &.active,
+                    &:hover {
+                        background-color: #FC0000;
+                        color: #FFFFFF;
+                        font-size: 16px;
+                        line-height: 140%;
+                        padding: 17px 24px;
+                    }
+                }
+
+                &:first-child{
+                    border-radius: 12px 0px 0px 0px;
+                }
+                &:last-child{
+                    border-radius: 0px 0px 0px 12px;
+                }
+
+                &.active,
+                &:hover {
+                    background-color: #FC0000;
+                    color: #FFFFFF;
+                    font-size: 16px;
+                    line-height: 120%;
+                    padding: 17.5px 19.45px;
+                }
+                &:nth-child(4) {
+                    display: flex;
+                    align-items: center;
+
+                    & > img {
+                        margin-left: 7px;
+                    }
+                }
+
+                &.js-edit-profile {
+                    &.active-profile {
+                        background-color: #FC0000;
+                        color: #FFFFFF;
+                        font-size: 16px;
+                        line-height: 140%;
+                        padding: 17px 24px;
+                    }
+                }
+            }
+        }
+        &_panel {
+            background-color: #fff;
+            display: none;
+            width: 100%;
+            position: relative;
+            top: -1px;
+            padding: 24px 16px;
+            filter: drop-shadow(0px 12px 32px rgba(0, 0, 0, 0.1));
+            &:nth-child(4) {
+                padding: 24px 16px;
+                // padding: 150px 24px 58px;
+
+                @include maxpoint($tablet) {
+                    padding: 64px 40px 40px;
+                }
+            }
+            @include maxpoint($tablet) {
+                width: calc(100% - 220px);
+                top: unset;
+                padding: 64px 40px 64px;
+                min-height: 753px;
+            }
+            &.active {
+                // display: flex;
+                display: flow-root;
+                margin-bottom: 40px;
+            }
+            .o-header-title-slant {
+                font-style: normal;
+                font-weight: 900;
+                font-size: 34px;
+                line-height: 110%;
+                padding: 0;
+                color: #ED1C24;
+                top: 42px;
+                left: 24px;
+                @include maxpoint($tablet) {
+                    top: 42px;
+                    left: 45px;
+                    font-size: 34px;
+                    line-height: 110%;
+                    // padding: 0px 0px 7px;
+                    margin-bottom: 40px;
+                }
+            }
+            &--detail.for-dashboard {
+                width: 100%;
+                padding: 0;
+                @include maxpoint($tablet) {
+                    // padding: 0 16px 0;
+                    padding: 0px;
+                }
+                & > p {
+                    color: #5B5853;;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 120%;
+                    letter-spacing: unset;
+                    max-width: 600px;
+                    width: 100%;
+                    & + p {
+                        margin-top: 16px;
+                        margin-bottom: 40px;
+                    }
+                }
+                .info-content {
+                    width: 100%;
+                    @include maxpoint($tablet) {
+                        max-width: 305px;
+                    }
+                    &:first-child {
+                        margin-bottom: 40px;
+                        @include maxpoint(1122px) {
+                            margin-right: 62px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    & > .h5 {
+                        font-family: $secondary-font;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 110%;
+                        color: #241F20;
+                        letter-spacing: unset;
+                        margin-bottom: 14px;
+                        max-width: 305px;
+                        width: 100%;
+                        @include maxpoint($tablet) {
+                            max-width: unset;
+                            font-size: 20px;
+                        }
+                    }
+                    &_card {
+                        padding: 24px;
+                        min-height: 109px;
+                        height: 117px;
+                        background-color: $color-t25;
+                        border-radius: 3px;
+                        max-width: 100%;
+                        width: 100%;
+                        margin-bottom: 14px;
+                        @include maxpoint($tablet) {
+                            max-width: unset;
+                        }
+                        &--icon {
+                            flex: auto;
+                            margin-right: 15px;
+                            // width: 26px;
+                            // height: 26px;
+                            .ic-user-c-grey {
+                                width: 30px;
+                                height: 30px;
+                                margin-top: -3px;
+                            }
+
+                            .ic-card-c-grey {
+                                width: 28px;
+                                height: 19.99px;
+                            }
+                        }
+                        &--detail {
+                            flex: auto;
+                            width: 100%;
+                            .h6, span {
+                                color: $color-t250;
+                                font-size: 14px;
+                            }
+                            .h6 {
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #241F20;
+                                margin-bottom: 8px;
+                            }
+                            span {
+                                font-family: $secondary-font;
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #5B5853;
+                                font-style: normal;
+                                -webkit-text-fill-color: #5B5853;
+                                -webkit-opacity: 1;
+                            }
+                        }
+                    }
+                    .o-button {
+                        &:nth-last-child(2) {
+                            margin-bottom: 14px;
+                            background: #FC0000;
+                            &:hover {
+                                background: #E60000;
+                            }
+                            span {
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 100%;
+                            }
+                        }
+                        &.o-button-trans {
+                            span {
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 100%;
+                                color: #241F20;
+                                padding-top: unset;
+                            }
+                            &:hover {
+                                background: #FC0000;
+                                span {
+                                    color: #FFFFFF;
+                                }
+                            }
+                        }
+                    }
+                    &.for-billing {
+                        .info-content_card {
+                            height: 184px;
+                            margin-bottom: 0;
+                            &--icon {
+                                margin-right: 14px;
+                            }
+                            &--detail {
+                                .h6, p {
+                                    line-height: 18.2px;
+                                    font-weight: normal;
+                                    margin-bottom: 16px;
+                                }
+                                .h6 {
+                                    font-weight: 500;
+                                    font-size: 14px;
+                                    line-height: 120%;
+                                    color: #5B5853;
+                                }
+                                p {
+                                    font-weight: 500;
+                                    font-size: 14px;
+                                    line-height: 120%;
+                                    color: #5B5853;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .dashboard-banner {
+                    background-color: $color-p100;
+                    margin: 32px -32px 7px -24px;
+                    width: 100vw;
+                    padding: 0 0 40px;
+                    position: relative;
+                    
+                    @include maxpoint($tablet) {
+                        margin: 32px 0 40px;
+                        width: 100%;
+                    }
+                    
+                    @include maxpoint($desktop) {
+                        margin: 25px 0 35px;
+                        padding: 0;
+                        max-width: 677px;
+                        height: 180px;
+                    }
+                    
+                    p {
+                        color: $color-t250;
+                    }
+
+                    .o-container {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    
+                        @include maxpoint($tablet) {
+                            padding: 0;
+                        }
+                    
+                        @include maxpoint($desktop) {
+                            flex-direction: row;
+                            justify-content: space-between;
+                            height: 100%;
+                        }
+                    }
+
+                    .mobile {
+                        position: absolute;
+                        z-index: 1;
+                        left: 50%;
+                        top: 30px;
+                        transform: translateX(-50%);
+
+                        @include maxpoint($desktop) {
+                            display: none;
+                        }
+                    }
+
+                    .desktop {
+                        display: none;
+
+                        @include maxpoint($desktop) {
+                            display: block;
+                            font-size: 16px;
+                            margin-bottom: 20px;
+                            line-height: 130%;
+                            letter-spacing: -0.02em;
+                        }
+                    }
+                    
+                    .text-container {
+                        padding: 0 77px;
+                        text-align: center;
+
+                        @include maxpoint($desktop) {
+                            padding: 35px 41px 34px 0;
+                            text-align: unset;
+                        }
+
+                        & > p:last-child {
+                            margin-top: 20px;
+                        }
+                    }
+
+                    .banner {
+                        &-images {
+                            background-color: $color-p100;
+                            position: relative;
+                            margin-bottom: 47px;
+                            width: 100%;
+                    
+                            @include maxpoint($desktop) {
+                                flex-basis: percentage(467 / 677);
+                                margin-bottom: 0;
+                                height: 100%;
+                            }
+                    
+                            .img-sm {
+                                @include maxpoint($desktop) {
+                                    display: none;
+                                }
+                            }
+                    
+                            .img-lg {
+                                display: none;
+                        
+                                @include maxpoint($desktop) {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        &-bg-wrapper {
+                            height: 255px;
+                            min-width: 375px;
+                    
+                            @include maxpoint($desktop) {
+                                height: 100%;
+                                min-width: auto;
+                            }
+                    
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                mix-blend-mode: screen;
+                            }
+                        }
+                    
+                        &-logo-wrapper {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            top: 90px;
+                            left: 50%;
+                            width: 140px;
+                            height: 165px;
+                            transform: translateX(-50%);
+                    
+                            @include maxpoint($desktop) {
+                                width: 93px;
+                                height: 10px;
+                                left: 46.5%;
+                            }
+                    
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                background-color: $color-n000;
+                                border-radius: 50%;
+                                height: 221px;
+                                width: 221px;
+                                z-index: 1;
+                        
+                                @include maxpoint($desktop) {
+                                    height: 150px;
+                                    width: 150px;
+                                }
+                            }
+                    
+                            img {
+                                position: relative;
+                                width: 100%;
+                                z-index: 2;
+                                margin-top: -11px;
+
+                                @include maxpoint($desktop) {
+                                    margin-top: -7px;
+                                }
+                            }
+                        }
+                    }
+
+                    .o-button {
+                        background-color: $color-p250;
+                        margin-top: 16px;
+                        width: 100%;
+                    
+                        & > span {
+                            color: $color-n000;
+                        }
+                    
+                        @include maxpoint($desktop) {
+                            margin-top: 24px;
+                            width: 316px;
+                        }
+                    }
+                }
+            }
+            .for-recent-orders {
+                width: 100%;
+                margin-top: -32px;
+                .order-item {
+                    padding: 32px 0 32px;
+
+                    @include maxpoint($desktop) {
+                        padding: 32px 0 24px;
+                    }
+
+
+                    &.apply-tail {
+                        // background-image: linear-gradient(to right, #333 45%, rgba(255, 255, 255, 0) 20%);
+                        // background-position: 0 100%;
+                        // background-size: 6px 1px;
+                        // background-repeat: repeat-x;
+                        border-bottom: 1px dashed #ABA8A3;
+                    }
+
+                    &:last-child {
+                        &.apply-tail {
+                            background-position: unset;
+                        }
+                    }
+                    &_col {
+                        width: 100%;
+                        &:first-child {
+                            max-width: 210px;
+                            margin-bottom: 16px;
+                            @include maxpoint($tablet) {
+                                margin-bottom: 0;
+                            }
+                        }
+                        &:nth-child(2) {
+                            max-width: 210px;
+                            margin-bottom: 32px;
+                            @include maxpoint($tablet) {
+                                margin-bottom: 0;
+                            }
+                        }
+                        &:last-child {
+                            @include maxpoint($tablet) {
+                                max-width: 185px;
+                            }
+                        }
+                        // & > span, &--detail > .h6, &--detail span {
+                        //     text-transform: uppercase;
+                        //     font-weight: bold;
+                        //     font-size: 14px;
+                        //     line-height: 17.71px;
+                        //     letter-spacing: 0.09em;
+                        //     color: $color-t250;
+                        // }
+                        & > span {
+                            font-family: $secondary-font;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 14px;
+                            line-height: 100%;
+                            color: #A2000F;
+                            letter-spacing: 0.35em;
+                            text-transform: uppercase;
+                            margin-bottom: 8px;
+                            @include maxpoint($tablet) {
+                                font-weight: 700;
+                            }
+                        }
+                        & > .h3 {
+                            font-family: $primary-font;
+                            margin-bottom: 16px;
+                            color: #202020;
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 21px;
+                            line-height: 100%;
+                            @include maxpoint($tablet) {
+                                font-size: 24px;
+                            }
+                        }
+                        &--detail {
+                            margin-bottom: 16px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            & > .h6 {
+                                margin-bottom: 8px;
+                                font-style: normal;
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #241F20;
+                            }
+                            & > span {
+                                font-family: $secondary-font;
+                                text-transform: unset;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #5B5853;
+                                @include maxpoint($tablet) {
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                        .o-button {
+                            width: 100%;
+                            &:first-child {
+                                margin-bottom: 16px;
+                                @include maxpoint($tablet) {
+                                    width: 185px;
+                                    height: 36px;
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                                @include maxpoint($tablet) {
+                                    width: 185px;
+                                    height: 36px;
+                                }
+                            }
+                        }
+
+                        .o-button-track-order {
+                            border-radius: 8px;
+                            background: #FC0000;
+                            padding: 12px 61px;
+
+                            @include maxpoint($tablet) {
+                                padding: 12px 0;
+                            }
+                            span {
+                                font-style: normal;
+                                font-weight: 900;
+                                font-size: 12px;
+                                line-height: 100%;
+                                color: #FFFFFF;
+                            }
+                        }
+
+                        .o-button-view-details {
+                            border-radius: 8px;
+                            padding: 12px 61px;
+                            @include maxpoint($tablet) {
+                                padding: 12px 0;
+                            }
+                            span {
+                                font-style: normal;
+                                font-weight: 900;
+                                font-size: 12px;
+                                line-height: 100%;
+                                color: #241F20;
+                            }
+                        }
+                    }
+                }
+            }
+            .for-edit-profile {
+                width: 100%;
+                form {
+                    width: 100%;
+                    .o-form-group {
+                        margin-bottom: -32px;
+                        padding-left: 42px;
+
+                        @include maxpoint($tablet) {
+                            padding-left: 64px;
+                        }
+
+                        .required {
+                            color: #A2000F;
+                            margin-left: -3px;
+                        }
+
+                        .o-form-timeline_count {
+                            font-size: 18px;
+                        }
+
+                        &:last-child{
+                            margin-bottom: 0px;
+                            padding-bottom: 0px;
+                        }
+                        
+
+                        &_password {
+
+                            .password-dummy1, .password-dummy2 {
+                                top: 20px;
+                                left: 28px;
+                                position: absolute;
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #241F20;
+
+                                @include maxpoint($tablet) {
+                                    left: 18px;
+                                }
+    
+                                &.show {
+                                    display: block;
+                                }
+    
+                                &.hide {
+                                    display: none;
+                                }
+                            }
+                            
+                            .ic-password {
+                                &::after {
+                                    background: url('images/ic-max-red-eye.svg');
+                                }
+                                &.password-hide::after {
+                                    background: url('images/ic-max-red-eye.svg') no-repeat;
+                                }
+                            }
+                        }
+
+                        &-inner {
+                            max-width: 386px;
+                            width: 100%;
+                            margin-bottom: 16px;
+                            position: relative;
+                            @include maxpoint(850px) {
+                                margin-right: 16px;
+                            }
+
+                            &.o-form-dropdown_input {
+                                input {
+                                    border: 1px solid #7D7871;
+                                    font-weight: 900;
+                                    font-size: 14px;
+                                    line-height: 120%;
+                                    color: #241F20;
+
+                                    &::placeholder {
+                                        font-weight: 300;
+                                        font-size: 14px;
+                                        line-height: 130%;
+                                        color: #9C9892;
+                                    }
+
+                                    &:not(:read-only) {
+                                        border: 1px solid #7D7871;
+                                    }
+                                    &:placeholder-shown {
+                                        border: 1px solid #E8E7E6;
+                                    }
+
+                                    &[type=password]{
+                                        color: transparent;
+                                    }
+                                }
+                            }
+                            .o-form-group_standard {
+                                max-width: unset;
+                            }
+                            .o-button {
+                                width: 100%;
+                                background: #FC0000;
+                                &:hover {
+                                    background: #E60000;
+                                }
+                                span {
+                                    font-weight: 900;
+                                    font-size: 14px;
+                                    line-height: 100%;
+                                }
+                            }
+
+                            label {
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 120%;
+                                margin-bottom: 12px;
+                                color: #241F20;
+                            }
+
+                            &.for-gender {
+                                .o-form-panels_card--detail {
+                                    padding: 16.5px 24px;
+
+                                    &__title {
+                                        > .h3 {
+                                            font-weight: 400;
+                                            font-size: 14px;
+                                            line-height: 120%;
+                                            color: #241F20;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        // background: #E8E7E6;
+                                        border: 1px solid #E8E7E6;
+                                    }
+
+                                    &.active {
+                                        background: #E8E7E6;
+                                        border: 1px solid #E8E7E6;
+
+                                        .o-form-panels_card--detail__title {
+                                            > .h3 {
+                                                font-weight: 900;
+                                                font-size: 14px;
+                                                line-height: 120%;
+                                                color: #241F20;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                @include maxpoint($tablet) {
+                                    .o-form-panels_card {
+                                        padding: 0 6px 16px;
+                                        &--detail {
+                                            &.active {
+                                                &__title {
+                                                    > .h3 {
+                                                        font-weight: 900;
+                                                        font-size: 14px;
+                                                        line-height: 120%;
+                                                        color: #241F20;
+                                                    }
+                                                }
+                                            }
+                                            &__title {
+                                                > .h3 {
+                                                    font-weight: 500;
+                                                    font-size: 14px;
+                                                    line-height: 120%;
+                                                    color: #241F20;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                @media only screen and (max-width: 820px) and (min-width: 375px)  {
+                                    .o-form-panels {
+                                        padding-left: 14px;
+                                        .o-form-panels_card {
+                                            width: auto;
+                                            padding: 0 6px 16px;
+                                            &:first-of-type {
+                                                .o-form-panels_card--detail {
+                                                    border-radius: 8px 0px 0px 8px;
+                                                }
+                                            }
+                                            &:last-of-type {
+                                                .o-form-panels_card--detail {
+                                                    border-radius: 0px 8px 8px 0px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &_standard {
+                            .dropdown-disabled {
+                                content: url('images/max-caret-down-grey.svg');
+                                position: absolute;
+                                top: 15px;
+                                right: 16px;
+                            }
+                            .o-form-group_input {
+                                border: 1px solid #E8E7E6;
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #241F20;
+
+                                &::placeholder {
+                                    font-weight: 300;
+                                    font-size: 14px;
+                                    line-height: 130%;
+                                    color: #9C9892;
+                                }
+
+                                &.text-center {
+                                    text-align: center;
+                                }
+
+                                &:not(:read-only) {
+                                    border: 1px solid #7D7871;
+                                }
+                                &:placeholder-shown {
+                                    border: 1px solid #E8E7E6;
+                                }
+
+                                &[type=password]{
+                                    color: transparent;
+                                }
+                                
+                                &.readonly {
+                                    font-weight: 300;
+                                    font-size: 14px;
+                                    line-height: 130%;
+                                    color: #9C9892;
+                                    background-color: #E8E7E6;
+                                }
+                            }
+                        }
+                        &:first-child, &:nth-child(3), &:nth-child(4) {
+                            .o-form-group {
+                                &-inner:nth-child(even) {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            .o-form-group {
+                                &-inner:nth-child(5) {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        &:nth-child(4) {
+                            .for-edit-profile_cta {
+                                margin-bottom: 0;
+                                .o-button {
+                                    background: #FC0000;
+                                    &:hover {
+                                        background: #E60000;
+                                    }
+                                    span {
+                                        font-weight: 900;
+                                        font-size: 14px;
+                                        line-height: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &_email {
+                    width: 100%;
+                    max-width: 386px;
+                    input {
+                        max-width: 386px;
+                    }
+                }
+                &_cta {
+                    padding-left: 14px;
+                    @include maxpoint($tablet) {
+                        padding-left: 0;
+                    }
+                }
+                &_spacer {
+                    margin-bottom: 0 !important;
+                }
+                .italize {
+                    margin-top: 12px;
+                    padding-left: 14px;
+
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 120%;
+                    color: #5B5853;
+                    @include maxpoint($tablet) {
+                        font-weight: 500;
+                        margin-top: 12px;
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            &.you-do-you-panel {
+                padding: 150px 24px 32px;
+
+                .for-rewards {
+                    .rewards {
+                        &-intro {
+                            &-card {
+                                &__images {
+                                    border-top: 1px solid #F1F1F1;
+                                    border-left: 1px solid #F1F1F1;
+                                    border-right: 1px solid #F1F1F1;
+                                    margin-bottom: 0;
+                                }
+                                &__content-wrapper {
+                                    padding: 0;
+                                }
+                                &__content {
+                                    border-bottom: 1px solid #F1F1F1;
+                                    border-left: 1px solid #F1F1F1;
+                                    border-right: 1px solid #F1F1F1;
+                                    padding: 58px 40px 32px;
+                                }
+                            }
+                        }
+                        &-order {
+                            &-card {
+                                display: flex;
+                                flex-direction: column;
+                                .order {
+                                    &_count {
+                                        order: 1;
+                                    }
+                                    &_remaining {
+                                        order: 3;
+                                    }
+                                    &_stamp-counter {
+                                        order: 2;
+                                    }
+                                }
+                                button {
+                                    order: 4;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @include desktop-md {
+                    padding: 150px 65px 64px 88px;
+                    .for-rewards {
+                        .rewards {
+                            &-intro {
+                                &-card {
+                                    &__images {
+                                        border: 0;
+                                    }
+                                    &__content-wrapper {
+                                        padding: 0;
+                                    }
+                                    &__content {
+                                        padding: 23px 0 23px 25px;
+                                    }
+                                }
+                            }
+                            &-order-card {
+                                .order {
+                                    &_count {
+                                        order: 1;
+                                    }
+                                    &_remaining {
+                                        order: 2;
+                                    }
+                                    &_stamp-counter {
+                                        order: 3;
+                                    }
+                                }
+                                button {
+                                    order: 4;
+                                }
+                            }
+                        }
+
+                        & > * {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &.you-do-you-panel-home {
+                padding: 0px;
+                width: 100%;
+                min-height: 0;
+
+                .for-rewards {
+                    margin-top: 0px;
+                    .rewards-container-desktop-only {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .rewards-intro-card__logo {
+                        &-desktop {
+                            display: none;
+                        }
+                        &-mobile {
+                            display: block;
+                        }
+                    }
+                    .rewards-intro-card {
+                        &__images {
+                            flex-basis: percentage(319.5 / 1280);
+                            padding: 20px 24px 18px;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 0px;
+                            height: auto;
+                        }
+                        &__logo-wrapper {
+                            width: auto;
+                            height: auto;
+                            margin-top: 0;
+                            text-align: center;
+                            img {
+                                height: auto;
+                            }
+                        }
+                        &__content-wrapper {
+                            flex-basis: percentage(639 / 1280);
+                            padding: 0px;
+                            .rewards-order-card {
+                                margin-top: 0px;
+                                padding: 24px;
+                                display: flex;
+                                flex-direction: column;
+                                .order_count {
+                                    order: 1;
+                                    span {
+                                        &.h2 {
+                                            letter-spacing: -0.02em;
+                                        }
+                                    }
+                                }
+                                .order_stamp {
+                                    svg {
+                                        width: 51px;
+                                    }
+                                    &--pizza {
+                                        svg {
+                                            width: 76px;
+                                        }
+                                    }
+                                }
+                                .order_stamp-counter {
+                                    margin-bottom: 20px;
+                                    order: 2;
+                                }
+                                .order_remaining {
+                                    order: 3;
+                                    &__break {
+                                        display: block;
+                                    }
+                                }
+                                .o-button {
+                                    order: 4;
+                                }
+                            }
+                        }
+                        &__content {
+                            flex-basis: percentage(319.5 / 1280);
+                            justify-content: center;
+                            padding: 34px 24px;
+                            display: flex;
+                            flex-direction: column;
+                            .body-1--bold {
+                                margin-top: 22px;
+                            }
+                        }
+                    }
+                }
+                .rewards-unregistered {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $color-p250;
+                    &__image {
+                        display: flex;
+                        justify-content: center;
+                        padding-top: 55px;
+                        padding-bottom: 0px;
+                        margin-bottom: 79px;
+                        text-align: right;
+                        background: url(images/you-do-you/pattern-black-m.png) center no-repeat;
+                        background-size: cover;
+                        &-desktop {
+                            display: none;
+                        }
+                        &-mobile {
+                            display: block;
+                        }
+                        img {
+                            position: relative;
+                            z-index: 3;
+                            margin-top: 0px;
+                            margin-bottom: -65px;
+                        }
+                    }
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        padding: 0px 24px;
+                        h4 {
+                            font-family: "Moderne LL", san-serif;
+                            font-weight: 900;
+                            font-size: 29px;
+                            line-height: 36px;
+                            letter-spacing: -0.02em;
+                            text-transform: uppercase;
+                            color: #ffffff;
+                            margin-bottom: 9px;
+                            text-align: center;
+                        }
+                        p {
+                            font-family: "Circular Std";
+                            font-size: 14px;
+                            line-height: 130%;
+                            letter-spacing: -0.01em;
+                            color: #ffffff;
+                            margin-bottom: 0px;
+                            text-align: center;
+                        }
+                    }
+                    &__button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 35px 24px 24px;
+                        &-enroll {
+                            display: inline-block;
+                            font-family: "Circular Std";
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 15px;
+                            line-height: 19px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #000000;
+                            padding: 16px 20px 15px;
+                            width: 100%;
+                            max-width: none;
+                            background: #F5B335;
+                        }
+                    }
+                }
+                @include desktop-md {
+                    padding: 0px;
+
+                    & > * {
+                        width: 100%;
+                    }
+                    .for-rewards {
+                        .rewards-container-desktop-only {
+                            margin-bottom: 0px;
+                            flex-direction: row;
+                        }
+                        .rewards-intro-card {
+                            &__images {
+                                padding: 24px;
+                            }
+                            &__logo {
+                                &-desktop {
+                                    display: block;
+                                }
+                                &-mobile {
+                                    display: none;
+                                }
+                            }
+                            &__content-wrapper {
+                                flex-basis: percentage(639 / 1280);
+                                .rewards-order-card {
+                                    padding: 24px 19.50%;
+                                    .order_count {
+                                        order: 1;
+                                    }
+                                    .order_stamp {
+                                        svg {
+                                            width: auto;
+                                        }
+                                        &--pizza {
+                                            svg {
+                                                width: auto;
+                                            }
+                                        }
+                                    }
+                                    .order_stamp-counter {
+                                        margin-bottom: 18px;
+                                        order: 3;
+                                    }
+                                    .order_remaining {
+                                        order: 2;
+                                        &__break {
+                                            display: inline-block;
+                                        }
+                                    }
+                                    .o-button {
+                                        order: 4;
+                                    }
+                                }
+                            }
+                            &__content {
+                                .body-1--bold {
+                                    margin-top: 16px;
+                                }
+                            }
+                        }
+                        .rewards-unregistered {
+                            flex-direction: row;
+                            &__image {
+                                padding-top: 0px;
+                                padding-bottom: 15px;
+                                margin-bottom: 0px;
+                                width: percentage(464 / 1280);
+                                background: url(images/you-do-you/pattern-black.png) center no-repeat;
+                                background-size: cover;
+                                img {
+                                    margin-top: -26px;
+                                    margin-bottom: 0px;
+                                }
+                                &-desktop {
+                                    display: block;
+                                }
+                                &-mobile {
+                                    display: none;
+                                }
+                            }
+                            &__text {
+                                padding: 29px 0px 29px 0px;
+                                width: percentage(405 / 1280);
+                                h4 {
+                                    margin-bottom: 8px;
+                                    text-align: left;
+                                }
+                                p {
+                                    text-align: left;
+                                }
+                            }
+                            &__button {
+                                padding:0px;
+                                width: percentage(411 / 1280);
+                                &-enroll {
+                                    max-width: 316px;
+                                }
+                            }
+                        }              
+                    }
+                }
+            }
+
+            .for-rewards {
+                margin-top: -42px;
+                width: 100%;
+
+                @include desktop-md {
+                    margin-top: 0;
+                }
+
+                h4 {
+                    font-family: "Circular Std";
+                    font-weight: 900;
+                    font-size: 18px;
+                    line-height: 120%;
+                    letter-spacing: -0.02em;
+                    text-transform: none;
+                    color: $color-p250;
+                }
+
+                .c-new-customer-tick-box {
+                    margin: 25px 0 10px -24px;
+                    position: relative;
+
+                    @include maxpoint($tablet) {
+                        margin: 25px 0 10px 0;
+                        width: 100%;
+                    }
+
+                    @include maxpoint($desktop) {
+                        height: 297px;
+                    }
+
+                    @include desktop-md {
+                        margin: -10px 0 35px -58px;
+                        padding: 0;
+                        max-width: 900px;
+                        width: 110%;
+                    }
+
+                    .tick-box {
+                        &-bg-wrapper {
+                            height: 268px;
+                    
+                            @include maxpoint($desktop) {
+                                height: 100%;
+                                min-width: auto;
+                            }
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    
+                        &-logo-wrapper {
+                            top: 110px;
+                            width: 139px;
+                            height: 166px;
+                    
+                            @include maxpoint($desktop) {
+                                width: 157px;
+                                height: 186px;
+                                top: 62px;
+                                left: 46.5%;
+                            }
+                        
+                            &::before {
+                                height: 221px;
+                                width: 221px;
+                        
+                                @include desktop-md {
+                                    height: 242px;
+                                    width: 242px;
+                                }
+                            }
+
+                            img {
+                                @include maxpoint($desktop) {
+                                    margin-top: -18px;
+                                }
+                            }
+                        }
+                    }
+
+                    .c-tick-box-input-group {
+                        .body-1 a {
+                            letter-spacing: normal;
+                        }
+                        
+                        .o-button {
+                            margin-top: 32px;
+                        }
+                    }
+
+                    .c-tick-box-images {
+                        background-color: $color-p100;
+                        position: relative;
+                        margin-bottom: 58px;
+                        width: 100%;
+
+                        @include maxpoint($desktop) {
+                            margin-bottom: 0;
+                        }
+                        @include desktop-md {
+                            flex-basis: percentage(364 / 900);
+                            margin-bottom: 0;
+                            height: 100%;
+                        }
+                    }
+
+                    .c-tick-box-form {
+                        padding: 0 40px 0 32px;
+                        @include maxpoint($desktop) {
+                            flex-basis: percentage(536 / 900);
+                            padding: 16px 40px 32px 24px;
+                        }
+
+                        label:first-child {
+                            padding-right: 10px;
+
+                            @include maxpoint($desktop) {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+
+                    .o-button {
+                        height: 50px;
+                        width: 316px;
+                    }
+                }
+
+                .o-header-title-slant {
+                    padding: 13px 16px 13px;
+                    margin-left: 2px;
+                    width: auto;
+
+                    @include  maxpoint($desktop) {
+                        margin-left: 40px;
+                    }
+
+                    &.not-registered {
+                        @include  maxpoint($desktop) {
+                            margin-left: -17px;
+                        }
+                    }
+                }
+
+                .header {
+                    font-weight: 700;
+                    font-size: 16px;
+                    
+                    &--mobile {
+                        line-height: 130%;
+                        letter-spacing: -0.02em;
+                        text-align: center;
+                        margin: 0 -60px 0 20px !important;
+                        position: absolute;
+                        z-index: 1;
+                        left: 45%;
+                        top: 32px;
+                        transform: translateX(-50%);
+    
+                        @include maxpoint($desktop) {
+                            display: none;
+                        }
+                    }
+    
+                    &--desktop {
+                        display: none;
+    
+                        @include maxpoint($desktop) {
+                            display: block;
+                            font-size: 16px;
+                            margin-bottom: 16px;
+                            line-height: 130%;
+                            letter-spacing: -0.02em;
+                        }
+                    }
+                }
+
+
+                .rewards-container-mobile-only {
+                    margin-top: -6px;
+                    @include desktop-md {
+                        display: none;
+                    }
+                }
+
+                .rewards-container-desktop-only {
+                    //display: none;
+                    @include desktop-md {
+                        border: 1px solid $color-n150;
+                        display: flex;
+                        margin: 0 0 31px;
+                        overflow: hidden;
+                    }
+                }
+
+                .rewards-intro-card {
+                    border: 1px solid #F1F1F1;
+                    border-radius: 2px;
+                    padding-bottom: 32px;
+
+                    @include desktop-md {
+                        display: none;
+
+                        &__content {
+                            border: 1px solid #F1F1F1;
+                            padding: 23px 0 23px 25px;
+
+                            & > p {
+                                max-width: 365px;
+                                color: $color-p250;
+                            }
+                        }
+                    }
+                    &__images {
+                        background-image: url(images/you-do-you/store-element-mb.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        height: 240px;
+                        padding-top: 28px;
+                        margin-bottom: 58px;
+
+                        @include desktop-md {
+                            background-image: url(images/you-do-you/store-element-dt.png);
+                            height: auto;
+                            padding-top: 32px;
+                            margin-bottom: 0;
+                            flex-basis: percentage(275 / 860);
+                            position: relative;
+                        }
+                    }
+
+                    &__logo-wrapper {
+                        width: 177px;
+                        height: 210px;
+                        margin-top: 5px;
+
+                        @include desktop-md {
+                            width: 227px;
+                            height: 271px;
+                            margin-top: 24px;
+
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    &__content-wrapper {
+                        text-align: center;
+                        padding: 0 40px;
+
+                        p.body-1--bold {
+                            letter-spacing: normal;
+                        }
+
+                        @include desktop-md {
+                            display: flex;
+                            flex-direction: column;
+                            flex-basis: percentage(585 / 860);
+                            border-left: 1px solid $color-n150;
+                            padding: 0;
+                            text-align: unset;
+                        }
+                    }
+
+                    &__welcome {
+                        font-family: 'SignPainter', serif;
+                        font-style: italic;
+                        font-weight: 600;
+                        font-size: 25px;
+                        line-height: 120%;
+                        letter-spacing: -0.02em;
+
+                        @include desktop-md {
+                            font-size: 32px;
+                            line-height: 130%;
+                            position: absolute;
+                            left: 32px;
+                        }
+                    }
+                }
+                
+
+                .rewards-order-card {
+                    background-color: #F1F1F1;
+                    border-radius: 2px;
+                    padding: 24px;
+                    margin-top: 24px;
+                    text-align: center;
+
+                    @include maxpoint($desktop) {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 0;
+                        padding: 24px 123px;
+                    }
+
+                    & > *:not(:last-child) {
+                        margin-bottom: 18px;
+                    }
+
+                    .order {
+                        &_count {
+                            font-family: "Circular Std";
+                            font-size: 20px;
+                            line-height: 25px;
+                            color: $color-p250;
+
+                            @include maxpoint($desktop) {
+                                margin-bottom: 5px;
+                            }
+                            span.h2 {
+                                font-size: 28px;
+                                color: $color-p100;
+                                line-height: 110%;
+                                margin: 0 8px;
+
+                                @include desktop-md {
+                                    font-size: 34px;
+                                }
+                            }
+                        }
+
+                        &_remaining {
+                            font-family: "Circular Std";
+                            font-size: 14px;
+                            line-height: 130%;
+                            letter-spacing: -0.01em;
+
+                            span {
+                                &.h2 {
+                                    font-size: 16px;
+                                    letter-spacing: normal;
+                                    line-height: 20px;
+                                    margin: 0 8px;
+
+                                    @include desktop-md {
+                                        font-size: 17px;
+                                        line-height: 21px;
+                                    }
+                                }
+
+                                &:not(.h2) {
+                                    display: block;
+
+                                    @include desktop-md {
+                                        display: inline;
+                                    }
+                                }
+                            }
+                        }
+
+                        &_stamp-counter {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        &_stamp {
+                            z-index: 1;
+
+                            &--connector {
+                                width: 100%;
+                                // border: 1px dashed #2D3340;
+                                border-top: 1px dashed #2D3340;
+
+                                &.active {
+                                    // border: 1px solid #2D3340;
+                                    border-top: 1px solid #2D3340;
+                                }
+                            }
+
+                            &.active {
+                                .stamp-circle, .stamp-pizza-fill {
+                                    fill: $color-p100;
+                                }
+                                
+                            }
+                        }
+                    }
+
+                    .o-button {
+                        width: 100%;
+                        height: 50px;
+
+                        @include desktop-md {
+                            max-width: 279px;
+                            align-self: center;
+                        }
+                    }
+                }
+
+                .rewards-transactions-coupons-container {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include desktop-md {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                }
+
+                .rewards-transactions-card {
+                    order: 1;
+                    margin-top: 24px;
+
+                    @include desktop-md {
+                        margin: 0 31px 0 0;
+                        flex-basis: percentage(414/860)
+                    }
+                    &.switch {
+                        order: 2;
+
+                        @include desktop-md {
+                            order: 1;
+                        }
+
+                        .o-button {
+                            margin-bottom: 6px;
+
+                            @include maxpoint($desktop) {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    &--empty {
+                        .rewards-transactions-card__header {
+                            padding: 24px 24px 15px;
+                        }
+                    }
+
+                    &__header {
+                        background-color: #F1F1F1;
+                        padding: 24px 24px 31px;
+                        text-align: center;
+
+                        p {
+                            color: $color-n200;
+                        }
+                    }
+
+                    &__points {
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            color: $color-p150;
+                        }
+                    }
+                    
+                    &__list {
+                        margin: 32px auto 16px;
+
+                        .no-transaction {
+                            color: $color-n200;
+                            font-family: "Circular Std";
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 18px;
+                            text-align: center;
+                        }
+                    }
+
+                    &__items {
+                        margin-top: -32px;
+                    }
+
+                    &__item {
+                        padding: 16px 0;
+
+                        &:not(:first-child) {
+                            border-top: 1px solid rgba($color-n150, 0.5);
+                        }
+
+                        & > * {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        &--order-details p {
+                            font-family: "Circular Std";
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: $color-n200;
+                        }
+
+                        &--status-details p {
+                            color: $color-c150;
+                            margin-top: 4px;
+                        }
+                    }
+
+                    .o-button {
+                        width: 100%;
+                        height: 50px;
+                    }
+                }
+
+                .rewards-coupons-card {
+                    order: 2;
+                    background-color: #F1F1F1;
+                    padding: 24px 0 24px 24px;
+                    max-width: 100vw;
+                    margin: 24px -24px 0;
+                    
+                    @include desktop-md {
+                        width: 414px;
+                        height: 372px;
+                        margin: 0;
+                        padding: 24px 0 24px;
+                        overflow: hidden;
+                        flex-basis: percentage(414/860)
+                    }
+                    &.switch {
+                        order: 1;
+
+                        @include desktop-md {
+                            order: 2;
+                        }
+                    }
+
+                    &--empty {
+                        padding: 24px;
+                        margin: 24px 0 2px;
+
+                        @include desktop-md {
+                            margin: 0;
+                            height: 266px;
+                        }
+                    }
+
+                    &__header {
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 18px;
+
+                        img {
+                            margin: -6px 0 0 8px;
+                        }
+                    }
+
+                    &__list {
+                        overflow: hidden;
+                        
+                        @include desktop-md {
+                            overflow: visible;
+                            padding-left: 24px;
+                        }
+
+                        &--empty {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 20px;
+
+                            @include desktop-md {
+                                margin-left: -24px;
+                                margin-top: 38px;
+                            }
+
+                            img {
+                                width: 99.52px;
+                                height: 88px;
+                            }
+                        }
+
+                        .no-coupons {
+                            color: $color-n150;
+                            margin-top: 17px;
+                            padding: 0 40px;
+                            text-align: center;
+
+                            @include desktop-md {
+                                padding: 0 90px;
+                            }
+                        }
+                    }
+
+                    .coupon {
+                        max-width: 285px;
+                    
+                        &:not(:last-child) {
+                            margin-right: 24px;
+                        }
+
+                        @include desktop-md {
+                            max-width: unset;
+                            min-width: 285px;
+                        }
+
+                        &_container {
+                            display: flex;
+                            width: 100%;
+                        }
+
+                        &.birthday .coupon_top,
+                        &.birthday .coupon_tear,
+                        &.birthday .coupon_bottom {
+                            background-color: $color-n200;
+                        }
+
+                        &.birthday img {
+                        transform: scale(1);
+                        }
+
+                        &.claimed {
+                            .coupon_bottom {
+                                background-color: $color-n150 !important;
+                                padding: 43px 0 42px;
+                                position: relative;
+                                background-color: transparent !important;
+                                z-index: -1;
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    overflow: hidden;
+                                    width: 100%;
+                                    height: 100%;
+                                    opacity: 0.4;
+                                    top: 0;
+                                    background-color: $color-n150;
+                                    border-radius: 8px;
+                                    z-index: 1;
+                                }
+                            }
+
+                            .bottom-claimed {
+                                font-size: 16px;
+                                line-height: 130%;
+                                letter-spacing: -0.02em;
+                                color: $color-n200;
+                                margin: 0;
+                            }
+                        }
+
+                        &_top {
+                            background-color: $color-p250;
+                            border-radius: 8px;
+                            display: flex;
+                            padding: 20px 20px 22.15px 20px;
+                            height: 143px;
+
+                            @include desktop-md {
+                                padding: 20px 20px 27.15px 20px;
+                            }
+
+                            h4 {
+                                font-family: "Moderne LL", san-serif;
+                                text-transform: uppercase;
+                                color: $color-p100;
+                                font-size: 16px;
+                                line-height: 20px;
+                                letter-spacing: normal;
+                            }
+
+                            p {
+                                color: $color-n150;
+                                margin-top: 6px;
+                            }
+
+                            img {
+                                margin-right: 18px;
+                                width: 85px;
+                                height: 85px;
+                                align-self: flex-end;
+                                transform: scale(1.35);
+                            }
+                        }
+
+                        &_tear {
+                            background-color: $color-p250;
+                            position: relative;
+                            margin-top: -1px;
+
+                            &::before, &::after {
+                                content: '';
+                                position: absolute;
+                                background-color: #f1f1f1;
+                                width: 20px;
+                                height: 20px;
+                                top: -3px;
+                                border-radius: 50%;
+                                transform: translateX(-50%);
+                            }
+
+                            &::before {
+                                left: -0;
+                            }
+
+                            &::after {
+                                right: -20px;
+                            }
+
+                            &--line {
+                                border-bottom: 1px dashed #FFFFFF;
+                                padding-top: 5px;
+                            }
+                        }
+
+                        &_bottom {
+                            background-color: $color-p250;
+                            border-radius: 8px;
+                            padding: 18px 20px 16px 20px;
+                            margin-top: -1px;
+                            height: 106px;
+
+                            button {
+                                width: 244px;
+                                height: 50px;
+                            }
+
+                            p {
+                                color: $color-w150;
+                                margin-top: 8px;
+                                text-align: center;
+                            }
+                        }
+
+                        &_slider-buttons {
+                            display: none;
+                            @include desktop-md {
+                                display: block;
+                                text-align: center;
+                                margin: 19px 0 27px;
+                            }
+
+                            & > * {
+                                border: none;
+                                background: transparent;
+                            }
+                        }
+
+                    }
+                    .tns-visually-hidden {
+                        display: none;
+                    }
+                }
+
+                .body-1--bold {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}

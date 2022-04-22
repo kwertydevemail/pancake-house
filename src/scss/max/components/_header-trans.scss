@@ -1,0 +1,178 @@
+.o-header-trans {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+    background-color: #F7F6E6;
+    
+    background-image: url('images/nav/max-transaction-bg-mb.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+    padding: 138px 0 20px;
+    margin-bottom: -98px;
+    z-index: 1;
+
+    @include maxpoint ($tablet) {
+        padding: 38px 0 20px;
+        margin-bottom: 0;
+        background-image: url('images/nav/max-transaction-bg-dt.png');
+    }
+
+    &.with-address {
+        display: none;
+    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     background: url('images/nav/max-transaction-bg-dt.png') no-repeat;
+    //     background-size: contain;
+    //     width: 1280px;
+    //     height: 343px;
+    // }
+    .o-container {
+        position: relative;
+        z-index: 3;
+        & > .h5 {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 110%;
+            text-align: center;
+            color: #FC0000;
+            @include maxpoint($tablet) {
+                font-size: 29px;
+            }
+        }
+    }
+    &-cards {
+        margin-top: 32px;
+        margin-bottom: 19px;
+
+        @include maxpoint($tablet) {
+            display: flex;
+        }
+
+        @media only screen and (max-width: 820px) and (min-width: 768px) {
+            display: flex;
+        }
+
+        &_card {
+            width: 100%;
+            @include maxpoint($tablet) {
+                width: auto;
+            }
+
+            @media only screen and (max-width: 820px) and (min-width: 768px) {
+                width: 45%;
+            }
+    
+            padding: 0 8px;
+            &--detail {
+                figure {
+                    position: relative;
+                    filter: drop-shadow(0px 12px 24px rgba(84, 82, 73, 0.16));
+                    border-radius: 0px 0px 20px 20px;
+                    height: 180px;
+                    width: 100%;
+                    margin: 0 0 16px;
+                    @include maxpoint($tablet) {
+                        margin: 0;
+                        width: 322px;
+                        height: 200px;
+                        left: calc(50% - 322px/2);
+                        top: calc(50% - 104px/2 - 28px);
+                        margin: 0 0 24px;
+                    }
+
+                    img {
+                        width: 100%;
+                        left: calc(50% - 322px/2);
+                        top: calc(50% - 104px/2 - 28px);
+                        border-radius: 20px 20px 0px 0px;
+                        max-height: 131px;
+                        object-fit: cover;
+    
+                        @include maxpoint($tablet) {
+                            max-height: 152px;
+                        }
+                    }
+                    figcaption {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #ED1C24;
+                        padding: 15px 18px;
+                        width: 100%;
+                        transition: .3s ease;
+                        overflow: hidden;
+                        height: 54px;
+
+                        text-align: center;
+                        border-radius: 0px 0px 20px 20px;
+
+                        @include maxpoint($tablet) {
+                            padding: 12px 18px;
+                            height: 48px;
+                        }
+
+                        .h5 {
+                            font-size: 18px;
+                            line-height: 110%;
+                            align-items: center;
+                            color: #FFFFFF;
+                            font-style: normal;
+                            font-weight: bold;
+                            letter-spacing: unset;
+                            img {
+                                height: 24px;
+                                width: 24px;
+                                margin-bottom: -8px;
+                                margin-left: 8px;
+                                @include maxpoint($tablet) {
+                                    margin-bottom: -5px;
+                                }
+                            }
+                            @include maxpoint($tablet) {
+                                font-family: $primary-font;
+                                font-size: 18px;
+                                line-height: 110%;
+                            }
+                        }
+                        p {
+                            opacity: 1;
+                            visibility: visible;
+                            transition: .3s ease;
+                            color: $color-sbeige175;
+                            font-size: 13px;
+                            line-height: 16px;
+                            margin-top: 4px;
+                            @include maxpoint($tablet) {
+                                // opacity: 0;
+                                font-size: 12px;
+                                visibility: hidden;
+                                line-height: 14px;
+                            }
+                            @include maxpoint(tablet) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                @include maxpoint($tablet) {
+                    &:hover {
+                        figure figcaption {
+                            height: 66px;
+                            p {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

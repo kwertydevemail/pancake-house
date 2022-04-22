@@ -1,0 +1,75 @@
+.c-explore-cards {
+    margin: -19px 0 0 -19px;
+    &-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 0 0px 20px;
+        width: calc(50% - 19px);
+        min-width: 152px;
+        margin: 19px 0 0 19px;
+        @include maxpoint($tablet) {
+            width: calc(33.333% - 19px);
+            margin-bottom: 21px;
+        }
+        @include maxpoint($desktop) {
+            width: calc(25% - 19px);
+        }
+        &_item {
+            figure {
+                width: 100%;
+                height: 172px;
+                margin-bottom: 20px;
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            &--detail {
+                height: 120px;
+                text-align: center;
+                .h6 {
+                    font-family: $primary-font;
+                    font-size: 20px;
+                    line-height: 110%;
+                    font-weight: 700;
+                    color: $color-p30;
+                    margin-bottom: 8px;
+                }
+                & > span {
+                    font-family: $secondary-font;
+                    color: $color-p20;
+                    font-size: 16px;
+                    line-height: 120%;
+                    margin-bottom: 24px;
+                }
+                .o-button {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 9px 11px;
+                    position: relative;
+                    border-top-left-radius: 15px;
+                    @include maxpoint($tablet) {
+                        padding: 12px 24px;
+                        width: auto;
+                    }
+                    i {
+                        margin-left: 6.5px;
+                        @include maxpoint($tablet) {
+                            margin-left: 8px;
+                        }
+                    }
+                    span {
+                        font-size: 12px;
+                        line-height: 100%;
+                        text-align: center;
+                        padding-top: 0;
+                        position: relative;
+                        top: 1px;
+                        color: #FFEFC1;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,175 @@
+.c-confirmation {
+    padding: 47px 0 0;
+    @include maxpoint($tablet) {
+        padding: 69px 0 0;
+    }
+    background: $color-n150 url('images/product/section-graphics-mb.png');
+    @include maxpoint($tablet) {
+        background: $color-n150 url('images/product/section-graphics.png');
+    }
+
+    .o-header-title {
+        max-width: 376px;
+        font-size: 34px;
+        line-height: 37.4px;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+        padding: 0 0 0 24px;
+        @include maxpoint(966px) {
+            padding: 0;
+        }
+        .ic-registered-sm {
+            width: 16px;
+            height: 16px;
+            margin-bottom: 12.76px;
+            position: relative;
+            left: -4px;
+            margin-right: -5px;
+        }
+    }
+    .c-standard-layout {
+        &-content {
+            padding: 48px 0 0;
+            border-top: 8px solid $color-p100;
+            @include maxpoint(966px) {
+                padding: 40px 64px 40px 48px;
+            }
+            &_display {
+                flex-direction: row;
+                @media only screen and (max-width: 965px) {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+    &-track {
+        width: 100%;
+        max-width: 633px;
+        padding: 0 24px 32px;
+        @include maxpoint(966px) {
+            margin-right: 17px;
+            padding: 0;
+        }
+        & > p {
+            font-size: 14px;
+            line-height: 18.2px;
+            letter-spacing: -0.01em;
+            color: $color-t250;
+            font-weight: normal;
+            margin-bottom: 8px;
+            @include maxpoint(966px) {
+                margin-bottom: 16px;
+            }
+            &.for-title {
+                max-width: 574px;
+            }
+            &.for-inquiries {
+                margin-bottom: 24px;
+            }
+        }
+        & > .h4 {
+            font-family: $primary-font;
+            font-size: 29px;
+            line-height: 36px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-weight: 900;
+        }
+        & > .o-button {
+            width: 100%;
+            margin-bottom: 24px;
+            @include maxpoint(966px) {
+                max-width: 260px;
+            }
+        }
+        & > .h5 {
+            margin-bottom: 8px;
+        }
+        &_user {
+            margin-bottom: 24px;
+            span {
+                font-family: $secondary-font;
+                color: $color-t250;
+                font-size: 14px;
+                line-height: 18.2px;
+                letter-spacing: -0.01em;
+                font-weight: normal;
+                padding: 4px 0;
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .o-divider {
+            margin: 0 0 24px;
+            border: 0;
+            background-image: linear-gradient(to right, #333 45%, rgba(255, 255, 255, 0) 20%);
+            background-position: 0 100%;
+            background-size: 4px 2px;
+            background-repeat: repeat-x;
+            height: 1px;
+        }
+        &_details {
+            margin-bottom: -24px;
+            flex-wrap: wrap-reverse;
+            @include maxpoint(1185px) {
+                flex-wrap: wrap;
+            }
+            &--card {
+                width: 100%;
+                margin-bottom: 24px;
+                @include maxpoint(966px) {
+                    max-width: 304.5px;
+                }
+                &:first-child {
+                    @include maxpoint(966px) {
+                        margin-right: 24px;
+                    }
+                }
+                .h5 {
+                    margin-bottom: 14px;
+                }
+                .info-card {
+                    max-width: unset;
+                    min-height: 232px;
+                    margin-left: 0;
+                    &_icon {
+                        flex: unset;
+                        @include maxpoint(966px) {
+                            flex: auto;
+                        }
+                    }
+                    &_detail {
+                        max-width: 208px;
+                        @include maxpoint(966px) {
+                            max-width: unset;
+                        }
+                    }
+                    .for-payment-detail {
+                        .h6 {
+                            text-transform: uppercase;
+                            letter-spacing: 0.09em;
+                        }
+                        span {
+                            font-weight: 300;
+                            margin-bottom: 16px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .c-checkout-summary {
+        min-width: 375px;
+        @include maxpoint(966px) {
+            max-width: calc(100% - 650px);
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.c-breadcrumbs {
+    background-color: $color-p40;
+    position: relative;
+    overflow: hidden;
+    padding: 21px 64px;
+    max-width: 1182px;
+    margin: 0 auto;
+
+    border-radius: 20px 20px 0px 0px;
+    .o-container {
+        position: relative;
+        z-index: 3;
+        padding: 0;
+        
+    }
+    
+    & > div > ul {
+        display: none;
+        @include maxpoint($tablet) {
+            display: flex;
+        }
+        & > li {
+            padding: 0 12px;
+            position: relative;
+            &::before {
+                content: url('images/ph-slash.svg');
+                position: absolute;
+                right: -4px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:first-child a {
+                margin-top: 1px;
+            }
+            &:last-child::before {
+                content: '';
+            }
+            a {
+                font-family: $primary-font;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 120%;
+                color: $color-p60;
+                margin-bottom: 5px;
+                display: inline-flex;
+                margin-bottom: 4px;
+            }
+            &:nth-child(n+3) a {
+                font-weight: normal;
+            }
+        }
+    }
+    .o-button {
+        display: flex;
+        @include maxpoint($tablet) {
+            display: none;
+        }
+        span {
+            text-transform: unset;
+        }
+    }
+}

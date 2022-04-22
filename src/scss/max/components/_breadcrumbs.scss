@@ -1,0 +1,101 @@
+.c-breadcrumbs {
+    background: #FEFDF4;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+
+    @include maxpoint($tablet) {
+        padding: 32px 0 31px;
+    }
+
+    & > div > a {
+        display: flex;
+        padding: 16px 0 18px 16px;
+        align-items: center;
+        @include maxpoint($tablet) {
+            display: none;
+        }
+        span {
+            margin-left: 8px;
+            font-family: New Transport;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 120%;
+            color: #241F20;
+        }
+    }
+
+    .o-container {
+        position: relative;
+        z-index: 3;
+        padding: 0 16px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        @include maxpoint($tablet) {
+            padding: 0 64px;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    }
+    @include maxpoint($tablet) {
+        padding: 12.6px 0 12.6px;
+    }
+    &::before, &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-size: contain;
+    }
+    & > div > ul {
+        display: none;
+        @include maxpoint($tablet) {
+            display: flex;
+        }
+        & > li {
+            padding: 0 12px;
+            position: relative;
+            &::before {
+                content: url('images/ic_max-slash.svg');
+                position: absolute;
+                right: -4px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:first-child a {
+                margin-top: 1px;
+                line-height: 0;
+            }
+            &:last-child::before {
+                content: '';
+            }
+            a {
+                font-family: $secondary-font;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 120%;
+                color: #939598;
+            }
+            &:nth-child(n+3) a {
+                font-weight: 900;
+                color: #241F20;
+            }
+        }
+    }
+    .o-button {
+        display: flex;
+        @include maxpoint($tablet) {
+            display: none;
+        }
+        span {
+            padding-top: 21px;
+            padding-bottom: 21px;
+            text-transform: unset;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 120%;
+            color: #241F20;
+        }
+    }
+}

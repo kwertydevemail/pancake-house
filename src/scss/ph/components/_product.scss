@@ -1,0 +1,486 @@
+.c-product {
+    background: $color-t25;
+    min-height:  300px;
+    padding: 72px 0 32px;
+    @include maxpoint($tablet) {
+        padding: 64px 0;
+    }
+    .o-container {
+        padding: 0;
+        max-width: 1182px;
+    }
+    &-content {
+        gap: 55px;
+        padding: 0;
+        @include maxpoint($tablet) {
+            padding: 0 20px;
+        }
+        @include maxpoint($desktop-md) {
+            padding: 0;
+        }
+        &_nav {
+            overflow: auto;
+            width: 100%;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            @include maxpoint($tablet) {
+                width: 181px;
+            }
+            & > li {
+                background-color: $color-n000;
+                font-family: $primary-font;
+                color: $color-p20;
+                font-size: 16px;
+                letter-spacing: -0.02em;
+                line-height: 130%;
+                font-weight: bold;
+                transition: .2s ease;
+                margin-right: 8px;
+                padding: 16px 18px;
+                border-radius: 10px;
+                text-align: center;
+                @include maxpoint($tablet) {
+                    margin-bottom: 8px;
+                    padding: 20px 16px;
+                    min-height: 54px;
+                    margin-right: 0;
+                }
+                &.active,
+                &:hover {
+                    background-color: #FFC20E;
+                    color: $color-p20;
+                }
+            }
+        }
+        &_panel {
+            display: none;
+            width: 100%;
+            position: relative;
+            top: -1px;
+            padding: 0px 20px 31px;
+            // @include maxpoint($tablet) {
+            //     width: calc(100% - 220px);
+            //     top: unset;
+            //     padding: 32px 0px 31px;
+            // }
+            // @include maxpoint($desktop) {
+            //     padding: 76px 0px 24px;
+            // }
+            // @include maxpoint(1050px) {
+            //     padding: 76px 0px 24px;
+            // }
+            // @include maxpoint($desktop-md) {
+            //     padding: 76px 0px 24px;
+            // }
+            &.active {
+                display: flex;
+            }
+            
+            &--list, &--detail {
+                position: relative;
+                border-top: 0;
+                @include maxpoint($desktop) {
+                    border-top: 5px solid $color-t250;
+                }
+                & > .h3 {
+                    position: relative;
+                    background-color: $color-p250;
+                    color: #fff;
+                    font-family: $primary-font;
+                    text-transform: uppercase;
+                    display: inline-flex;
+                    transform: rotate(-5deg);
+                    padding: 17.33px;
+                    margin-bottom: 40px;
+                    top: unset;
+                    line-height: 32px;
+                    font-size: 26px;
+                    letter-spacing: -0.02em;
+                    @include maxpoint($desktop) {
+                        min-height: 56px;
+                        padding: 11px 27px 4px;
+                        font-size: 29px;
+                        line-height: 36px;
+                        margin-bottom: 0;
+                        top: -45px;
+                        position: absolute;
+                    }
+                }
+            }
+            &.for-default {
+                .c-product-content_panel {
+                    &--list, &--detail {
+                        display: none;
+                        &.active {
+                            display: block;
+                        }
+                        @include maxpoint($desktop) {
+                            display: block;
+                        }
+                    }
+                    &--list {
+                        position: relative;
+                        width: 100%;
+                        padding: 10px 0 0;
+                        @include maxpoint(925px) {
+                            padding: 50px 30px 0 0;
+                        }
+                        @include maxpoint(1050px) {
+                            padding: 50px 48px 0 0;
+                        }
+                        @include maxpoint($desktop) {
+                            width: calc(100% - 460px);
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                top: 39px;
+                                bottom: 24px;
+                                border-right: 2px dashed $color-t250;
+                            }
+                        }
+                        & > .h3 {
+                            left: unset;
+                            @include maxpoint($tablet) {
+                                left: -5px;
+                            }
+                        }
+                        .explore-list {
+                            margin: 0 -5px -24px;
+                            @include maxpoint($tablet) {
+                                margin: 0 -5px -32px;
+                            }
+                            @include maxpoint($desktop) {
+                                margin: 0;
+                            }
+                            & > li {
+                                margin-bottom: 26px;
+                                padding: 0 5px;
+                                @include maxpoint($tablet) {
+                                    margin-bottom: 32px;
+                                    width: 50%;
+                                }
+                                @include maxpoint($desktop) {
+                                    width: auto;
+                                    padding: 0;
+                                }
+                                figure {
+                                    margin-right: 20px;
+                                    width: 134px;
+                                    height: 128px;
+                                    @include maxpoint($desktop) {
+                                        width: 100px;
+                                        height: 100px;
+                                    }
+                                    @include maxpoint(1050px) {
+                                        width: 150px;
+                                        height: 150px;
+                                        margin-right: 32px;
+                                    }
+                                    img {
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            &-detail {
+                                width: calc(100% - 155px);
+                                @include maxpoint($tablet) {
+                                    width: calc(100% - 120px);
+                                }
+                                @include maxpoint(1050px) {
+                                    width: calc(100% - 182px);
+                                }
+                                & > .h5 {
+                                    margin: 0 0 8px;
+                                    @include maxpoint($tablet) {
+                                        margin: 0;
+                                    }
+                                }
+                                a {
+                                    color: $color-p250;
+                                    font-size: 20px;
+                                }
+                                & > span {
+                                    color: $color-p100;
+                                    font-family: $primary-font;
+                                    letter-spacing: -0.02em;
+                                    line-height: 130%;
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    margin-bottom: auto;
+                                    @include maxpoint($desktop) {
+                                        margin-bottom: 14px;
+                                    }
+                                }
+                                p {
+                                    color: $color-p200;
+                                    font-size: 14px;
+                                    line-height: 130%;
+                                    letter-spacing: -0.01em;
+                                    margin-bottom: auto;
+                                    display: none;
+                                    @include maxpoint($desktop) {
+                                        max-width: 181px;
+                                        display: block;
+                                    }
+                                }
+                                .o-button {
+                                    width: 100%;
+                                    justify-content: center;
+                                    padding: 9px 12.5px;
+                                    margin-top: 10px;
+                                    @include maxpoint($tablet) {
+                                        padding: 9px 16px;
+                                        width: auto;
+                                    }
+                                    span {
+                                        font-size: 15px;
+                                        line-height: 19.05px;
+                                        @include maxpoint($tablet) {
+                                            font-size: 9px;
+                                            line-height: 120%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &--detail {
+                        width: 100%;
+                        padding: 0;
+                        @include maxpoint(925px) {
+                            padding: 50px 0 0 20px;
+                        }
+                        @include maxpoint(1050px) {
+                            padding: 50px 0 0 48px;
+                        }
+                        @include maxpoint($desktop) {
+                            width: 460px;
+                        }
+                        & > .o-button-white {
+                            margin-bottom: 40px;
+                            @include maxpoint($desktop) {
+                                display: none;
+                            }
+                        }
+                        & > .h3 {
+                            @include maxpoint ($desktop) {
+                                left: unset;
+                            }
+                        }
+                        .category-content {
+                            &-ctas {
+                                margin-bottom: 20px;
+                                order: 3;
+                                width: 100%;
+                                @include maxpoint($desktop) {
+                                    order: 2;
+                                    width: unset;
+                                }
+                                .o-button {
+                                    padding: 15.5px;
+                                    justify-content: center;
+                                    width: 100%;
+                                    span {
+                                        font-size: 15px;
+                                        line-height: 19px;
+                                    }
+                                    i {
+                                        margin-left: 15px;
+                                    }
+                                    @include maxpoint($desktop) {
+                                        padding: 9px 16px;
+                                        span {
+                                            font-size: 9px;
+                                            line-height: 120%;
+                                        }
+                                        i {
+                                            margin-left: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                            &-titles {
+                                margin: 0 auto 30px 0;
+                                display: none;
+                                @include maxpoint($desktop) {
+                                    display: block;
+                                }
+                                .h4 {
+                                    text-transform: unset;
+                                }
+                                span {
+                                    color: $color-p100;
+                                    font-family: $primary-font;
+                                    letter-spacing: -0.02em;
+                                    line-height: 130%;
+                                    font-weight: bold;
+                                    margin-bottom: 14px;
+                                    font-size: 16px;
+                                }
+                            }
+                            &-details {
+                                width: 100%;
+                                order: 2;
+                                @include maxpoint($desktop) {
+                                    order: 3;
+                                }
+                                figure {
+                                    width: 100%;
+                                    margin-bottom: 24px;
+                                    height: 249.78px;
+                                    @include maxpoint($desktop) {
+                                        margin-bottom: 32px;
+                                        height: 263px;
+                                    }
+                                    img {
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                                &_descriptions {
+                                    border-top: 1px solid $color-p100;
+                                    padding: 40px 0 0;
+                                    @include maxpoint($desktop) {
+                                        padding: 32px 0 0;
+                                    }
+                                    p {
+                                        font-size: 14px;
+                                        line-height: 130%;
+                                        letter-spacing: -0.01em;
+                                        color: $color-p200;
+                                        margin-bottom: 20px;
+                                        &:last-child {
+                                            margin-bottom: 24px;
+                                        }
+                                        @include maxpoint($desktop) {
+                                            &:last-child {
+                                                margin-bottom: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            &.for-standard {
+                
+                .c-product-content_panel {
+                    &--legend {
+                        position: relative;
+                        display: block;
+                        @include maxpoint($desktop) {
+                            border-bottom: 5px solid $color-p30;
+                            padding-bottom: 17px;
+                            display: flex;
+                        }
+                        h3 {
+                            font-family: $primary-font;
+                            font-weight: 700;
+                            font-size: 50px;
+                            line-height: 110%;
+                            color: #7B2E1B;
+                        }
+                        .o-header-title-slant {
+                            font-size: 50px;
+                            line-height: 110%;
+                            display: inline-flex;
+                            position: relative;
+                            letter-spacing: normal;
+                            text-transform: none;
+                        }
+                        &__content {
+                            margin: 45px 0 8.53px auto;
+                            @include maxpoint($desktop) {
+                                width: 405px;
+                                margin: 0 0 0 auto;
+                            }
+                            & > .h6 {
+                                font-family: $primary-font;
+                                font-weight: normal;
+                                font-size: 16px;
+                                color: $color-p250;
+                                line-height: 120%;
+                                margin: 0 0 8px;
+                                @include maxpoint($desktop) {
+                                    margin: 0 17px 0 0;
+                                }
+                            }
+                            & > ul {
+                                margin: 0 -8px;
+                                width: 195px;
+                                @include maxpoint($tablet) {
+                                    width: auto;
+                                }
+                                & > li {
+                                    padding: 0 8px 8px;
+                                    @include maxpoint($desktop) {
+                                        padding: 0 8px;
+                                    }
+                                    span {
+                                        font-family: $primary-font;
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                        color: $color-p250;
+                                        line-height: 120%;
+                                        @extend .h6;
+                                        padding: 0 0 0 39px;
+                                        position: relative;
+                                        &.ph-specialty {
+                                            &::before {
+                                                position: absolute;
+                                                left: 0;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                height: 31px;
+                                            }
+                                        }
+                                        &.ph-specialty::before{
+                                            content: url('images/ph-specialty.svg');
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &--detail {
+                        width: 100%;
+                        border-top: 0;
+                        @include maxpoint($desktop) {
+                            padding: 70px 6.5px 0;
+                        }
+                    }
+                }
+            }
+            &.for-other-item {
+                h3 {
+                    font-family: $primary-font;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 110%;
+                    color: #7B2E1B;
+                }
+                .o-header-title-slant {
+                    font-size: 50px;
+                    line-height: 110%;
+                    display: inline-flex;
+                    position: relative;
+                }
+                .c-product-content_panel--detail {
+                    padding: 50px 0 0;
+                    @include maxpoint($desktop) {
+                        padding: 70px 6.5px 0;
+                    }
+                }
+            }
+            
+        }
+    }
+}

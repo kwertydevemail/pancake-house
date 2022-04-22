@@ -1,0 +1,58 @@
+.info-card {
+    padding: 24px;
+    min-height: 109px;
+    background-color:#F3F2F2;
+    border-radius: 3px;
+    width: 100%;
+    margin-left: 14px;
+    @include maxpoint($tablet) {
+        max-width: 220px;
+        margin-left: 0;
+    }
+    &_icon {
+        flex: auto;
+        margin-right: 16px;
+        width: 32px;
+    }
+    &_detail {
+        flex: auto;
+        width: 100%;
+        .h6, span {
+            // color: $color-t250;
+            // font-size: 14px;
+        }
+        .h6 {
+            // line-height: 17.71px;
+            // font-weight: bold;
+            margin-bottom: 8px;
+
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 120%;
+            color: #241F20;
+        }
+        span {
+            font-family: $secondary-font;
+            // line-height: 18.2px;
+            // letter-spacing: -0.01em;
+            // font-weight: normal;
+            // font-style: normal;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            color: #5B5853;
+
+            margin-bottom: 8px;
+            word-break: break-word;
+            &:nth-child(3) {
+                word-break: break-word;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+        }
+    }
+}

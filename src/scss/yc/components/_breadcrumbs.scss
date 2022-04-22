@@ -1,0 +1,81 @@
+.c-breadcrumbs {
+    background-color: $color-p100;
+    position: relative;
+    overflow: hidden;
+    padding: 32px 0 31px;
+    .o-container {
+        position: relative;
+        z-index: 3;
+        padding: 0 24px;
+        @include maxpoint($tablet) {
+            padding: 0 64px;
+        }
+    }
+    @include maxpoint($tablet) {
+        padding: 40px 0 93px;
+    }
+    &::before, &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-size: contain;
+    }
+    &::before {
+        content: url('images/breadcrumbs/section-graphics-mb-1.png');
+        width: 191px;
+        height: 213px;
+        top: -200px;
+        @include maxpoint($tablet) {
+            content: url('images/breadcrumbs/section-graphics-1.png');
+            width: 649px;
+            height: 310px;
+            top: -629px;
+        }
+    }
+    & > div > ul {
+        display: none;
+        @include maxpoint($tablet) {
+            display: flex;
+        }
+        & > li {
+            padding: 0 12px;
+            position: relative;
+            &::before {
+                content: url('images/ic_slash.svg');
+                position: absolute;
+                right: -4px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:first-child a {
+                margin-top: 1px;
+            }
+            &:last-child::before {
+                content: '';
+            }
+            a {
+                font-family: $secondary-font;
+                letter-spacing: -0.02em;
+                color: $color-t250;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 130%;
+                margin-bottom: 5px;
+                display: inline-flex;
+                margin-bottom: 4px;
+            }
+            &:nth-child(n+3) a {
+                font-weight: normal;
+            }
+        }
+    }
+    .o-button {
+        display: flex;
+        @include maxpoint($tablet) {
+            display: none;
+        }
+        span {
+            text-transform: unset;
+        }
+    }
+}

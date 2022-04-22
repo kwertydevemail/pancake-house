@@ -1,0 +1,312 @@
+.c-default-details {
+    background-color: #eee;
+    padding: 0 0 40px;
+    .o-container {
+        max-width: 1182px;
+        padding: 0;
+        > .o-header-title {
+            padding: 24px 34px;
+            font-size: 34px;
+            line-height: 100%;
+            color: $color-p10;
+            font-weight: 700;
+            background: $color-p30;
+        }
+    }
+    &-content {
+        flex-wrap: wrap;
+        position: relative;
+        border-radius: 4px;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 0px 20px 20px;
+        &-title {
+            // flex: 0 0 100%;
+            
+        }
+        &_display {
+            padding: 0 16px;
+            width: 100%;
+            @include maxpoint($tablet) {
+                padding: 0;
+                width: 300px;
+            }
+            @include maxpoint($desktop) {
+                width: 400px;
+            }
+            @include maxpoint(1000px) {
+                width: 495px;
+            }
+            @include maxpoint(1100px) {
+                width: 522px;
+            }
+            & > p {
+                letter-spacing: -0.02em;
+                color: $color-t250;
+                margin-bottom: 16px;
+                font-size: 16px;
+                line-height: 18.2px;
+                @include maxpoint($tablet) {
+                    margin-bottom: 30px;
+                }
+                &.italize {
+                    font-size: 12px;
+                    color: $color-t200;
+                    letter-spacing: -0.01em;
+                    color: $color-p70;
+                    margin-bottom: 16px;
+                    
+                }
+                &:nth-child(n+2) {
+                    font-style: normal;
+
+                }
+                
+                &:last-child {
+                    
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 120%;
+                    margin-bottom: 32px;
+                    @include maxpoint($tablet) {
+                        margin-bottom: unset;
+                    }
+                }
+                &:first-child {
+                    margin-top: 16px;
+                    @include maxpoint($tablet) {
+                        margin-top: unset;
+                        max-width: 456px;
+                        width: 100%;
+                    }
+                }
+            }
+            figure {
+                width: 100%;
+                height: 343px;
+                position: relative;
+                margin-bottom: 16px;
+                @include maxpoint($tablet) {
+                    width: 100%;
+                    margin-bottom: 32px;
+                }
+                @include maxpoint(1000px) {
+                    width: 458px;
+                    height: 458px;
+                }
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                    // @include maxpoint($tablet) {
+                    //     object-fit: cover;
+                    // }
+                }
+            }
+        }
+        & > .o-header-title-slant {
+            font-size: 32px;
+            padding: 13.56px 16.81px 11.36px;
+            top: -15px;
+            position: relative;
+            margin: 0 27.5px;
+            left: 0;
+            max-width: 260px;
+            @include maxpoint($tablet) {
+                top: -55px;
+                font-size: 50px;
+                padding: 18px 25px;
+                left: 38px;
+                position: absolute;
+                margin: 0;
+                max-width: unset;
+            }
+        }
+        &_form {
+            width: 100%;
+            padding: 40px;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            @include maxpoint($tablet) {
+                width: calc(100% - 300px);
+            }
+            @include maxpoint($desktop) {
+                width: calc(100% - 400px);
+            }
+            @include maxpoint(1000px) {
+                width: calc(100% - 495px);
+            }
+            @include maxpoint(1100px) {
+                width: calc(100% - 522px);
+            }
+            .o-header-title {
+                font-size: 29px;
+                line-height: 110%;
+                font-weight: 700;
+                color: $color-p20;
+                letter-spacing: -0.02em;
+                margin-bottom: 33px;
+                
+            }
+            & > span {
+                font-family: $secondary-font;
+                color: $color-t250;
+                font-size: 20px;
+                line-height: 25px;
+                display: block;
+                padding-left: 0;
+                margin-bottom: 24px;
+               
+            }
+            &--details {
+                margin: 0;
+                .line-subtext {
+                    display: none;
+                    @include maxpoint($tablet) {
+                        display: block;
+                    }
+                }
+                & > p {
+                    color: $color-t250;
+                    font-size: 15px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+                &__multi {
+                    display: flex;
+                    flex-wrap: wrap;
+                    label {
+                        width: 100%;
+                    }
+                    .o-form-dropdown_input {
+                        margin: 0 0 15px 0;
+                        @include maxpoint($tablet) {
+                            margin: 0 31px 15px 0;
+                            max-width: 212px;
+                        }
+                    }
+                }
+                .order-summary {
+                    &.active {
+                        background-color: $color-t25;
+                        & > .h3, p, .h5, .order-summary-list {
+                            display: block;
+                        }
+                        .order-summary-total {
+                            display: flex;
+                        }
+                    }
+                    & > .h3, p, .h5, .order-summary-list, .order-summary-total {
+                        display: none;
+                    }
+                    margin: 0 -24px;
+                    width: calc(100% + 48px);
+                    padding: 24px 24px 32px;
+                    @include maxpoint($tablet) {
+                        max-width: 598px;
+                        width: 100%;
+                        margin: 0 -20px 0 0;
+                        padding: 26px 39px 34px;
+                    }
+                    & > .h3 {
+                        font-size: 24px;
+                        line-height: 30px;
+                        font-weight: bold;
+                        margin-bottom: 2px;
+                    }
+                    & > p {
+                        font-size: 16px;
+                        line-height: 130%;
+                        margin-bottom: 26px;
+                        color: $color-t250;
+                    }
+                    & > .h5 {
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 130%;
+                        margin-bottom: 15px;
+                    }
+                    &-list {
+                        padding-bottom: 32px;
+                        border-bottom: 1px solid $color-t50;
+                        margin-bottom: 16px;
+                        @include maxpoint($tablet) {
+                            margin-bottom: 29px;
+                        }
+                        li {
+                            letter-spacing: -0.01em;
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 130%;
+                            font-family: $secondary-font;
+                            display: flex;
+                            align-items: center;
+                            color: $color-t250;
+                            position: relative;
+                            &.item-indent {
+                                padding-left: 16px;
+                                @include maxpoint($tablet) {
+                                    padding-left: 35px;
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            &.filled {
+                                margin-bottom: 11px;
+                                @include maxpoint($tablet) {
+                                    margin-bottom: 8px;
+                                }
+                                &::after {
+                                    content: '-';
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    letter-spacing: -0.02em;
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    font-family: $secondary-font;
+                                    position: absolute;
+                                }
+                            }
+                            &.hidden {
+                                display: none;
+                            }
+                        }
+                        &_title {
+                            margin-bottom: 11px;
+                            @include maxpoint($tablet) {
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                    &-total  {
+                        margin-bottom: 40px;
+                        @include maxpoint($tablet) {
+                            margin-bottom: 31px;
+                        }
+                        & > h5 {
+                            font-size: 18px;
+                            line-height: 23px;
+                        }
+                        & > span {
+                            font-family: $secondary-font;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 20px;  
+                            letter-spacing: -0.02em;
+                            color: $color-n250;
+                        }
+                    }
+                    .o-button {
+                        width: 100%;
+                        max-width: 372px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

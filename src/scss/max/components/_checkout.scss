@@ -1,0 +1,1270 @@
+.c-checkout {
+    // padding: 0;
+    // background: $color-n150 url('images/product/section-graphics-mb.png');
+    // @include maxpoint($tablet) {
+    //     background: $color-n150 url('images/product/section-graphics.png');
+    // }
+    // .c-breadcrumbs {
+    //     display: block;
+    //     padding: 32px 24px;
+    //     @include maxpoint($tablet) {
+    //         padding: 40px 0 93px;
+    //     }
+    // }
+    .o-header-title-slant {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 34px;
+        line-height: 110%;
+        letter-spacing: unset;
+        margin-left: 16px;
+        position: unset;
+        display: flex;
+
+        @include maxpoint($tablet) {
+            font-weight: 900;
+            font-size: 34px;
+            line-height: 110%;
+
+            margin-left: 0px;
+            position: absolute;
+            display: contents;
+        }
+        
+    }
+    .c-standard-layout {
+        &-content {
+            padding: 40px 0 40px;
+            @include maxpoint(966px) {
+                padding: 56px 32px;
+            }
+            &_display {
+                flex-direction: column-reverse;
+                @include maxpoint(966px) {
+                    flex-direction: row;
+                }
+                @media only screen and (max-width: 965px) {
+                    flex-wrap: wrap;
+                }
+                @media only screen and (max-width: 820px) and (min-width: 768px)  {
+                    width: 100%;
+                }
+
+                .o-form-timeline {
+                    .o-form-group {
+
+                        @media only screen and (max-width: 820px) and (min-width: 768px)  {
+                            width: 80%;
+                        }
+
+                        padding-bottom: 16px;
+
+                        &:first-child {
+                            @media only screen and (max-width: 400px) and (min-width: 375px)  {
+                                .o-form-panels_card--detail {
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
+
+                        &.for-payment {
+                            &::before {
+                                display: none;
+                            }
+
+                            .o-form-panels_card {
+                                @media only screen and (max-width: 1024px) and (min-width: 375px)  {
+                                    padding: 0 0 8px 0;
+                                    &:last-child {
+                                        padding: 0 0 0 !important;
+                                    }
+                                }
+                            }
+                        }
+
+                        &_card {
+                            .info-card {
+                                width: 278px;
+                                @include maxpoint(966px) {
+                                    width: 100%;
+                                }
+                                margin-left: 0px;
+                                @include maxpoint(966px) {
+                                    // margin-left: 14px;
+                                }
+
+                                &_detail {
+                                    span {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+
+                        &_phone {
+                            input:first-child {
+                                &:disabled {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 130%;
+                                    color: #9C9892;
+                                }
+                            }
+                        } 
+
+                        &_input {
+                            font-weight: 900;
+                            font-size: 14px;
+                            line-height: 120%;
+                            &::placeholder{
+                                color: #9C9892;
+                                font-weight: 300;
+                                font-size: 14px;
+                                line-height: 130%;
+                                @include maxpoint(966px) {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                        label {
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 110%;
+                            color: #241F20;
+                            margin-bottom: 12px;
+
+                            &.main {
+                                margin-bottom: 24px !important;
+                            }
+
+                            @include maxpoint(966px) {
+                                margin-bottom: 12px;
+                            }
+                        }
+
+                        .required {
+                            color: $color-pdarkred;
+                            margin-left: -4px;
+                        }
+
+                        .o-form-group_card {
+                            margin-bottom: 16px;
+                            @include maxpoint(966px) {
+                                margin-bottom: 30px;
+                            }
+                        }
+
+                        .o-form-group-inner {
+                            .o-form-group_standard {
+
+                                padding-left: 0px;
+                                @include maxpoint(996px) {
+                                    padding-left: 0px;
+                                }
+
+
+                                &.o-form-group_phone {
+                                    input {
+                                        &:first-child {
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.with-phone-drop {
+                                margin-bottom: 16px;
+                                .o-form-group_phone {
+                                    .o-form-dropdown_input {
+                                        margin-right: 10px;
+                                        padding-left: 0px;
+                                        @include maxpoint(996px) {
+                                            // padding-left: 14px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.for-description {
+                                margin-bottom: 16px;
+                                label {
+                                    margin-bottom: 8px;
+                                }
+
+                                span {
+                                    font-weight: 500;
+                                    letter-spacing: unset;
+                                }
+                            }
+
+                            label {
+                                font-style: normal;
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #241F20;
+                            }
+
+                            .o-form-group_checkbox {
+                                label {
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 120%;
+                                    color: #5B5853;
+
+                                    span {
+                                        top: -2.8px;
+                                    }
+
+                                    .checkmark {
+                                        height: 20px;
+                                        width: 20px;
+                                        &:after {
+                                            top: 2px;
+                                            left: 7.3px;
+                                            width: 4px;
+                                            height: 10px;
+                                            border-radius: 4px;
+                                        }
+                                    }
+                                }
+                                
+                                input {
+                                    &:checked ~ .checkmark {
+                                        background-color: #B4E57F;
+                                    }
+                                }
+                            }
+                        }
+
+                        .o-form-panels {
+                            margin: 0;
+                            // @include maxpoint(996px) {
+                            //     margin: 0 6px -16px 0 !important;
+                            // }
+                        }
+
+
+
+                        .o-form-panels_card {
+                            padding: 0 12px 0 0;
+                            &:last-child {
+                                padding: 0 0 0 !important;
+                                // @include maxpoint(996px) {
+                                //     padding: 0 0 16px !important;
+                                // }
+                            }
+                        }
+
+                        .o-form-panels_card--detail {
+                            max-width: 67px;
+                            height: 50px;
+                        }
+
+                        .o-form-timeline_count {
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 110%;
+                            text-align: center;
+                            align-items: unset;
+                            padding: 8px;
+                            border-radius: 50px;
+                        }
+
+                        &:first-child {
+                            .o-form-panels {
+                                margin: 0;
+                            }
+                            .o-form-panels_card {
+                                padding: 0 12px 0 0;
+                                @include maxpoint(996px) {
+                                    padding: 0 12px 0 0;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .o-button {
+                        margin-top: 22px;
+                        &.for-pickup {
+                            margin-top: 82px;
+                            @include maxpoint(996px) {
+                                margin-top: 22px;
+                                width: 373px;
+                            }
+                        }
+
+                        &.for-cod {
+                            margin-top: 10px;
+                            @include maxpoint(996px) {
+                                margin-top: 22px;
+                                width: 373px;
+                            }
+                        }
+
+                        &.for-curbside {
+                            // margin-top: 10px;
+                            @include maxpoint(996px) {
+                                // margin-top: 22px;
+                                width: 373px;
+                            }
+                        }
+                    }
+
+                    .for-cutleries {
+                        label {
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 14px;
+                            line-height: 120%;
+                            color: #241F20;
+                        }
+
+                        @media only screen and (max-width: 400px) and (min-width: 375px)  {
+                            .o-form-panels {
+                                .o-form-panels_card {
+                                    width: auto;
+                                    &:first-of-type {
+                                        .o-form-panels_card--detail {
+                                            border-radius: 8px 0px 0px 8px;
+                                        }
+                                    }
+                                    &:last-of-type {
+                                        .o-form-panels_card--detail {
+                                            border-radius: 0px 8px 8px 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        @media only screen and (max-width: 820px) and (min-width: 768px) {
+                            .o-form-panels {
+                                .o-form-panels_card {
+                                    width: auto;
+                                    &:first-of-type {
+                                        .o-form-panels_card--detail {
+                                            margin: 0;
+                                            border-radius: 8px 0px 0px 8px;
+                                        }
+                                    }
+                                    &:last-of-type {
+                                        .o-form-panels_card--detail {
+                                            border-radius: 0px 8px 8px 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .color_grey {
+        color: #939598 !important;
+    }
+
+    .o-divider {
+        margin: 24px 0 32px;
+        display: none;
+        @include maxpoint(966px) {
+            display: block;
+            max-width: 606px;
+        }
+    }
+    &-form, &-summary {
+        .o-button-white {
+            span {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 120%;
+                color: #9C9892;
+            }
+        }
+    }
+    &-form {
+        max-width: 500px;
+        width: 100%;
+        padding: 32px 16px 0;
+        @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+            width: 50.5%;
+        }
+        @include maxpoint(966px) {
+            margin-right: 32px;
+            padding: 32px 24px 0;
+        }
+        @include maxpoint(1185px) {
+            padding: 10px 0 0;
+            max-width: 606px;
+        }
+        & > .h5 {
+            letter-spacing: unset;
+            margin-bottom: 32px;
+            font-style: normal;
+            
+            color: #5B5853;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 110%;
+
+            @include maxpoint(966px) {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 110%;
+                margin-bottom: 0;
+            }
+        }
+        form {
+            max-width: 550px;
+            width: 100%;
+
+            margin-top: 40px;
+
+            @include maxpoint(966px) {
+                margin-top: 32px;
+            }
+
+            .o-form-group {
+                &:first-child {
+                    padding-right: 0;
+                    @include maxpoint(966px) {
+                        padding-right: 0;
+                    }
+                }
+                &-inner {
+                    width: 100%;
+                    max-width: 307px;
+                    margin-bottom: 16px;
+                    @include maxpoint(966px) {
+                        margin-bottom: 16px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    & > label {
+                        letter-spacing: 0.09em;
+                    }
+                    label {
+                        color: $color-t250;
+                        &.label-sm {
+                            text-transform: unset;
+                            font-weight: normal;
+                            line-height: 18.2px;
+                            letter-spacing: -0.01em;
+                            margin-bottom: 16px;
+                            letter-spacing: unset;
+                            @include maxpoint(996px) {
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+                    &.for-description {
+                        margin-bottom: 24px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        label {
+                            display: flex;
+                            color: $color-t250;
+                            & > span {
+                                &.for-delivery {
+                                    width: 251px;
+                                    font-weight: 900 !important;
+                                    @include maxpoint(966px) {
+                                        width: 233px;
+                                    }
+                                }
+
+                                &.for-datetime {
+                                    font-weight: 900 !important;
+                                }
+                                // margin-right: 18px;
+                                @include maxpoint(966px) {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        & > span {
+
+                            &.for-instructions {
+                                @include maxpoint($tablet) {
+                                    width: 373px;
+                                }
+                            }
+
+                            font-family: $secondary-font;
+                            letter-spacing: unset;
+                            padding-left: 0px;
+
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 120%;
+                            color: #5B5853;
+
+                            display: block;
+                            @include maxpoint($tablet) {
+                                padding-left: 0;
+                            }
+                        }
+                        .o-button {
+                            background: transparent;
+                            margin-top: 0px;
+                            margin-left: 0px;
+                            padding: 0 0 0 10px;
+                        }
+
+                        .o-button-white {
+                            span {
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 120%;
+                                color: #9C9892;
+                            }
+                        }
+                    }
+                    .o-form-panels {
+                        padding-left: 0px;
+                        margin: 0;
+                        @include maxpoint($tablet) {
+                            padding-left: 0px;
+                            margin: 0 -8px -16px 0;
+                        }
+                    }
+                }
+                .o-form-panels_card {
+                    &--detail {
+                        padding: 16px;
+                        width: auto;
+                    }
+                }
+                &.for-payment {
+                    @include maxpoint(966px) {
+                        padding-bottom: 41px;
+                    }
+
+                    .only {
+                        border-radius: 8px !important;
+                    }
+                    .o-form-group-inner {
+                        max-width: unset;
+                        margin-top: 12px;
+
+                        .o-form-panels_card {
+                            &:nth-child(2), &:nth-child(2):last-child {
+                                .o-form-panels_card--detail {
+                                    max-width: 278px;
+                                    padding: 38.25px 24px 38.25px 24px;
+                                    justify-content: center;
+                                    @include maxpoint($tablet) {
+                                        max-width: 153px;
+                                        padding: 38.25px 24px 38.25px 24px;
+                                        justify-content: unset;
+                                    }
+                                    @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+                                        max-width: 278px;
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                flex: auto;
+                                @include maxpoint($tablet) {
+                                    flex: unset;
+                                }
+                                .o-form-panels_card--detail {
+                                    max-width: 278px;
+                                    @include maxpoint($tablet) {
+                                        max-width: 160px;
+                                    }
+                                }
+                            }
+
+                            &:only-child{
+                                padding: 0;
+                                @include maxpoint($tablet){
+                                    padding: 0 0 18px;
+                                }
+                                > div{
+                                    border-radius: 8px;
+                                    margin: 0;
+                                    @include maxpoint($tablet){
+                                        border-radius:  8px !important;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            margin-bottom: 32px;
+                            @include maxpoint(966px) {
+                                margin-bottom: 38px;
+                            }
+                        }
+                        &:nth-child(4) {
+                            margin-bottom: 12px;
+                        }
+                        .for-pesopay, .for-terms {
+                            margin-bottom: 16px;
+                            padding-left: 14px;
+                            @include maxpoint($tablet) {
+                                padding-left: 0;
+                            }
+                            span {
+                                font-family: $secondary-font;
+                                margin-right: 16px;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 120%;
+                                color: #5B5853;
+                            }
+                            figure {
+                                width: 113px;
+                                height: 51px;
+                                img {
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                        .for-pesopay {
+                            padding-left: 0px;
+                            justify-content: space-between;
+                            @include maxpoint(966px) {
+                                max-width: unset;
+                            }
+                            span {
+                                max-width: 158px;
+                                width: 100%;
+                                margin-right: 0px;
+                                
+                                @include maxpoint(966px) {
+                                    max-width: calc(100% - 129px);
+                                }
+                            }
+                        }
+                        .for-terms {
+                            padding-left: 0px;
+                            @include maxpoint(966px) {
+                                width: 569px;
+                            }
+                            margin-bottom: 0;
+                            span {
+                                margin-right: 0;
+                                width: 100%;
+                                max-width: 270px;
+                                @include maxpoint(996px) {
+                                    max-width: unset;
+                                }
+                            }
+                            a {
+                                color: #FF7D00;
+                                position: relative;
+                                &::before {
+                                    position: absolute;
+                                    content: '';
+                                    left: 0;
+                                    right: 0;
+                                    height: 1px;
+                                    bottom: 0px;
+                                    // background-color: $color-p100;
+                                    background-color:#FF7D00;
+                                }
+                            }
+                        }
+                        .o-form-group_checkbox {
+                            max-width: 285px;
+                            margin-bottom: 32px;
+                            padding-left: 0px;
+                            @include maxpoint(966px) {
+                                max-width: unset;
+                                margin-bottom: 24px;
+                            }
+                        }
+                        &.for-payment-filter {
+                            margin-bottom: 0;
+                            display: none;
+
+                            @media only screen and (max-width: 400px) and (min-width: 375px)  {
+                                margin-top: 0;
+                            }
+
+                            @include maxpoint(966px) {
+                                margin-top: 0;
+                            }
+
+                            &.active {
+                                display: block;
+                            }
+                            .for-pesopay {
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+            & > .o-button {
+                max-width: 486px;
+                width: 100%;
+                @include maxpoint(966px) {
+                    margin-left: 52px;
+                }
+            }
+        }
+    }
+    &-summary {
+        width: 100%;
+
+        figure {
+            margin-bottom: -5px;
+            position: relative;
+            height: 56px;
+            @include maxpoint(966px) {
+               height: unset;
+            }
+
+            img {
+                height: 56px;
+                @include maxpoint(966px) {
+                    height: unset;
+                 }
+            }
+        }
+
+        .count_quantity {
+            border-radius: 64px;
+            background: #FFCC00;
+            width: 24px;
+            height: 24px;
+            z-index: 2;
+            font-weight: 900;
+            font-size: 12px;
+            line-height: 120%;
+            align-items: center;
+            justify-content: center;
+            color: #241F20;
+            display: flex;
+            margin-right: 12px;
+            margin-top: -3px;
+        }
+
+        @include maxpoint(966px) {
+            max-width: calc(100% - 638px);
+            min-width: 375px;
+            margin-top: -37px;
+        }
+        .accordion-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            @include maxpoint(996px) {
+                max-height: unset;
+                overflow: unset;
+            }
+            &.active {
+                overflow: unset;
+            }
+        }
+        &_header {
+            padding: 24px;
+            background-color: #FEFDF4;
+            position: relative;
+            &.active {
+                .ic-caret-down-lg {
+                    transform: rotate(180deg);
+                }
+            }
+            & > .h4 {
+                // text-transform: initial;
+                // font-size: 24px;
+                // line-height: 30.36px;
+                // letter-spacing: -0.02em;
+
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 100%;
+                color: #000000;
+                text-transform: unset;
+
+                .o-button {
+                    margin-right: 0;
+                    i {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+                &.accordion-cta {
+                    &:first-child {
+                        display: none;
+                        @include maxpoint(966px) {
+                            display: block;
+                        }
+                    }
+                    &:nth-child(2) {
+                        display: flex;
+                        @include maxpoint(966px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &--title {
+                position: relative;
+                &__icon {
+                    width: 24px;
+                    margin-right: 8px;
+                    margin-top: 2px;
+                }
+                .h5 {
+                    font-size: 24px;
+                    line-height: 100%;
+                    margin-bottom: 24px;
+                    @include maxpoint(966px) {
+                        margin-bottom: 24px;
+                    }
+                }
+                figure {
+                    position: absolute;
+                    width: 88px;
+                    height: 88px;
+                    background-color: $color-p050;
+                    right: 0;
+                    top: -8px;
+                    @include maxpoint(966px) {
+                        right: -18px;
+                        top: -18px;
+                    }
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .o-divider {
+                    margin: 0 0 24px;
+                    border: 0;
+                    background-image: linear-gradient(to right, #333 45%, rgba(255, 255, 255, 0) 20%);
+                    background-position: 0 100%;
+                    background-size: 6px 1px;
+                    background-repeat: repeat-x;
+                    height: 1px;
+                    max-width: 218px;
+                    @include maxpoint(966px) {
+                        max-width: 329px;
+                    }
+                }
+            }
+        }
+        &_body {
+            background-color: #FEFDF4;
+            ul {
+                padding: 8px 16px 24px;
+                @include maxpoint(966px) {
+                    padding: 0 24px 24px;
+                }
+            }
+        }
+        &_footer {
+            background-color: #241F20;
+            ul {
+                padding: 16px 16px;
+                @include maxpoint(966px) {
+                    padding: 16px 24px;
+                }
+            }
+            .h6 {
+                color: $color-n000;
+            }
+            .subtotal {
+                border-color: $color-t50 !important;
+            }
+
+            .summary-list {
+                li.grandtotal {
+                    .h6 {
+                        letter-spacing: unset;
+                    }
+                }
+                li.last_text {
+                    padding-top: 8px !important;
+                }
+                li {
+                    .h6 {
+                        font-style: normal;
+                        font-weight: 700 !important;
+                        font-size: 18px !important;
+                        line-height: 110% !important;
+                        color: #FFFFFF !important;
+                    }
+                }
+            }
+        }
+        &_subtotal {
+            background-color: #F7F6E6;
+            ul {
+                padding: 24px 16px;
+                @include maxpoint(966px) {
+                    padding: 24px;
+                }
+            }
+            .h6 {
+                color: $color-n000;
+            }
+            .subtotal {
+                border-color: $color-t50 !important;
+            }
+
+            .summary-list {
+                li {
+                    .h6 {
+                        font-style: normal;
+                        font-weight: 900 !important;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: #241F20;
+                    }
+                }
+            }
+        }
+        .summary-list {
+            li.main_no_edit {
+                justify-content: unset !important;
+                align-items: center;
+                padding-bottom: 19px;
+                .h6 {
+                    font-style: normal !important;
+                    font-weight: 900 !important;
+                    font-size: 14px !important;
+                    line-height: 120% !important;
+                    color: #241F20 !important;
+                }
+                
+                span {
+                    font-style: normal;
+                    color: #241F20;
+
+                    font-weight: 900;
+                    font-size: 12px;
+                    line-height: 120%;
+
+                    @include maxpoint($desktop) {
+                        font-weight: 900;
+                        font-size: 12px;
+                        line-height: 120%;
+                    }
+
+                    &:not(:first-child):last-child {
+                        color: #9C9892;
+                    }
+
+                    &.italize {
+                        font-style: italic;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            li.main {
+                padding-bottom: 19px;
+                align-items: center;
+                .h6 {
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 120%;
+                    color: #241F20;
+
+                    &:not(:first-child):last-child {
+                        font-weight: 500;
+                    }
+                }
+
+                span {
+                    font-style: normal;
+                    color: #241F20;
+
+                    font-weight: 900;
+                    font-size: 12px;
+                    line-height: 120%;
+
+                    @include maxpoint($desktop) {
+                        font-weight: 900;
+                        font-size: 12px;
+                        line-height: 120%;
+                    }
+
+                    &:not(:first-child):last-child {
+                        color: #9C9892;
+                    }
+
+                    &.italize {
+                        font-style: italic;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            li.subtotal {
+                padding: 8px 0 24px 36px;
+                border-bottom: 1px solid #CAC7C4;
+                &:not(:first-child):last-child {
+                    border-bottom: none;
+                }
+            }
+            li.inner {
+                padding-left: 36px;
+                padding-top: 0px;
+                padding-bottom: 8px;
+                span {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 120%;
+                    color: #241F20;
+
+                    &:not(:first-child):last-child {
+                        color: #9C9892;
+                    }
+
+                    &.italize {
+                        font-style: italic;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            li.service-charge {
+                padding: 4px 0 24px;
+            }
+            li {
+                .h6 {
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 120%;
+                    color: #241F20;
+
+                    &:not(:first-child):last-child {
+                        font-weight: 700;
+                    }
+                }
+
+                span {
+                    font-style: normal;
+                    color: #241F20;
+
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 120%;
+
+                    @include maxpoint($desktop) {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 120%;
+                    }
+
+                    &:not(:first-child):last-child {
+                        color: #9C9892;
+                    }
+
+                    &.italize {
+                        font-style: italic;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        &.with-logo {
+            .c-checkout-summary {
+                &_header {
+                    padding: 24px 24px 0;
+                    .h5 {
+                        font-weight: 900;
+                        line-height: 100%;
+                        width: calc(100% - 32px);
+                        color: #000000;
+
+                        @include maxpoint($desktop) {
+                            font-weight: 900;
+                            line-height: 100%;
+                        }
+                    }
+                }
+                &_body {
+                    .summary-list {
+                        padding: 0 24px 24px;
+                        li {
+                            & > span {
+                                &.quantity {
+                                    text-align: center;
+                                    max-width: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-delivery {
+        .c-checkout {
+            &-form {
+                max-width: unset;
+                @include maxpoint(966px) {
+                    margin-right: 10px;
+                }
+                @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+                    margin-right: 32px;
+                }
+                @include maxpoint(1185px) {
+                    padding: 10px 0 0;
+                    max-width: unset;
+                }
+                & > .h5 {
+                    max-width: 606px;
+                }
+                form {
+                    max-width: unset;
+                    .o-form-group {
+                        &.for-payment {
+                            .o-form-group-inner {
+                                &:nth-child(3) {
+                                    margin-bottom: 16px;
+                                    @include maxpoint(966px) {
+                                        margin-bottom: 22px;
+                                    }
+                                }
+                                .o-form-panels_card {
+                                    @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+                                        width: 100%;
+                                    }
+                                    .o-form-panels_card--detail {
+                                        max-width: 278px;
+                                        padding: 40px 22px 40px 22px;
+                                        justify-content: center;
+                                        @include maxpoint(966px) {
+                                            max-width: 211px;
+                                            justify-content: unset;
+                                        }
+                                        @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+                                            max-width: 278px;
+                                            justify-content: center;
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        .o-form-panels_card--detail {
+                                            padding-right: 35px;
+                                        }
+                                    }
+
+
+                                    @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+                                        &:nth-child(2) {
+                                            .o-form-panels_card--detail {
+                                                border-radius: 8px 8px 0px 0px;
+                                            }
+                                        }
+                                        &:last-child {
+                                            .o-form-panels_card--detail {
+                                                border-radius: 0px 0px 8px 8px;
+                                            }
+                                        }
+
+                                        &:nth-child(2):last-child {
+                                            .o-form-panels_card--detail {
+                                               border-radius: 50px !important;
+                                            }
+                                        }
+                                    }
+
+                                    @include maxpoint(1025px) {
+                                        &:nth-child(2) {
+                                            .o-form-panels_card--detail {
+                                                max-width: 155px;
+                                                padding-right: 16px;
+                                                padding: 40px 22px 40px 22px;
+                                            }
+                                        }
+                                        &:nth-child(3) {
+                                            .o-form-panels_card--detail {
+                                                max-width: 180px;
+                                            }
+                                        }
+                                        &:last-child {
+                                            .o-form-panels_card--detail {
+                                                max-width: 148px;
+                                                padding: 40px 22px 40px 22px;
+                                            }
+                                        }
+
+                                        &:nth-child(2):last-child {
+                                            .o-form-panels_card--detail {
+                                               border-radius: 50px !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.for-payment-delivery {
+                                .o-form-group {
+                                    &_standard {
+                                        margin-bottom: 2px !important;
+                                    }
+                                    &-inner {
+                                        & > span {
+                                            font-family: $secondary-font;
+                                            display: block;
+                                            max-width: 571px;
+                                            // padding-left: 14px;
+                                            margin-bottom: 32px;
+
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 16px;
+                                            line-height: 120%;
+                                            color: #5B5853;
+
+                                            @include maxpoint(966px) {
+                                                margin-bottom: 16px;
+                                                padding-left: 0;
+                                            }
+                                        }
+                                        .for-credit-cards {
+                                            margin-bottom: 10px;
+                                            @include maxpoint(966px) {
+                                                margin-bottom: 24px;
+                                            }
+                                            a {
+                                                figure {
+                                                    width: 88px;
+                                                    height: 40px;
+                                                    img {
+                                                        height: 100%;
+                                                        object-fit: contain;
+                                                    }
+                                                }
+                                                &:last-child {
+                                                    figure {
+                                                        width: 97px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &_standard {
+                                        margin-bottom: 16px;
+                                        max-width: 514px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

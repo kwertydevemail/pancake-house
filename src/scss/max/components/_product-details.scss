@@ -1,0 +1,568 @@
+.c-product-details {
+    .o-container {
+        padding-top: 64px;
+        @include maxpoint(tablet) {
+            padding-top: 32px; 
+            padding-left: 0px; 
+            padding-right: 0px; 
+        }
+    }
+    .c-default-details-content_display {
+        @include maxpoint(tablet) {
+            padding-left: 24px; 
+            padding-right: 24px; 
+        }
+        figure {
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        p {
+            font-weight: 500;
+            @include maxpoint($tablet) {
+                &:first-child {
+                    max-width: 346px;
+                    width: 100%;
+                }
+                &:last-child {
+                    margin-bottom: 56px;
+                }
+            }
+        }
+    }
+    .o-header-title-slant {
+        &-promo {
+            display: none;
+            background: url('images/ic-max-star.svg') center no-repeat;
+            background-size: contain;
+            height: 82px;
+            width: 82px;
+            padding-top: 34px;
+            padding-bottom: 33px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 120%;
+            text-align: center;
+            color: #241F20;
+            span {
+                display: block;
+                margin-bottom: 1px;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 12px;
+                line-height: 120%;
+                text-align: center;
+                color: #FC0000;
+            }
+        }
+        &.has-promo {
+            .o-header-title-slant-promo {
+                display: block;
+            }
+            position: relative;
+            padding-right: 90px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            .o-header-title-slant-promo {
+                padding-top: 27px;
+                padding-bottom: 26px;
+            }
+        }
+        &.has-bundle {
+            .o-header-title-slant-promo {
+                display: block;
+            }
+            position: relative;
+            padding-right: 90px;
+            padding-top: 22px;
+            padding-bottom: 22px;
+        }
+        &.has-promo-mobile {
+            position: relative;
+            padding-right: 90px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .o-header-title-slant-promo {
+                padding-top: 27px;
+                padding-bottom: 26px;
+                display: block;
+            }
+        }
+        &.has-bundle-mobile {
+            .o-header-title-slant-promo {
+                display: block;
+            }
+            position: relative;
+            padding-right: 90px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+    .o-form-dropdown_input--item__subdetail {
+        span {
+            &:first-child::after {
+                color: #A2000F;
+            }
+        }
+    }
+    .o-form-dropdown {
+        &_input {
+            @include maxpoint($tablet) {
+                padding-left: 0;
+            }
+            ul {
+                li {
+                    &:hover {
+                        cursor: pointer;
+                        h5 {
+                            font-weight:700 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .c-default-details-content {
+        flex-wrap: wrap;
+        &-title {
+            width: 100%;
+            h3 {
+                max-width: 380px;
+            }
+            @include maxpoint(tablet) {
+                display: none;
+            }
+        }
+        &_form {
+            @include maxpoint(tablet) {
+                > h3 {
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
+            }
+        }
+        .o-form-timeline-inner {
+            @include maxpoint(tablet) {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+        .c-default-details-content_display {
+            h3 {
+                font-weight: 900;
+                font-size: 28px;
+                line-height: 110%;
+                margin-bottom: 16px;
+                @include maxpoint($tablet) {
+                    font-size: 34px;
+                    display: none;
+                }
+            }
+        }
+        .o-form-panels_card--detail__title {
+            .h3 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 120%;
+                color: $color-nblack;
+                &.hasprice {
+                    color: #A2000F;
+                }
+                @include maxpoint(tablet) {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 110%;
+                    &.hasprice {
+                        color: #241F20;
+                        font-weight: 300;
+                        font-size: 17px;
+                        line-height: 110%;
+                    }
+                }
+            }
+        }
+        .o-form-panels_card--detail.active {
+            .h3 {
+                font-weight: 900;
+                color: #241F20;
+                &.hasprice {
+                    color: #241F20;
+                    margin-bottom: 3px;
+                }
+                @include maxpoint(tablet) {
+                    font-weight: 700;
+                }
+            }
+        }
+        .o-form-operator {
+            align-items: center;
+            @include maxpoint(tablet) {
+                padding-left: 16px;
+            }
+            .o-form-group_input {
+                height: 49px;
+                max-width: 70px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                font-weight: 900;
+                color: #241F20;
+            }
+        }
+        .last-padding {
+            padding-bottom: 40px;
+            &:first-child {
+                padding-top: 0px;
+            }
+        }
+        .o-form-dropdown_input {
+            max-width: 373px;
+            ul {
+                filter: drop-shadow(0px 12px 24px rgba(84, 82, 73, 0.16));
+                @include maxpoint(tablet){
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    position: fixed;
+                    bottom: 0;
+                    z-index: 99;
+                    left: 0;
+                    width: 100%;
+                    top: unset;
+                    max-height: 360px;
+                }
+
+                li {
+                    .o-form-dropdown_input--item__subdetail {
+                        span {
+                            &:empty {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            + h5 {
+                margin-top: 16px;
+            }
+            &--item {
+                h5 {
+                    font-size: 17px !important;
+                    font-weight: 300 !important;
+                    color: #241F20 !important;
+                    line-height: 110% !important;
+                    @include maxpoint($tablet){
+                        font-size: 18px !important;
+                    }
+                }
+                &__subdetail {
+                    span {
+                        font-weight: 500 !important;
+                        font-size: 14px !important;
+                        line-height: 120% !important;
+                        color: #7D7871;
+                    }
+                }
+            }
+        }
+        .order-summary {
+            position: relative;
+            padding: 40px 40px 40px 53px;
+            padding-top: 0px;
+            max-width: 465px;
+            @include maxpoint(tablet) {
+                width: 100%;
+                padding-left: 72px;
+                padding-right: 16px;
+                margin: 0px;
+                [data-catcher="addOns"] {
+                    display: none;
+                    margin-bottom: 0px;
+                }
+            }
+            @include maxpoint($tablet) {
+                > * {
+                    max-width: 372px;
+                }
+            }
+            &.active {
+                background-color: #F3F2F2;
+                padding-top: 40px;
+                padding-left: 104px;
+                @include maxpoint($tablet) {
+                    margin-left: -40px;
+                    width: calc(100% + 40px);
+                }
+                .order-summary-checklist {
+                    display: block;
+                }
+            }
+            [data-catcher="orderCount"] {
+                display: none;
+            }
+            h3 {
+                font-size: 20px;
+                line-height: 110%;
+                color: #241F20;
+                margin-bottom: 4px;
+            }
+            p {
+                color: #5B5853;
+                line-height: 120%;
+                font-weight: 500;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #CAC7C4;
+                margin-bottom: 16px;
+            }
+            h5 {
+                font-size: 14px;
+                line-height: 120%;
+                font-weight: 900;
+                color: #241F20;
+                margin-bottom: 16px;
+            }
+            .order-summary-checklist {
+                display: none;
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                top: 40px;
+                left: 40px;
+            }
+            .order-summary-list {
+                padding-bottom: 16px;
+                border-bottom: 1px solid #CAC7C4;
+                margin-bottom: 16px;
+                li {
+                    line-height: 120%;
+                    font-weight:500;
+                    color: #241F20;
+                    margin-bottom: 8px;
+                    &:after {
+                        font-size: 14px;
+                        color: #9C9892;
+                    }
+                    &:empty {
+                        display: none;
+                    }
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            .order-summary-total {
+                margin-bottom: 32px;
+                @include maxpoint(tablet) {
+                    margin-bottom: 40px;
+                }
+                h5 {
+                    margin-bottom: 0px;
+                }
+                span {
+                    font-weight: 900;
+                    font-size: 14px;
+                    color: #241F20;
+                    line-height: 120%;
+                }
+            }
+            .o-button {
+                span {
+                    font-size: 14px;
+                    line-height: 100%;
+                    text-transform: none;
+                }
+            }
+            @include maxpoint(tablet) {
+                h3 {
+                    padding-left: 56px;
+                }
+                p {
+                    padding-left: 56px;
+                }
+                .order-summary-checklist {
+                    left: 16px;
+                }
+            }
+        }
+        .o-form-group {
+            max-width: 425px;
+            &:nth-last-child(2) {
+                background-image: linear-gradient(to bottom, #939598 30%, rgba(255, 255, 255, 0) 20%);
+            }
+            &:last-child {
+                background: none;
+            }
+            > h5 {
+                font-weight: 900;
+                font-size: 14px;
+                line-height: 120%;
+                color: #241F20;
+                margin-bottom: 12px;
+                span {
+                    color: #A2000F;
+                }
+            }
+            @include maxpoint(tablet) {
+                label {
+                    padding-left: 16px;
+                }
+                > h5 {
+                    padding-left: 16px;
+                }
+            }
+        }
+        .o-form-panels {
+            @include maxpoint(tablet) {
+                padding-left: 16px;
+                &_card {
+                    padding-bottom: 8px;
+                }
+            }
+        }
+        .order-summary-active {
+            .order-summary {
+                max-width: none;
+                @include maxpoint(tablet) {
+                    padding: 40px 16px 40px;
+                }
+            }
+        }
+    }
+}
+
+.c-standard-details {
+    .c-default-details-content {
+        &_display {
+            padding: 0 24px;
+            @include maxpoint($tablet) {
+                padding: 53px 20px 101px 41px;
+            }
+            & > p {
+                line-height: 20.8px;
+                &:first-child {
+                    margin-bottom: 11px;
+                    margin-top: 0;
+                    @include maxpoint($tablet) {
+                        max-width: 401px;
+                        width: 100%;
+                    }
+                    & + p {
+                        margin-top: 30px;
+                        letter-spacing: -0.02em;
+                        font-size: 16px;
+                        @include maxpoint($tablet) {
+                            max-width: 401px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            & > figure {
+                margin: 16px 0;
+                @include maxpoint($tablet) {
+                    margin: 33px 0 16px;
+                }
+                &:last-child {
+                    margin: 16px 0 5px;
+                    @include maxpoint($tablet) {
+                        margin: 33px 0 5px;
+                    }
+                }
+            }
+            .italize {
+                font-size: 14px;
+                line-height: 18.2px;
+                margin-bottom: 16px;
+                @include maxpoint($tablet) {
+                    font-size: 13px;
+                    line-height: 16.44px;
+                    margin-bottom: 16px;
+                }
+            }
+            .italize, div, p, figure {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &_form {
+            padding: 32px 24px 0;
+            @include maxpoint($tablet) {
+                padding: 0;
+            }
+            @include maxpoint($tablet) {
+                flex-direction: column;
+                &.for-no-option {
+                    display: flex;
+                    align-self: center;
+                    & > span {
+                        font-weight: 300;
+                    }
+                }
+            }
+            .o-header-title {
+                margin: 0;
+            }
+            & > span {
+                font-size: 18px;
+                margin-bottom: 0;
+            }
+            &--details {
+                margin: 24px 0 0;
+                @include maxpoint($tablet) {
+                    margin: 32px 0 0 21px;
+                }
+                &.no-option {
+                    margin: 0;
+                    padding: 48px 0 0;
+                    border: 0;
+                    @include maxpoint($tablet) {
+                        margin: 0 24px 0 20px;
+                        padding: 40px 0 0;
+                    }
+                }
+                .o-form-group {
+                    padding-left: 52px;
+                    label {
+                        padding-left: 0;
+                    }
+                    &:nth-last-child(2) {
+                        padding-bottom: 48px;
+                    }
+                    .o-form-panels {
+                        &_card {
+                            &--detail {
+                                width: 129px;
+                                @include maxpoint($tablet) {
+                                    width: 138px;
+                                }
+                                .h5 {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+                form {
+                    & > .o-button {
+                        width: 100%;
+                        margin-bottom: 32px;
+                        @include maxpoint($tablet) {
+                            max-width: 521px;
+                        }
+                    }
+                }
+            }
+            &.for-beverages-form {
+                .o-form-group {
+                    &:first-child:nth-last-child(2) {
+                        padding-bottom: 104px;
+                    }
+                }
+            }
+        }
+    }
+}

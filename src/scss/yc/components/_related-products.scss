@@ -1,0 +1,170 @@
+.c-related-products {
+    background-color: $color-p100;
+    padding: 0;
+    margin: -3px 0 0 0;
+
+    @include maxpoint($tablet) {
+        padding: 88px 0 0;
+        margin: 0;
+    }
+    
+    .o-container {
+        padding: 0;
+
+        @include maxpoint($tablet) {
+            padding: 0 0 0 48px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 182px 12px 78px 12px;
+        width: 100%;
+        height: 100%;
+        background-color: $color-n000;
+
+        @include maxpoint($desktop) {
+            max-width: 1232px;
+            padding: 81.5px 110px 93px 95px;
+            background-image: linear-gradient(to bottom, #333 45%, rgba(255, 255, 255, 0) 20%);
+            background-position: 44px;
+            background-size: 2px 6px;
+            background-repeat: repeat-y;  
+        }
+
+        .o-header-title-slant {
+            top: 65px;
+            left: 39px;
+            font-size: 32px;
+            
+            @include maxpoint($tablet) {
+                top: -50px;
+                left: 36px;
+                font-size: 50px;
+            }
+        }
+
+        .slider-buttons {
+            position: absolute;
+            content: '';
+            bottom: 32px;
+            right: 40%;
+            display: flex;
+            width: 80px;
+            height: 40px;
+            background: #F5B335;
+
+            @include maxpoint(768px) {
+                right: 45%;
+            }
+
+            @include maxpoint($desktop) {
+                top: 30px;
+                // right: 119px;
+                right: 32px;
+            }
+
+            button {
+                width: 40px;
+                height: 40px;
+                background: $color-p100;
+                padding: 12px;
+                border: none;
+                display: flex !important;
+            }
+
+            button:disabled {
+                background-color: #D9D9D6;
+                cursor: not-allowed;
+            }
+        }
+
+        .products-carousel {
+            display: flex;
+            flex-flow: column wrap;
+            max-height: 650px;
+            height: 100%;
+
+            @include maxpoint(768px) {
+                flex-flow: row;
+            }
+        }
+
+        .c-explore-cards {
+            margin: 0 !important;
+
+            &-card {
+                min-width: 175px !important;
+                margin: 0 0 24px 0;
+
+                @include maxpoint($tablet) {
+                    margin: 0;
+                }
+
+                &_item {
+                    figure {
+                        height: 140px;
+                        width: 152px;
+                        margin: 0 0 13px 0;
+
+                        @include maxpoint($desktop) {
+                            height: 180px;
+                            width: 100%;
+                            margin: 0 0 4.5px 0;
+                        }
+
+                        img {
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                &_item--detail {
+                    height: 100%;
+
+                    h6 {
+                        font-family: Circular Std;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 130%;
+                        text-align: center;
+                        letter-spacing: -0.02em;
+                        color: $color-t250;
+                        margin: 0 0 4px 0;
+
+                        @include maxpoint($desktop) {
+                            margin: 0 0 1px 0;
+                        }
+                    }
+
+                    h6 + span {
+                        margin: 0 0 16px 0;
+
+                        @include maxpoint($desktop) {
+                            margin: 0 0 35px 0;
+                        }
+                    }
+
+                    .o-button {
+
+                        @include maxpoint($tablet) {
+                            padding: 11.5px 16px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        .tns-outer {
+            overflow: hidden;
+
+            .tns-visually-hidden {
+                display: none;
+            }
+        }
+    }
+}

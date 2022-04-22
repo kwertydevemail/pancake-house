@@ -1,0 +1,201 @@
+.c-related-products {
+    background: url(images/max/pattern-BG.png) center no-repeat;
+    background-size: cover;
+    padding: 0;
+
+    @include maxpoint($tablet) {
+        margin: 0;
+    }
+    
+    .o-container {
+        padding: 0;
+        max-width: 1104px;
+        margin: 0px auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 56px 0px 65px;
+        width: 100%;
+        height: 100%;
+        @include maxpoint($tablet){
+            padding: 56px 0px 67px;
+        }
+
+        .o-header-title-slant {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 29px;
+            line-height: 110%;
+            text-align: center;
+            color: #FC0000;
+            margin-bottom: 40px;
+
+            @include maxpoint(tablet){
+                font-size: 26px;
+            }
+        }
+
+        .slider-buttons {
+            position: absolute;
+            content: '';
+            bottom: 32px;
+            right: 40%;
+            display: flex;
+            width: 80px;
+            height: 40px;
+            background: #F5B335;
+
+            @include maxpoint(768px) {
+                right: 45%;
+            }
+
+            @include maxpoint($desktop) {
+                top: 30px;
+                // right: 119px;
+                right: 32px;
+            }
+
+            button {
+                width: 40px;
+                height: 40px;
+                background: $color-p100;
+                padding: 12px;
+                border: none;
+                display: flex !important;
+            }
+
+            button:disabled {
+                background-color: #D9D9D6;
+                cursor: not-allowed;
+            }
+        }
+
+        .products-carousel {
+            display: flex;
+            flex-flow: column wrap;
+            max-height: 650px;
+            height: 100%;
+
+            @include maxpoint(768px) {
+                flex-flow: row;
+            }
+        }
+
+        .c-explore-cards {
+            margin: 0 !important;
+            @include maxpoint(tablet) {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            &-card {
+                min-width: 175px !important;
+                margin: 0 0 24px 0;
+                @include maxpoint($tablet) {
+                    margin: 0;
+                }
+
+                &_item {
+                    figure {
+                        width: 100%;
+                        height: 120px;
+                        margin: 0 0 8px 0;
+                        border-radius: 12px;
+                        overflow: hidden;
+
+                        @include maxpoint($tablet) {
+                            margin: 0 0 12px 0;
+                            height: 160px;
+                            width: 100%;
+                        }
+
+                        img {
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                &_item--detail {
+                    height: 100%;
+                    @include maxpoint(tablet) {
+                        position: relative;
+                        align-items: start;
+                        min-height: 118px;
+                    }
+
+                    h6 {
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 110%;
+                        color: #241F20;
+                        margin-bottom: 4px;
+                        text-align: left;
+                        @include maxpoint($tablet) {
+                            text-align: center;
+                        }
+                    }
+
+                    h6 + span {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 120%;
+                        color: #FC0000;
+                        margin-bottom: 19px;
+                        text-align: left;
+                        @include maxpoint($tablet) {
+                            font-weight: 500;
+                            margin-bottom: 69px;
+                            text-align: center;
+                        }
+                        span {
+                            font-weight: 500;
+                            text-decoration-line: line-through;
+                            color: #ABA8A3;
+                            margin-left: 12px;
+                            @include maxpoint($tablet) {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    .o-button {
+                        padding: 10px 25px;
+                        margin: 0px auto;
+                        width: 100%;
+                        @include maxpoint(tablet) {
+                            position: absolute;
+                            bottom: 0px;
+                            left: 0px;
+                        }
+                        @include maxpoint($tablet) {
+                            max-width: 136px; 
+                        }
+                        i {
+                            margin-left: 6px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tns-outer {
+            overflow: hidden;
+
+            .tns-visually-hidden {
+                display: none;
+            }
+        }
+    }
+}
+@include maxpoint(tablet){
+    #tns1 {
+        > .tns-item {
+            width: 50% !important;
+        }
+    }
+}

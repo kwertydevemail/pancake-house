@@ -1,0 +1,355 @@
+.c-confirmation {
+    // padding: 47px 0 0;
+    // @include maxpoint($tablet) {
+    //     padding: 69px 0 0;
+    // }
+    // background: $color-n150 url('images/product/section-graphics-mb.png');
+    // @include maxpoint($tablet) {
+    //     background: $color-n150 url('images/product/section-graphics.png');
+    // }
+
+    .o-container {
+        @media only screen and (max-width: 378px) and (min-width: 375px) {
+            padding: 101px 0 40px;
+            margin-top: -60px;
+        }
+        @media only screen and (max-width: 820px) and (min-width: 768px) {
+            padding: 100px 0;
+            margin-top: -60px;
+        }
+    }
+
+    .o-header-title {
+        max-width: 569px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 110%;
+        margin-bottom: 16px;
+        padding: 0 0 0 16px;
+
+        color: #FC0000;
+        @include maxpoint(966px) {
+            font-size: 34px;
+            padding: 0;
+        }
+        @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+            max-width: 480px;
+        }
+        .ic-registered-sm {
+            width: 16px;
+            height: 16px;
+            margin-bottom: 12.76px;
+            position: relative;
+            left: -4px;
+            margin-right: -5px;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .c-standard-layout {
+        &-content {
+            padding: 40px 0 0;
+            // border-top: 8px solid $color-p100;
+            @include maxpoint(966px) {
+                padding: 56px 32px 23px 32px;
+            }
+            &_display {
+                flex-direction: row;
+                @media only screen and (max-width: 965px) {
+                    flex-wrap: wrap;
+                }
+                @media only screen and (max-width: 820px) and (min-width: 768px) {
+                    width: 100%;
+                }
+
+                .reference-number {
+                    font-family: 'New Transport';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 120%;
+                    color: #241F20;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+    &-track {
+        width: 100%;
+        max-width: 633px;
+        padding: 0 16px 40px;
+        @media only screen and (max-width: 820px) and (min-width: 768px) {
+            max-width: 100%;
+        }
+        @include maxpoint(966px) {
+            margin-right: 48px;
+            padding: 0;
+        }
+        & > p {
+            color: #5B5853;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+
+            margin-bottom: 24px;
+            @include maxpoint(966px) {
+                margin-bottom: 21px;
+                font-weight: 400;
+                font-size: 16px;
+            }
+            &.for-title {
+                max-width: 574px;
+            }
+            &.for-inquiries {
+                margin-bottom: 24px;
+                margin-top: 24px;
+                @include maxpoint(966px) {
+                    margin-bottom: 15px;
+                    margin-top: 0px;
+                }
+
+                span {
+                    font-weight: 900;
+                }
+
+                a{
+                    color: #FF7D00;
+                    font-weight: 900;
+                }
+            }
+        }
+        & > .h4 {
+            font-family: $primary-font;
+            font-size: 29px;
+            line-height: 36px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            font-weight: 900;
+
+            @include maxpoint(966px) {
+                margin-bottom: 24px;
+            }
+        }
+        & > .o-button {
+            width: 100%;
+            margin-bottom: 0px;
+            // background-color: #FC0000;
+            @include maxpoint(966px) {
+                max-width: 260px;
+                margin-bottom: 32px;
+            }
+
+            &:hover {
+                background: #FC0000;
+                span {
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        & > .o-button-track {
+            background-color: #FC0000;
+                &:hover {
+                    background: #E60000;;
+                    span {
+                        color: #FFFFFF;
+                    }
+                }
+            @include maxpoint(966px) {
+                max-width: 275px;
+            }
+        }
+
+        & > .reference_no {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #E8E7E6;
+            width: 100%;
+            padding: 24px 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+
+            @include maxpoint(966px) {
+                margin-bottom: 16px;
+                width: 275px;
+            }
+
+            .h4 {
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 100%;
+                color: #241F20;
+
+                @include maxpoint(966px) {
+                    font-weight: 900;
+                    font-size: 24px;
+                }
+            }
+
+            i {
+                margin-left: 42px;
+                cursor: pointer;
+            }
+        }
+
+        & > .h5 {
+            margin-bottom: 16px;
+            font-size: 18px;
+            margin-top: 24px;
+            @include maxpoint(966px) {
+                font-size: 18px;
+                margin-top: 32px;
+            }
+        }
+        &_user {
+            margin-bottom: 24px;
+            @include maxpoint($desktop) {
+                margin-bottom: 32px;
+                width: 421px;
+            }
+            span {
+                font-family: $secondary-font;
+                color:#5B5853;
+                padding: 4px 0;
+
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 120%;
+
+                @include maxpoint($desktop) {
+                    padding: 0 0 12px;
+                    font-weight: 400;
+                }
+
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .divider-bottom {
+            border-bottom: 1px solid #CAC7C4;
+        }
+        .divider {
+            width: 100%;
+            border-bottom: 1px solid #CAC7C4;
+            margin-top: 0px;
+            margin-bottom: 24px;
+            @include maxpoint($desktop) {
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
+        }
+        .o-divider {
+            margin: 0 0 24px;
+            border: 0;
+            background-image: linear-gradient(to right, #333 45%, rgba(255, 255, 255, 0) 20%);
+            background-position: 0 100%;
+            background-size: 4px 2px;
+            background-repeat: repeat-x;
+            height: 1px;
+        }
+        &_details {
+            // margin-bottom: 24px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+            @include maxpoint(1185px) {
+                flex-wrap: wrap;
+                margin-top: 32px;
+                margin-bottom: 0px;
+            }
+            &--card {
+                width: 100%;
+                margin-bottom: 24px;
+
+                @media only screen and (max-width: 400px) and (min-width: 375px)  {
+                    &:first-of-type {
+                        .info-card {
+                            height: 200px;
+                            min-height: 200px;
+                        }
+                    }
+                    &:last-of-type {
+                        .info-card {
+                            height: 168px;
+                            min-height: 168px;
+                        }
+                    }
+                }
+
+                @include maxpoint(966px) {
+                    max-width: 276px;
+                    margin-bottom: 0px;
+                }
+                &:first-child {
+                    @include maxpoint(966px) {
+                        margin-right: 17px;
+                    }
+                    @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+                        margin-right: 0px;
+                        margin-bottom: 17px;
+                    }
+                }
+                .h5 {
+                    margin-bottom: 24px;
+                    font-size: 17px;
+                    @include maxpoint($desktop) {
+                        font-size: 18px;
+                        margin-bottom: 14px;
+                    }
+                }
+                .info-card {
+                    max-width: unset;
+                    min-height: 232px;
+                    margin-left: 0;
+                    &_icon {
+                        flex: unset;
+                        @include maxpoint(966px) {
+                            flex: auto;
+                        }
+                    }
+                    &_detail {
+                        max-width: 251px;
+                        span {
+                            font-weight: 500;
+                        }
+                        @include maxpoint(966px) {
+                            max-width: unset;
+                        }
+                    }
+                    .for-payment-detail {
+                        .h6 {
+                            // text-transform: uppercase;
+                            // letter-spacing: 0.09em;
+                        }
+                        span {
+                            font-weight: 500;
+                            margin-bottom: 16px;
+                            @include maxpoint(966px) {
+                                font-weight: 500;
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .c-checkout-summary {
+        min-width: 375px;
+        @include maxpoint(966px) {
+            max-width: calc(100% - 650px);
+            margin-top: -88px;
+        }
+    }
+}

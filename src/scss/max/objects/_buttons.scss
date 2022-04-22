@@ -1,0 +1,110 @@
+.o-button {
+    padding: 12px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    background: #939598;
+    border-radius: 12px;
+    span {
+        font-family: $secondary-font;
+        padding-top: 2px;
+        color: $color-nwhite;
+        font-size: 9px;
+        line-height: 120%;
+        text-transform: capitalize;
+        font-weight: 900;
+    }
+    i {
+        margin-left: 6.5px;
+        @include maxpoint($tablet) {
+            margin-left: 6px;
+        }
+    }
+    &.ic-front {
+        i {
+            margin-right: 8px;
+            margin-left: 0;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &.o-button-lg {
+        padding: 16px 54px 16px 55px;
+        justify-content: center;
+        span {
+            font-size: 15px;
+            line-height: 19px;
+            text-align: center;
+        }
+        i {
+            margin-left: 6px;
+        }
+        
+    }
+    &.o-button-white {
+        background-color: transparent;
+        display: flex;
+        padding: 0;
+        span {
+            letter-spacing: -0.02em;
+            font-size: 16px;
+            line-height: 130%;
+            font-weight: normal;
+        }
+    }
+    &.o-button-full {
+        width: 100%;
+        background-color: $color-pred;
+    }
+    &.o-button-disabled {
+        background: $color-n150;
+        cursor: not-allowed;
+
+        span {
+            color: $color-n000 !important;
+        }
+
+        .ic-person {
+            content: url('images/ic-person-white.svg');
+        }
+    }
+    &:disabled {
+        background-color: $color-n150;
+        cursor: not-allowed;
+        span {
+            color: #fff;
+        }
+        .ic-cart{
+            content:url('images/ic-cart-white.svg');
+        }
+    }
+    &.o-button-trans {
+        background-color: transparent;
+        display: flex;
+        padding: 15.5px;
+        span {
+            color: $color-t250;
+        }
+    }
+    &.o-button-bordered {
+        border: 1px solid $color-pred;
+    }
+    &.ic-only {
+        border-radius: 8px;
+        justify-content: center;
+        i {
+            margin-left: 0;
+        }
+        &-point {
+            border-radius: 0;
+            padding: 12px;
+            i {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+    &.hide {
+        display: none;
+    }
+}

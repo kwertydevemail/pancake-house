@@ -1,0 +1,60 @@
+.c-standard-layout {
+    background-color: $color-p100;
+    position: relative;
+    padding: 84px 0 0;
+    background-image: url('images/layout/section-combine-layout.png');
+    background-size: 100%;
+    @include maxpoint($tablet) {
+        padding: 0;
+    }
+    .o-container {
+        padding: 0;
+        position: relative;
+        z-index: 2;
+        @include maxpoint($tablet) {
+            padding: 0 0 0 48px;
+        }
+    }
+    .o-header-title-slant {
+        top: -9px;
+        letter-spacing: -0.01em;
+        font-size: 32px;
+        padding: 11.36px 16.81px;
+        left: 24px;
+        @include maxpoint($tablet) {
+            top: -65px;
+            padding: 18.03px 25.3px;
+            font-size: 50px;
+            left: 38px;
+        }
+    }
+    &-content {
+        position: relative;
+        background-color: #fff;
+        padding: 79px 24px 32px;
+        border-radius: 0px;
+        &.apply-tail {
+            background-image: linear-gradient(to bottom, #333 45%, rgba(255, 255, 255, 0) 20%);
+            background-position: 45px;
+            background-size: 2px 6px;
+            background-repeat: repeat-y;
+        }
+        @include maxpoint($tablet) {
+            padding: 64px 84px 80px;
+            border-radius: 4px;
+        }
+        &_display {
+            width: 100%;
+        }
+    }
+    .c-breadcrumbs {
+        background-color: unset;
+        display: none;
+        &::before {
+            content: unset;
+        }
+        @include maxpoint($tablet) {
+            display: block;
+        }
+    }
+}

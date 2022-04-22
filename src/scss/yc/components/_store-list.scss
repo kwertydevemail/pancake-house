@@ -1,0 +1,244 @@
+.c-store-list {
+    padding: 0;
+    .c-breadcrumbs {
+        display: block;
+        padding: 32px 24px;
+        @include maxpoint($tablet) {
+            padding: 40px 0 21px;
+        }
+    }
+    &-hotline {
+        margin-bottom: 32px;
+        padding: 24px 24px 32px;
+        @include maxpoint($tablet) {
+            padding: 40px 40px 33px;
+        }
+        .c-ordernow-title {
+            font-size: 29px;
+            line-height: 36.25px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            @include maxpoint($tablet) {
+                margin-bottom: 24px;
+            }
+        }
+        &_panel {
+            margin: 0 -8px -16px;
+            &--card {
+                padding: 0 8px;
+                text-align: center;
+                margin-bottom: 16px;
+                &__detail {
+                    background-color: $color-p250;
+                    border-radius: 4px;
+                    padding: 7px;
+                    width: 100%;
+                    @include maxpoint($tablet) {
+                        padding: 10.5px 16.5px;
+                        width: 162px;
+                    }
+                    .h5 {
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        line-height: 17.71px;
+                        font-weight: 400;
+                        letter-spacing: 0.09em;
+                        font-weight: bold;
+                    }
+                    span {
+                        font-size: 14px;
+                        line-height: 18.2px;
+                        letter-spacing: -0.01em;
+                        color: #fff;
+                        font-family: $secondary-font;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+    &-stores {
+        padding: 38px 24px 54px;
+        @include maxpoint($tablet) {
+            padding: 64px 64px 80px;
+        }
+        .c-ordernow-title {
+            font-size: 32px;
+            line-height: 36.48px;
+            margin-bottom: 29px;
+            @include maxpoint($tablet) {
+                font-size: 50px;
+                line-height: 55px;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+        }
+        &_header {
+            max-width: 592px;
+            width: 100%;
+            margin-right: auto;
+            .o-divider {
+                margin-bottom: 0;
+            }
+        }
+        form {
+            width: 100%;
+            @include maxpoint($tablet) {
+                width: unset;
+            }
+            .o-form-group {
+                padding: 0 0 16px;
+                @include maxpoint($tablet) {
+                    padding: 0;
+                }
+                label {
+                    font-size: 14px;
+                    line-height: 17.71px;
+                    letter-spacing: 0.09em;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+                &:first-child {
+                    margin-right: 16px;
+                    width: 100%;
+                    @include maxpoint($tablet) {
+                        width: 246px;
+                    }
+                }
+                &:last-child {
+                    width: 100%;
+                    padding-bottom: 27px;
+                    @include maxpoint($tablet) {
+                        padding-bottom: 0;
+                        width: 120px;
+                    }
+                }
+                .o-form-dropdown_input {
+                    padding-left: 0;
+                    ul {
+                        li {
+                            padding: 17px 16.5px 16px;
+                        }
+                    }
+                    &--item {
+                        width: 100%;
+                    }
+                }
+                .o-form-group_standard {
+                    padding-left: 0;
+                }
+            }
+        }
+        &_contacts {
+            width: 100%;
+            margin-bottom: 57px;
+            @include maxpoint($tablet) {
+                margin-bottom: 46px;
+            }
+            &--item {
+                padding: 32px 0 16px;
+                @include maxpoint($tablet) {
+                    padding: 30px 0 0;
+                }
+                &.hide{
+                    display: none;
+                }
+                &.searched {
+                    display: flex;
+                }
+                .o-divider {
+                    margin: 24px auto 0;
+                    max-width: 1078px;
+                }
+                &__content {
+                    .h4 {
+                        letter-spacing: -0.02em;
+                        margin-bottom: 24px;
+                        text-transform: unset;
+                        font-size: 25px;
+                        line-height: 31.62px;
+                        @include maxpoint($tablet) {
+                            font-size: 24px;
+                            line-height: 30.36px;
+                            margin-bottom: 16px;
+                        }
+                    }
+                    .store-legend {
+                        margin-bottom: 35px;
+                        @include maxpoint($tablet) {
+                            margin-bottom: 0;
+                        }
+                        li {
+                            &:first-child {
+                                margin-right: 20px;
+                                @include maxpoint($tablet) {
+                                    margin-right: 66px;
+                                }
+                            }
+                            i {
+                                margin-right: 9.33px;
+                            }
+                            span {
+                                font-family: $secondary-font;
+                                font-size: 14px;
+                                line-height: 18.2px;
+                                letter-spacing: -0.01em;
+                                color: $color-t250;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+                .contact-panel {
+                    margin: 0 -8px -16px;
+                    max-width: 534px;
+                    &_card {
+                        padding: 0 8px;
+                        width: 100%;
+                        margin-bottom: 16px;
+                        @include maxpoint($tablet) {
+                            width: unset;
+                        }
+                        &--detail {
+                            border: 1px solid $color-n150;
+                            text-align: center;
+                            border-radius: 4px;
+                            width: 100%;
+                            padding: 16px;
+                            @include maxpoint($tablet) {
+                                padding: 15px 16px;
+                                width: 162px;
+                            }
+                            .h5 {
+                                font-size: 14px;
+                                line-height: 18.2px;
+                                letter-spacing: -0.01em;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .store-list-paginate {
+        width: auto;
+        @include maxpoint($tablet) {
+            display: none;
+        }
+        .o-form-group.for-store-page {
+            padding-top: 0;
+            width: 140px;
+            padding-bottom: 10px;
+            margin-right: 0;
+            .o-form-dropdown_input {
+                height: 40px;
+                &::after {
+                    bottom: 11px;
+                }
+            }
+        }
+    }
+}

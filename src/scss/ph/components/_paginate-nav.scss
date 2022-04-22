@@ -1,0 +1,28 @@
+.c-paginate-nav {
+    margin-left: 10px;
+    @include maxpoint($tablet) {
+        margin-left: 0;
+    }
+    a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-n250;
+        font-size: 16px;
+        line-height: 20.8px;
+        letter-spacing: -0.02em;
+        font-family: $secondary-font;
+        font-weight: bold;
+        &:not(.c-paginate-nav_carets):hover, &.active {
+            background-color: $color-p050;
+        }
+        &.hide {
+            display: none;
+        }
+    }
+    &_carets {
+        background-color: $color-p100;
+    }
+}

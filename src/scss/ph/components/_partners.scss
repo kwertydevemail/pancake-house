@@ -1,0 +1,93 @@
+.c-partners {
+    // background-color: $color-n200;
+    background-color: $color-p30;
+    position: relative;
+    padding: 40px 0 28px;
+
+    @include maxpoint($tablet) {
+        padding: 97px 0 101px;
+    }
+
+    .header {
+        position: absolute;
+        bottom: 100px;
+        left: -80px;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 92%;
+        mix-blend-mode: overlay;
+        opacity: 0.3;
+        transform: matrix(0, -1, 1, 0, 0, 0);
+
+        @include maxpoint($tablet) {
+            font-size: 100px;
+            line-height: 92%;
+        }
+    }
+
+    .c-partners-wrapper {
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+    }
+    &-club {
+        $club: &;
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 794px;
+        @include maxpoint($tablet) {
+            gap: 30px;
+        }
+        
+        &_panel:hover {
+            background: #FFFFFF;
+        }
+
+        &_panel:active {
+            background: #F7F7F7;
+            border: 1px solid #FFCC00;
+        }
+
+        &_panel {
+            position: relative;
+            width: calc(25% - 15px);
+            height: 104px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            background: #F7F7F7;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include maxpoint($tablet) {
+                width: calc(25% - 30px);
+            }
+            &--card {
+                overflow: hidden;
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                display: block;
+                padding: 10px;
+                @include maxpoint($tablet) {
+                    padding: 22px;
+                }
+                figure {
+                    width: 100%;
+                    img {
+                        object-fit: contain;
+                    }
+                }
+            }
+            @include maxpoint($tablet) {
+                height: 176px;
+            }
+    
+            @media (min-width:1024px) and (max-width:1026px) {
+                height: 122.09px;
+            }
+        }
+        
+    }
+}

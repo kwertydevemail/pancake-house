@@ -1,0 +1,185 @@
+.c-new-customer-tick-box {
+  background-color: $color-p100;
+  margin: 10px -32px 30px -60px;
+  width: 100vw;
+  padding: 0 0 30px;
+
+  @include maxpoint($tablet) {
+    margin: 10px -66px 30px -112px;
+  }
+
+  @include maxpoint($desktop) {
+    margin: -35px 0 35px;
+    padding: 0;
+    max-width: 1060px;
+    min-height: 266px;
+  }
+
+  .o-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include maxpoint($tablet) {
+      padding: 0;
+    }
+
+    @include maxpoint($desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  .c-tick-box {
+    &-images {
+      background-color: $color-p100;
+      position: relative;
+      margin-bottom: 51px;
+      width: 100%;
+
+      @include maxpoint($desktop) {
+        flex-basis: percentage(410 / 1060);
+        margin-bottom: 0;
+        height: 100%;
+      }
+
+      .img-sm {
+        @include maxpoint($desktop) {
+          display: none;
+        }
+      }
+
+      .img-lg {
+        display: none;
+
+        @include maxpoint($desktop) {
+          display: block;
+        }
+      }
+    }
+
+    &-form {
+      padding: 0 40px 0 30px;
+
+      @include maxpoint($desktop) {
+        flex-basis: percentage(656 / 1060);
+        padding: 48px 60px 30px 18px;
+      }
+    }
+
+    &-input-group {
+      padding-left: 2px;
+
+      .checkmark {
+        background-color: transparent;
+        top: 2px !important;
+        border: 2px solid #000 !important;
+
+        &::after {
+          left: 5px;
+          top: -2px;
+          width: 3px;
+          height: 12px;
+        }
+      }
+
+      a {
+        color: $color-n000 !important;
+        font-weight: 700;
+        border-bottom: 1px solid $color-n000;
+      }
+    }
+
+    &-input {
+      padding-left: 0 !important;
+      &:not(:last-child) {
+        margin-bottom: 6px !important;
+
+        @include maxpoint($desktop) {
+          margin-bottom: 24px !important;
+        }
+      }
+    }
+  }
+
+  .tick-box {
+    &-bg-wrapper {
+      height: 210px;
+      min-width: 375px;
+
+      @include maxpoint($desktop) {
+        height: 100%;
+        min-width: auto;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mix-blend-mode: screen;
+
+        @include maxpoint($desktop) {
+          object-fit: fill;
+        }
+      }
+    }
+
+    &-logo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 58px;
+      left: 50%;
+      width: 133px;
+      height: 158px;
+      transform: translateX(-50%);
+
+      @include maxpoint($desktop) {
+        width: 139px;
+        height: 166px;
+        top: 52px;
+        left: 46.5%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: $color-n000;
+        border-radius: 50%;
+        height: 207px;
+        width: 207px;
+        z-index: 1;
+
+        @include maxpoint($desktop) {
+          height: 217px;
+          width: 217px;
+        }
+      }
+
+      img {
+        position: relative;
+        width: 100%;
+        z-index: 2;
+      }
+    }
+  }
+
+  .o-button {
+    background-color: $color-p250;
+    margin-top: 16px;
+    width: 100%;
+
+    & > span {
+      color: $color-n000;
+    }
+
+    @include maxpoint($desktop) {
+      margin-top: 24px;
+      width: 316px;
+    }
+  }
+}

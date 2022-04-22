@@ -1,0 +1,34 @@
+// @import url('https://fonts.googleapis.com/css?family=Asap');
+// $primary-font: 'asap', san-serif;
+
+$primary-font: 'Museo Sans Condensed', san-serif;
+$secondary-font: 'Circular Std', san-serif;
+
+@font-face {
+    font-family: 'Moderne LL';
+    src: url('../dist/fonts/ModerneLL-Fat.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Condensed';
+    src: url('../dist/fonts/MuseoSansCondensed-300.woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Condensed';
+    src: url('../dist/fonts/MuseoSansCondensed-500.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Condensed';
+    src: url('../dist/fonts/MuseoSansCondensed-700.woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+

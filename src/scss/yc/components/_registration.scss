@@ -1,0 +1,233 @@
+.c-registration {
+    min-height:  300px;
+    padding: 0;
+    background: $color-n150 url('images/product/section-graphics-mb.png');
+    @include maxpoint($tablet) {
+        background: $color-n150 url('images/product/section-graphics.png');
+    }
+    .c-standard-layout {
+        &-content {
+            padding: 87px 0 40px;
+            @include maxpoint($tablet) {
+                padding: 91px 66px 64px 60px;
+            }
+        }
+    }
+    .c-breadcrumbs {
+        display: block;
+        padding: 32px 24px;
+        @include maxpoint($tablet) {
+            padding: 40px 0 93px;
+        }
+    }
+    .c-checkout-form {
+        padding: 0;
+        max-width: unset;
+        margin-right: 0;
+        & > .h5 {
+            max-width: 882px;
+            padding: 0 24px;
+            font-weight: 300;
+            margin-bottom: 24px;
+            @include maxpoint($tablet) {
+                font-weight: normal;
+                padding: 0;
+            }
+        }
+        & > .o-divider {
+            margin: 16px 0 32px;
+        }
+        form {
+            max-width: unset;
+            padding: 0 32px 0 24px;
+            @include maxpoint($tablet) {
+                padding: 0;
+            }
+            .o-form-group {
+                &:nth-last-child(2) {
+                    padding-bottom: 32px;
+                    @include maxpoint($tablet) {
+                        padding-bottom: 48px;
+                    }
+                }
+                &-inner {
+                    margin-bottom: 16px;
+                    @include maxpoint($tablet) {
+                        max-width: 514px;
+                        margin-right: 26px;
+                    }
+                    &:nth-child(even) {
+                        margin-right: 0;
+                    }
+                    &:last-child:not(.o-form-dropdown_input) {
+                        margin-bottom: 0;
+                    }
+                    & > label {
+                        &.label-sm, &.label-md {
+                            text-transform: unset;
+                            font-weight: normal;
+                            letter-spacing: -0.01em;
+                            letter-spacing: unset;
+                            margin-bottom: 16px;
+                            @include maxpoint(996px) {
+                                margin-bottom: 8px;
+                            }
+                        }
+                        &.label-md {
+                            font-size: 16px;
+                            line-height: 20.8px;
+                            margin-bottom: 8px;
+                            @include maxpoint($tablet) {
+                                margin-bottom: 16px;
+                            }
+                        }
+                        &.label-sm {
+                            margin-bottom: 0;
+                            @include maxpoint($tablet) {
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                    &.for-drop-date {
+                        display: flex;
+                        flex-wrap: wrap;
+                        max-width: 522px;
+                        margin-bottom: 0px;
+                        .o-form-group-inner {
+                            &:last-child {
+                                margin-bottom: 16px;
+                            }
+                            @include maxpoint($tablet) {
+                                margin-right: 16px;
+                                max-width: 253px;
+                            }
+                            &:nth-child(odd) {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    .italize {
+                        margin-top: 8px;
+                        font-size: 13px;
+                        line-height: 16.44px;
+                        font-weight: 400;
+                        padding-left: 14px;
+                        color: $color-t200;
+                        @include maxpoint($tablet) {
+                            margin-top: 3px;
+                            padding-left: 0;
+                        }
+                    }
+                    &.o-form-group_password {
+                        min-height: 130px;
+                        @include maxpoint($tablet) {
+                            min-height: 133px;
+                        }
+                    }
+                    &.for-captcha {
+                        @include maxpoint($tablet) {
+                            min-height: 125px;
+                        }
+                        .error-data {
+                            margin-top: 8px;
+                            @include maxpoint($tablet) {
+                                margin-top: 0;
+                                margin-left: 204px;
+                            }
+                        }
+                    }
+                    .o-form-group-custom-captcha {
+                        max-width: 514px;
+                    }
+                    .for-terms {
+                        margin-bottom: 16px;
+                        padding-left: 14px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        @include maxpoint($tablet) {
+                            padding-left: 0;
+                        }
+                        span {
+                            margin-right: 0;
+                            max-width: 270px;
+                            @include maxpoint(996px) {
+                                max-width: unset;
+                            }
+                        }
+                        a {
+                            color: $color-p100;
+                            position: relative;
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                left: 0;
+                                right: 0;
+                                height: 1px;
+                                bottom: -3px;
+                                background-color: $color-p100;
+                            }
+                        }
+                    }
+                    &.for-partner-panel {
+                        & > label {
+                            margin-bottom: 16px;
+                            @include maxpoint($tablet) {
+                                margin-bottom: 24px;
+                            }
+                        }
+                        .o-form-panels {
+                            max-width: 670px;
+                            &_card {
+                                padding: 0 8px 16px;
+                                @include maxpoint($tablet) {
+                                    padding: 0 12px 24px;
+                                }
+                                &--detail {
+                                    padding: 0;
+                                    position: relative;
+                                    border: 2px solid $color-n150;
+                                    &.active, &:hover  {
+                                        border: 2px solid $color-p075;
+                                    }
+                                    height: 127px;
+                                    width: 127px;
+                                    @include maxpoint($tablet) {
+                                        height: 110px;
+                                        width: 110px;
+                                    }
+                                    figure {
+                                        position: absolute;
+                                        top: calc(50% + 3px);
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        img {
+                                            width: auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.for-edit-profile_spacer {
+                        display: none;
+                        @include maxpoint($tablet) {
+                            display: block;
+                        }
+                    }
+                }
+                &_standard {
+                    max-width: unset;
+                }
+            }
+            & > .o-button {
+                max-width: 554px;
+                width: 327px;
+                @include maxpoint($tablet) {
+                    width: 100%;
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+}

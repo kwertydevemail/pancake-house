@@ -1,0 +1,753 @@
+
+.o-divider {
+    width: 100%;
+    margin: 16px 0;
+    border-top: 1px solid $color-t50;
+}
+.bg-yellow {
+    background-color: $color-p100;
+}
+.qs {
+    &-datepicker {
+        &-container {
+            &.qs-show {
+                position: fixed;
+                top: 299px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: unset;
+            }
+            @include maxpoint($tablet) {
+                left: unset !important;
+                right: unset !important;
+                position: absolute;
+                top: calc(100% - 1px) !important;
+                width: 343px;
+            }
+            border-color: $color-n150;
+        }
+    }
+    &-controls {
+        background-color: #fff;
+        padding: 24px 20px 0;
+    }
+    &-month, &-year {
+        font-family: $secondary-font;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    &-right, &-left {
+        &:hover {
+            background-color: unset;
+        }
+        &::after {
+            border: 0;
+        }
+    }
+    &-right::after {
+        content: url('images/ic-caret-right.svg');
+    }
+    &-left::after {
+        content: url('images/ic-caret-left.svg');
+    }
+    &-squares {
+        padding: 10px 13px 20px;
+    }
+    &-square {
+        height: 30px;
+        font-family: $secondary-font;
+        color: $color-t250;
+        font-weight: 300;
+        margin-bottom: 5px;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+    }
+    &-active, &-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+        background-color: unset;
+        position: relative;
+        text-decoration: none;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-color: $color-p050;
+            border: 1px solid $color-p100;
+            z-index: -1;
+        }
+    }
+}
+
+.c-ordernow {
+    &-title {
+        line-height: 37.4px;
+        font-family: $primary-font;
+        font-size: 28px;
+        width: 100%;
+        @include maxpoint($tablet) {
+            font-size: 34px;
+        }
+    }
+    .o-divider {
+        max-width: 648px;
+        margin: 24px 0 32px;
+        @include maxpoint($tablet) {
+            margin: 17px 0 32px;
+        }
+    }
+    .o-form-panels {
+        margin: 0 6px -16px;
+        @include maxpoint($tablet) {
+            margin: 0 -8px -16px;
+        }
+        &_card {
+            &--detail {
+                padding: 16px;
+                width: 130px;
+                min-height: 94px;
+                @include maxpoint($tablet) {
+                    width: 129px;
+                }
+                &.pad-l-lg {
+                    padding: 16px 33px 16px 16px;
+                    @include maxpoint($tablet) {
+                        padding: 16px 32px 16px 16px;
+                    }
+                }
+                &__title {
+                    .h3 {
+                        line-height: 21.25px;
+                        .ic-registered-sm {
+                            margin-bottom: 5px;
+                            margin-left: -1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .o-form-dropdown_input ul li .h5 {
+        font-weight: normal;
+    }
+    form {
+        width: 100%;
+        & > .o-button {
+            width: 100%;
+            @include maxpoint($tablet) {
+                max-width: 521px;
+            }
+        }
+        .italize {
+            margin-top: 8px;
+            max-width: 636px;
+            line-height: 16px;
+            font-size: 13px;
+            color: $color-t200;
+        }
+    }
+    &.for-pickup-form, &.for-delivery-form {
+        .for-store-branch .o-form-dropdown_input,
+        .o-form-datetime .o-form-datetime_date {
+            input {
+                padding: 15px 35px 15px 16px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    &.for-delivery-form {
+        .c-standard-layout-content {
+            padding: 79px 32px 32px 24px;
+            @include maxpoint($tablet) {
+                padding: 64px 53px 80px 84px;
+            }
+        }
+        .o-form-panels {
+            &_card {
+                &--detail {
+                    width: 126.5px;
+                    min-height: unset;
+                    &.pad-l-lg {
+                        padding: 16px 19px 16px 16px;
+                    }
+                    @include maxpoint($tablet) {
+                        width: 129px;
+                    }
+                }
+            }
+        }
+        .o-form-dropdown {
+            &_input {
+                ul {
+                    @include maxpoint($tablet) {
+                        max-height: 160px;
+                    }
+                }
+                textarea {
+                    resize: none;
+                    height: 78px !important;
+                    padding: 15px 16px 9px 16px;
+                    overflow: hidden;
+                    @include maxpoint($desktop) {
+                        height: 48px !important;
+                        padding: 15px 16px;
+                    }
+                }
+            }
+            .italize {
+                min-width: 269px;
+                margin-left: 16px;
+                @include maxpoint($tablet) {
+                    margin-left: 0;
+                }
+            }
+        }
+        .o-form-address-picker {
+            .o-form-dropdown_input {
+                height: 78px;
+                margin-right: 0;
+                @include maxpoint($desktop) {
+                    margin-right: 15px;
+                    height: 48px;
+                }
+            }
+            ul {
+                @include maxpoint($tablet) {
+                    max-height: 324px;
+                }
+            }
+            .o-button {
+                padding: 13.5px;
+                max-width: 211px;
+                width: 100%;
+                margin-top: 8px;
+                margin-left: 16px;
+                @include maxpoint($tablet) {
+                    margin-left: 0;
+                }
+                @include maxpoint(1152px) {
+                    margin-top: 0;
+                }
+            }
+        }
+        .deliver {
+            &-now-text {
+                width: 100%;
+                line-height: 18.2px;
+                font-size: 14px;
+                letter-spacing: -0.01em;
+                padding-left: 16px;
+                color: $color-t250;
+                font-weight: 300;
+                @include maxpoint($tablet) {
+                    padding-left: 0;
+                    max-width: 471px;
+                }
+                &.full-w {
+                    max-width: unset;
+                    margin-bottom: 16px;
+                }
+            }
+            &-type {
+                width: 100%;
+                display: none;
+                &.show {
+                    display: flex;
+                }
+            }
+        }
+        .for-newaddress {
+            margin-bottom: 8px !important;
+
+            @include maxpoint($desktop) {
+                margin-bottom: 24px !important;
+            }
+            .o-form-dropdown_input {
+                max-width: 689px;
+                .o-form-group_input {
+                    padding: 15px 40px 15px 16px;
+                }
+            }
+        }
+        .o-button[type=submit] {
+            margin-top: 19px;
+        }
+        .o-form-group-inner {
+            margin-bottom: 24px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .for-view-location {
+            padding-left: 16px;
+            @include maxpoint($tablet) {
+                padding-left: 0;
+            }
+            button {
+                padding: 14.5px;
+            }
+        }
+    }
+    &-cta {
+        max-width: 260px;
+        width: 260px;
+        margin-left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @media (max-width: 1240px) {
+            display: none;
+        }
+        .o-button-bordered {
+            width: 100%;
+        }
+    }
+}
+
+.c-order-tracker {
+    padding: 0;
+    .c-breadcrumbs {
+        display: block;
+        padding: 43px 24px 44px;
+        @include maxpoint($tablet) {
+            padding: 40px 0 93px;
+        }
+    }
+    .c-standard-layout-content {
+        padding: 79px 24px 37px;
+        @include maxpoint($tablet) {
+            padding: 64px 24px 80px 84px;
+        }
+        @include maxpoint(1040px) {
+            padding: 64px 84px 80px;
+        }
+        &.apply-tail {
+            background-image: none;
+            @include maxpoint($desktop) {
+                background-image: linear-gradient(to bottom, #333 45%, rgba(255, 255, 255, 0) 20%);
+            }
+        }
+        &_display {
+            flex-direction: column;
+            @include maxpoint($desktop) {
+                flex-direction: row;
+            }
+        }
+    }
+    &_stacks {
+        margin-right: 0;
+        @include maxpoint(1040px) {
+            margin-right: 67px;
+        }
+        .o-divider {
+            margin: 16px 0 32px 0;
+            max-width: 717px;
+        }
+        &--track {
+            margin: 0 -16px;
+            flex-direction: column;
+            @include maxpoint($desktop) {
+                flex-direction: row;
+            }
+            &__list {
+                padding: 0 16px 40px;
+                position: relative;
+                @include maxpoint($desktop) {
+                    padding: 0 16px;
+                }
+                &:last-child {
+                    padding: 0 16px;
+                }
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    background-size: 1px 5.5px;
+                    background-image: linear-gradient(to bottom, #333 45%, rgba(255, 255, 255, 0) 20%);
+                    background-repeat: repeat-y;
+                    width: 2px;
+                    left: 55px;
+                    top: 0;
+                    bottom: 0;
+                    @include maxpoint($desktop) {
+                        top: 40px;
+                        background-size: 5.5px 1px;
+                        background-repeat: repeat-x;
+                        height: 2px;
+                        width: unset;
+                        background-position: 45px;
+                        background-image: linear-gradient(to right, #333 45%, rgba(255, 255, 255, 0) 20%);
+                    }
+                }
+                @include maxpoint($desktop) {
+                    &::before {
+                        left: 50%;
+                        right: 0;
+                    }
+                    &::after {
+                        right: 50%;
+                        left: 0;
+                    }
+                }
+                &:first-child {
+                    &::after {
+                        background-image: none;
+                    }
+                }
+                &:last-child {
+                    &::before, &::after {
+                        background-image: none;
+                    }
+                    @include maxpoint($desktop) {
+                        &::after {
+                            background-image: linear-gradient(to right, #333 45%, rgba(255, 255, 255, 0) 20%);
+                        }
+                    }
+                }
+                .tracker-cards {
+                    position: relative;
+                    z-index: 3;
+                    width: 277px;
+                    @include maxpoint($desktop) {
+                        width: 165px;
+                    }
+                    figure {
+                        border-radius: 80px;
+                        height: 80px;
+                        width: 80px;
+                        background-color: #fff;
+                        border: 1px dashed $color-n250;
+                        svg {
+                            fill: $color-t175;
+                        }
+                        @include maxpoint($desktop) {
+                            margin-bottom: 32px;
+                        }
+                    }
+                    .h5 {
+                        font-size: 21px;
+                        line-height: 26.56px;
+                        font-weight: bold;
+                        color: $color-t175;
+                        text-align: center;
+                        max-width: 165px;
+                        width: 100%;
+                        margin-left: auto;
+                        @include maxpoint($desktop) {
+                            max-width: unset;
+                            margin-left: unset;
+                            font-size: 24px;
+                            line-height: 30.36px;
+                        }
+                    }
+                }
+                &.tracker {
+                    &-filled {
+                        figure {
+                            background-color: $color-p100;
+                            border: 0;
+                            svg {
+                                fill: #fff;
+                            }
+                        }
+                        .h5 {
+                            color: #000;
+                        }
+                    }
+                    &-semi {
+                        figure {
+                            background-color: $color-t175;
+                            border: 4px solid $color-p100;
+                            svg {
+                                fill: #fff;
+                            }
+                        }
+                        .h5 {
+                            color: $color-t250;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_detail {
+        width: 184px;
+        padding: 48px 0 0;
+        @include maxpoint(1222px) {
+            padding: 16px 0 0;
+        }
+        &--item {
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .h5 {
+                font-size: 16px;
+                line-height: 20.8px;
+                font-weight: bold;
+                margin-bottom: 6px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 18.2px;
+                letter-spacing: -0.01em;
+                font-weight: 300;
+                color: $color-t250;
+            }
+        }
+    }
+}
+
+.c-order-form {
+    padding: 0;
+    .c-breadcrumbs {
+        display: block;
+        padding: 32px 24px;
+        @include maxpoint($tablet) {
+            padding: 40px 0 21px;
+        }
+    }
+    .c-standard-layout-content {
+        padding: 38px 24px 64px;
+        @include maxpoint($tablet) {
+            padding: 64px;
+        }
+        &_display {
+            max-width: 722px;
+            width: 100%;
+            & > .h5 {
+                font-size: 18px;
+                line-height: 21.6px;
+                letter-spacing: unset;
+                font-weight: normal;
+                margin-bottom: 24px;
+                max-width: 316px;
+                width: 100%;
+                letter-spacing: -0.02em;
+                color: $color-t200;
+                @include maxpoint($tablet) {
+                    font-size: 20px;
+                    line-height: 25.3px;
+                    margin-bottom: 0;
+                    max-width: unset;
+                    letter-spacing: unset;
+                }
+            }
+            .o-divider {
+                margin: 16px 0 32px;
+                max-width: 717px;
+                display: none;
+                @include maxpoint($tablet) {
+                    display: block;
+                }
+            }
+            form {
+                width: 100%;
+                .o-form-group {
+                    padding-top: 0;
+                    padding-bottom: 24px;
+                    @include maxpoint($tablet) {
+                        padding-bottom: 46px;
+                    }
+                    label {
+                        font-size: 14px;
+                        color: $color-p250;
+                        margin-bottom: 8px;
+                        line-height: 17.71px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        letter-spacing: 0.09em;
+                    }
+                    &_standard {
+                        max-width: 100%;
+                        padding-left: 0;
+                        input {
+                            max-width: 307px;
+                            width: 100%;
+                            @include maxpoint($tablet) {
+                                max-width: unset;
+                            }
+                            &::placeholder {
+                                color: $color-t150;
+                            }
+                        }
+                    }
+                    &:nth-last-child(2) {
+                        padding-bottom: 24px;
+                    }
+                }
+                .recaptcha-container {
+                    position: relative;
+                    overflow: hidden;
+                    .g-recaptcha {
+                        transform: scale(1.065);
+                        transform-origin: 0 0;
+                        & > div {
+                            width: 304px !important;
+                            iframe {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .o-button {
+                    max-width: 322px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .c-ordernow-title {
+        font-size: 32px;
+        line-height: 35.2px;
+        letter-spacing: -0.01em;
+        margin-bottom: 16px;
+        @include maxpoint($tablet) {
+            font-size: 50px;
+            line-height: 55px;
+        }
+    }
+}
+
+.summary-list {
+    li {
+        padding: 4px 0;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0 !important;
+        }
+        .h6 {
+            font-size: 14px;
+            line-height: 17.71px;
+            font-weight: bold;
+            &:first-child {
+                max-width: 168px;
+                @include maxpoint($tablet) {
+                    max-width: 200px;
+                }
+                width: 100%;
+            }
+        }
+        & > span {
+            font-family: $secondary-font;
+            color: $color-t250;
+            font-size: 14px;
+            line-height: 18.2px;
+            width: 100%;
+            letter-spacing: -0.01em;
+            &:first-child {
+                max-width: 200px;
+                text-align: left;
+            }
+            &:nth-child(2) {
+                max-width: 60px;
+                text-align: center;
+            }
+            &:not(:first-child):last-child {
+                max-width: 150px;
+                text-align: right;
+            }
+            &.italize {
+                color: $color-n000;
+                font-weight: 400;
+                max-width: unset;
+            }
+        }
+        &.inner {
+            padding-left: 24px;
+        }
+        &.subtotal {
+            padding: 8px 0 24px;
+            border-bottom: 1px solid $color-p250;
+            & + li {
+                padding: 24px 0 4px;
+            }
+            &:last-child {
+                padding: 8px 0;
+                border: 0;
+            }
+        }
+        &.grandtotal {
+            .h6 {
+                font-size: 16px;
+                line-height: 20.8px;
+                letter-spacing: -0.02em;
+            }
+        }
+        .o-button {
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+}
+
+.swal2 {
+    $swal: &;
+    &-container {
+        #{$swal}-styled {
+            &.swal2-confirm, &.swal2-cancel  {
+                border-radius: 0;
+                text-transform: uppercase;
+                font-size: 15px;
+                line-height: 19px;
+                font-family: $secondary-font;
+                font-weight: 900;
+                padding: 15.5px;
+                width: 100%;
+                @include maxpoint($tablet) {
+                    width: 48%;
+                }
+                &:focus {
+                    box-shadow: unset;
+                }
+                &:hover {
+                    background-image: unset !important;
+                }
+            }
+            &.swal2-confirm {
+                background-color: $color-p100;
+                color: $color-t250;
+            }
+            &.swal2-cancel {
+                color: $color-t250;
+                background-color: $color-n000;
+                outline: 1px solid $color-p100;
+            }
+        }
+    }
+    &-title {
+        font-family: $primary-font;
+        color: $color-t250 !important;
+        padding: 45px 24px 0 !important;
+        @include maxpoint($tablet) {
+            padding: 90px 1em 0 !important;
+        }
+    }
+    &-html-container {
+        font-family: $secondary-font;
+        font-size: 14px !important;
+        color: $color-t250 !important;
+        padding: 24px 68px 0 !important;
+    }
+    &-popup {
+        border-radius: 0 !important;
+        width: 681px !important;
+        padding: 0 0 27px !important;
+        @include maxpoint($tablet) {
+            padding: 0 0 45px !important;
+        }
+    }
+    &-actions {
+        padding: 0 24px !important;
+        @include maxpoint($tablet) {
+            padding: 0 68px !important;
+        }
+    }
+}
+
+
+

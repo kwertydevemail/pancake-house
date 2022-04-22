@@ -1,0 +1,52 @@
+@import 'max/tools/_mixins';
+
+@import 'max/settings/_variables';
+@import 'max/settings/_font';
+@import 'max/settings/_common';
+@import 'max/settings/_colors';
+
+@import 'max/settings/_typography';
+
+@import 'max/vendor/_vendor';
+
+@import 'max/objects/_container';
+@import 'max/objects/_columns';
+@import 'max/objects/_inputs';
+@import 'max/objects/_buttons';
+
+@import 'max/components/_header';
+@import 'max/components/_nav';
+@import 'max/components/_footer';
+@import 'max/components/_cards';
+@import 'max/components/_hero-banner';
+@import 'max/components/_product';
+@import 'max/components/_explore-cards';
+@import 'max/components/_breadcrumbs';
+@import 'max/components/_default-details';
+@import 'max/components/_product-details';
+@import 'max/components/_magnifier';
+@import 'max/components/_partners';
+@import 'max/components/_legends';
+@import 'max/components/_header-trans';
+@import 'max/components/_modal';
+@import 'max/components/_login-and-forgotpass';
+@import 'max/components/_standard-layout';
+@import 'max/components/_mix-components';
+@import 'max/components/cart';
+@import 'max/components/_review-order';
+@import 'max/components/_store-list';
+@import 'max/components/_paginate-nav';
+@import 'max/components/_updated-product-detail-pages';
+@import 'max/components/_account';
+@import 'max/components/_checkout';
+@import 'max/components/_confirmation';
+@import 'max/components/_registration';
+@import 'max/components/_related-products';
+@import 'max/components/_address-affix';
+@import 'max/components/_new-customer-tick-box';
+@import 'max/components/_timer-picker';
+@import 'max/components/search';
+
+@import 'max/tools/_utils';
+
+@import '~js-datepicker/dist/datepicker.min.css';

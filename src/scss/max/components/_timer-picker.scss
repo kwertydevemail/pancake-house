@@ -1,0 +1,104 @@
+.c-timer-picker {
+	position: fixed;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-height: 411px;
+	display: flex;
+	justify-content: center;
+	padding: 40px 16px;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s ease;
+    width: 100%;
+	&::before {
+		display: none;
+	}
+	&.show-time {
+		opacity: 1;
+		visibility: visible;
+		z-index: 9;
+	}
+	.picker {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		.separator {
+			display: flex;
+			align-items: center;
+			color: #CAC7C4;
+			font-weight: 500;
+			font-family: $primary-font;
+			font-size: 14px;
+		}
+	}
+	.swiper-container {
+		width: 80px;
+		height: 210px;
+		float: left;
+		.swiper-wrapper {
+			.swiper-slide {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 120%;
+				text-align: center;
+				color: #9C9892;
+				opacity: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				user-select: none;
+				transition: opacity 0.3s ease;
+				cursor: default;
+				font-weight: bold;
+				-webkit-tap-highlight-color: transparent;
+				&-prev,
+				&-next {
+					cursor: pointer;
+				}
+				&-active {
+					color: #241F20;
+					font-weight: 900;
+				}
+			}
+		}
+	}
+	.vizor {
+		position: absolute;
+		top: 50%;
+		left: 1rem;
+		right: 1rem;
+		transform: translateY(-50%);
+		border: 1px solid #7D7871;
+		box-sizing: border-box;
+		border-radius: 4px;
+		height: 50px;
+		opacity: 1;
+	}
+	.o-button {
+		font-family: $primary-font;
+		width: 100%;
+		max-width: 100%;
+		justify-content: center;
+		margin: 0;
+		font-weight: 900;
+		font-size: 14px;
+		line-height: 100%;
+		&--full {
+			background: #FC0000;
+			margin: 40px 0 17px;
+			color: #fff;
+		}
+		&--trans {
+			background: transparent;
+			color: #241F20;
+			border: 1px solid #FC0000;
+		}
+	}
+}

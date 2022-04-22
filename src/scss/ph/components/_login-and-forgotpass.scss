@@ -1,0 +1,338 @@
+.c-login, .c-forgot-password {
+    padding: 32px 0 0 0;
+    background: $color-n150 url(images/product/section-graphics.png);
+    
+    @include maxpoint($desktop) {
+        padding: 80px 0 0 0;
+    }
+
+    .o-container {
+        padding: 0;
+
+        @include maxpoint($desktop) {
+            padding: 0 0 0 48px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        @include maxpoint($desktop) {
+            height: 585px;
+            flex-direction: row;
+        }
+
+        .content-left {
+            width: 100%;
+            background: $color-p050;
+            padding: 32px 24px 40px 24px;
+
+            @include maxpoint($desktop) {
+                width: 602px;
+                padding: 91px 0 0 0;
+            }
+            
+            &__description {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: auto;
+                // margin: 0;
+                height: 304px;
+                max-width: 443px;
+                
+                @include maxpoint($desktop) {
+                    margin: auto;
+                }
+
+                @include maxpoint($desktop-md) {
+                    margin: 0 auto 0 60px;
+                }
+
+                h3 {
+                    margin: 0 0 8px 0;
+                    color: $color-t250;
+
+                    @include maxpoint($desktop) {
+                        margin: 0 0 16px 0;
+                    }
+                }
+
+                p {
+                    margin: 0 0 16px 0;
+                    font-size: 14px;
+                    color: $color-p250;
+                }
+
+                .description-image {
+                    width: 181px;
+                    height: 181px;
+                    margin: 0 auto;
+    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            .o-button {
+                width: 100%;
+                margin: 30px auto 0;
+                height: 50px;
+                
+                @include maxpoint($desktop) {
+                    width: 443px;
+                }
+
+                span {
+                    font-family: Circular Std;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 15px;
+                    line-height: 19px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: $color-t250;
+                }
+            }
+        }
+
+        .content-right {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: $color-n000;
+
+            @include maxpoint($desktop) {
+                width: 630px;
+            }
+
+            &__form {
+                width: 100%;
+                padding: 32px 24px;
+
+                @include maxpoint($desktop) {
+                    max-width: 443px;
+                    padding: 91px 0 0 0;
+                }
+
+                h3 {
+                    margin: 0 0 16px 0;
+                    color: $color-t250;
+
+                    @include maxpoint($desktop) {
+                        margin: 0 0 24px 0;
+                    }
+                }
+
+                .registered-label {
+                    margin: 0 0 24px 0;
+                    color: $color-t225;
+                }
+
+                .form-back {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 0 16px 0;
+                    color: $color-t250;
+
+                    font-family: $secondary-font;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 130%;
+                    letter-spacing: -0.02em;
+
+                    .ic-back-arrow {
+                        margin: 0 8px 0 0;
+                    }
+                }
+
+                .o-form-group {
+                    margin: 0 0 16px 0;
+                    padding: 0;
+
+                    .overline {
+                        margin: 0 0 8px 0;
+                        width: fit-content;
+                        position: relative;
+
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 18px;
+                        letter-spacing: 0.09em;
+                        text-transform: uppercase;
+                        color: $color-p250;
+                    }
+
+                    .overline:before {
+                        position: absolute;
+                        content: "*";
+                        color: #FF4127;
+                        top: 0;
+                        right: -8px;
+                    }
+                }
+                
+                //temp
+                .error-data {
+                    font-family: $secondary-font;
+                    position: absolute;
+                    display: none;
+                    // white-space: nowrap;
+                    white-space: unset;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: -0.01em;
+                    color: #FF4127;
+                    top: calc(100% + 2px);
+                    font-weight: 300;
+
+                    @include maxpoint($desktop) {
+                        top: calc(100% + 8px);
+                    }
+
+                    &.relative {
+                        position: relative;
+                        margin-top: 8px;
+                        white-space: pre-wrap;
+                    }
+                }
+
+                .is-invalid {
+                    position: relative;
+                    .has-error {
+                        border-color: #FF4127;
+                    }
+                    .error-data {
+                        display: block;
+                    }
+                }       
+
+                .password {
+                    position: relative;
+
+                    // &::after {
+                    //     position: absolute;
+                    //     content: "";
+                    //     background: url("images/login/ic-password.svg");
+                    //     top: 43px;
+                    //     right: 17px;
+                    //     width: 16px;
+                    //     height: 16px;
+                    // }
+
+                    .ic-password-hide, .ic-password-show {
+                        position: absolute;
+                        top: 55%;
+                        right: 4%;
+                        cursor: pointer;
+                        height: 16px;
+                        width: 16px;
+                    }
+                }
+    
+                .o-button {
+                    width: 100%;
+                    margin: 40px 0 0 0;
+                    height: 50px;
+    
+                    @include maxpoint($desktop) {
+                        width: 443px;
+                        margin: 48px 0 0 0;
+                    }
+
+                    span {
+                        font-family: Circular Std;
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 15px;
+                        line-height: 19px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: $color-t250;
+                    }
+                }
+
+                .forgot {
+                    display: block;
+                    margin: 8px 0 0 0;
+                    font-family: $secondary-font;
+                }
+            }
+        }
+    }
+}
+
+.c-forgot-password {
+
+    &__content {
+        
+        .content-right {
+            justify-content: center;
+
+            @include maxpoint($desktop-md) {
+                justify-content: flex-start;
+            }
+
+            &__form {
+                margin: 0;
+
+                @include maxpoint($desktop-md) {
+                    margin: 0 0 0 80px;
+                }
+
+                .enter-label {
+                    position: relative;
+                    width: fit-content;
+                    margin: 0 0 24px 0;
+
+                    &::before {
+                        position: absolute;
+                        content: "*";
+                        color: #FF4127;
+                        top: 0;
+                        right: -6px;
+                    }
+                }
+
+                .o-button {
+                    margin: 32px 0 0 0;
+                    height: 50px;
+                    width: 100%;
+
+                    @include maxpoint($desktop) {
+                        margin: 40px 0 0 0;
+                        width: 443px;
+                    }
+                }
+            }
+        }
+    }
+
+    .email-sent {
+        display: none;
+        align-items: center;
+        margin: 16px 0 18px;
+
+        &__success {
+            margin: 0 0 0 8px;
+            color: #0F984E;
+           
+            @include maxpoint($desktop) {
+                white-space: nowrap;
+            }
+        }
+    }
+    
+    .is-sent {
+        .email-sent {
+            display: flex;
+        }
+    }
+}

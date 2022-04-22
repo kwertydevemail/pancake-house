@@ -1,0 +1,352 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @include maxpoint(tablet){
+        justify-content: center;
+    }
+    
+}
+
+.c-nav-date-mobile  {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+    p, .h7 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0 7px 0 0;
+        color: $color-n000;
+    }
+
+    .h7 {
+        color: $color-p100;
+    }
+
+    @include maxpoint($desktop) {
+        display: none;
+    }
+}
+
+.c-nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(100% - 28px);
+    @include maxpoint($desktop) {
+        height: unset;
+    }
+    &__logo-date {
+        display: flex;
+        max-width: 800px;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+
+        @include maxpoint($desktop) {
+            width: 100%;
+            flex-direction: row;
+        }
+
+        .logo {
+            
+            width: 76px;
+            height: 76px;
+            @include maxpoint($tablet) {
+                
+            }
+            @include maxpoint($desktop) {
+                position: absolute;
+                width: 110px;
+                height: 110px;
+                margin: -30px 0 0 0;
+            }
+        }
+
+        .date-time {
+            width: auto;
+            margin-left: 9px;
+            display: flex;
+            flex-direction: row;
+            align-self: flex-end;
+            @include maxpoint($desktop) {
+                display: block;
+                margin-left: 133px;
+                align-self: auto;
+            }
+            @include maxpoint($desktop) {
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - 23px);
+            }
+            p {
+                color: $color-p20;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 110%;
+                font-family: $primary-font;
+            }
+        }
+    }
+    
+    &_address {
+        display: none;
+        margin-top: 15px;
+        @include maxpoint($desktop) {
+            flex-direction: column;
+        }
+        @include maxpoint(1105px) {
+            flex-direction: row;
+        }
+        .h5 {
+            color: $color-n000;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            font-family: $secondary-font;
+            margin-right: 5px;
+            width: 80px;
+        }
+        input, & > span {
+            &.active {
+                display: block;
+            }
+        }
+        input, & > span {
+            display: none;
+            background-color: transparent;
+            border: 0;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            font-family: $secondary-font;
+            padding: 0;
+            color: $color-n000;
+            font-weight: 300;
+            margin-right: 17.75px;
+            &:focus {
+                border-bottom: 1px solid #fff;
+            }
+        }
+        .o-button {
+            background-color: transparent;
+            padding: 0;
+            width: 115px;
+            span {
+                color: $color-n000;
+            }
+            i {
+                margin-right: 5px;
+            }
+        }
+        &.address-mobile {
+            display: none;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 0;
+        position: absolute;
+        right: 16px;
+        top: 20px;
+        z-index: 4;
+        @include maxpoint($tablet) {
+            position: relative;
+            right: 0;
+            top: 0;
+        }
+        @include maxpoint($desktop) {
+            position: relative;
+            right: 0;
+            top: 0;
+            padding-top: 5px;
+        }
+        li {
+            margin-right: 18px;
+            position: relative;
+            @include maxpoint(375px) {
+                margin-right: 34px;
+            }
+            > a {
+                > img {
+                    width: 24px;
+                    height: 24px;
+                    @include maxpoint($tablet) {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+            
+            .cart-counter {
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                font-weight: normal;
+                font-size: 11px;
+                line-height: 13px;
+                text-align: center;
+                letter-spacing: -0.02em;
+                font-family: $secondary-font;
+                color: $color-t250;
+                position: absolute;
+                right: -8px;
+                top: -8px;
+                background-color: $color-p100;
+                border: 2px solid $color-n250;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            &.active {
+                .c-nav-menu__links--submenu {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            .o-button {
+                span {
+                    width: 86px;
+                }
+            }
+
+        }
+        &--submenu {
+            width: 264px;
+            background-color: $color-n250;
+            position: absolute;
+            right: -64px;
+            padding: 16px 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: .2s ease;
+            top: 42px;
+            @include maxpoint($tablet) {
+                top: 48px;
+            }
+            li {
+                margin: 0;
+            }
+            & > li {
+                &.active {
+                    .c-nav-menu__links--innerSubmenu {
+                        max-height: 105px;
+                    }
+                }
+            }
+            a {
+                font-size: 14px;
+                font-family: $secondary-font;
+                letter-spacing: 0.09em;
+                font-weight: bold;
+                line-height: 17.71px;
+                color: $color-n000;
+                text-transform: uppercase;
+                width: 100%;
+                padding: 8px 32px;
+                display: block;
+            }
+            .user-holder {
+                border-bottom: 1px solid $color-n150;
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8px 32px 24px;
+                    span {
+                        padding: 4px 0;
+                        &:first-child {
+                            font-size: 12px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+                & + li a {
+                    padding: 24px 32px 8px;
+                }
+            }
+        }
+        &--innerSubmenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            & > li {
+                &:last-child {
+                    padding-bottom: 0;
+                }
+                a {
+                    text-transform: unset;
+                    line-height: 18.2px;
+                    letter-spacing: -0.01em;
+                    font-weight: 300;
+                    padding: 8px 32px 8px 48px;
+                }
+            }
+        }
+
+        li:last-child {
+            margin: 0;
+        }
+    }
+    
+}
+
+.c-header.with-address {
+    max-height: 98px;
+    
+    @include maxpoint($desktop) {
+        max-height: 88px;
+    }
+    .c-nav-menu {
+        flex-wrap: wrap;
+        display: flex;
+        @include maxpoint ($desktop) {
+            flex-wrap: nowrap;
+        }
+        .logo {
+            width: 98.79px;
+            height: 48px;
+            @include maxpoint($desktop) {
+                width: 177px;
+                height: 86px;
+            }
+        }
+        &_address {
+            display: flex;
+        }
+    }
+    .address-mobile {
+        display: flex;
+        margin-top: 16px;
+        width: 100%;
+        @include maxpoint($desktop) {
+            display: none;
+        }
+        .h5 {
+            max-height: 36px;
+        }
+        & > span {
+            width: calc(100% - 85px);
+            margin-right: 0;
+            max-height: 36px;
+        }
+        .o-button {
+            max-height: 14px;
+            text-align: center;
+            margin-left: 85px;
+            margin-bottom: 5px;
+        }
+    }
+}

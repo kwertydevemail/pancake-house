@@ -1,0 +1,622 @@
+.c-review-order {
+    padding: 0;
+    background-image: url(images/layout/section-combine-layout.png);
+
+    .c-breadcrumbs {
+        padding: 38px 0 37px 0;
+        display: flex;
+    }
+
+    .o-container {
+        padding: 0;
+
+        @include maxpoint($tablet) {
+            padding: 0 0 0 48px;
+        }
+    }
+
+    &__content {
+        background-color: $color-n000;
+        height: 100%;
+        position: relative;
+        padding: 74px 16px 40px 16px;
+
+        @include maxpoint(375px) {
+            padding: 74px 24px 40px 24px;
+        }
+
+        @include maxpoint($desktop) {
+            padding: 70px 88px 84px 40px;
+        }
+
+        .o-header-title-slant {
+            top: -13px;
+            left: 16px;
+
+            @include maxpoint(375px) {
+                left: 24px;
+            }
+            
+            @include maxpoint($desktop) {
+                top: -20px;
+                left: 32px;
+            }
+        }
+        
+        .o-button-white {
+            span {
+                font-size: 14px;
+                line-height: 17.71px;
+                color: $color-t250;
+                font-weight: 700;
+            }
+        }
+
+        .order-item {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-bottom: 1px dashed #000000;
+            padding: 32px 0 16px 0;
+            
+            @include maxpoint($desktop) {
+                flex-wrap: nowrap;
+                padding: 82px 68px 46px 68px;
+            }
+            & > .order-item__image {
+                width: 120px;
+                height: 150px;
+                margin: 0 16px 0 0;
+            }
+
+            .order-item__image {
+                width: 120px;
+                height: 150px;
+                margin: 0 16px 0 0;
+
+                @include maxpoint(375px) {
+                    width: 134px;
+                }
+
+                @include maxpoint($desktop) {
+                    width: 185px;
+                    height: 140px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .order-item__list {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                @include maxpoint($tablet) {
+                    width: calc(100% - 150px);
+                }
+                
+                @include maxpoint($desktop) {
+                    width: calc(100% - 201px);
+                }
+                .first-row {
+                    display: flex;
+                    width: calc(100% - 150px);
+                    flex-wrap: wrap;
+                    @include maxpoint($tablet) {
+                        flex-wrap: nowrap;
+                        width: 100%;
+                    }
+
+                    @include maxpoint($desktop) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        min-height: unset;
+                        height: 30px;
+                    }
+                    
+                    .title {
+                        color: $color-t250;
+                        margin: 0 0 24px 0;
+                        width: 100%;
+
+                        @include maxpoint($tablet) {
+                            margin: 0 auto 0 0;
+                            width: auto;
+                        }
+                    }
+
+                    .o-form-group {
+                        width: 150px;
+                        padding: 0;
+
+                        @include maxpoint(375px) {
+                            width: auto;
+                        }
+                    }
+
+                    .button-price {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        @include maxpoint($desktop) {
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 337px;
+                        }
+
+                        .o-form-operator {
+                            margin: 0 0 24px 0; 
+
+                            @include maxpoint($desktop) {
+                                margin: 0;
+                            }
+                            
+                            input[type=number]::-webkit-outer-spin-button,
+                            input[type=number]::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+
+                            input[type=number] {
+                                -moz-appearance: textfield;
+                            }
+                        }
+
+                        .price {
+                            display: flex;
+                            font-family: $secondary-font;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 21px;
+                            line-height: 27px;
+                            letter-spacing: -0.02em;
+                            color: $color-t250;
+
+                            @include maxpoint($desktop) {
+                                font-size: 24px;
+                                line-height: 30px;
+                            }
+
+                            .js-price, .js-total {
+                                color: $color-t250;
+                                margin: 0 0 0 5px;
+                            }
+                        }
+                    }
+                }
+
+                .second-row {
+                    display: flex;
+                    width: 100%;
+                    margin: 16px 0 0 0;
+                    @include maxpoint($tablet) {
+                        margin: 33px 0 0 0;
+                    }
+
+                    .order-summary-list {
+                        width: 100%;
+
+                        li {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 0 0 16px 0;
+                            color: $color-t250;
+
+                            &.item-indent {
+                                padding-left: 16px;
+                                @include maxpoint($tablet) {
+                                    padding-left: 35px;
+                                }
+                            }
+                        }
+
+                        li:last-child {
+                            margin: 0;
+                        }
+                    }
+
+                    .remove {
+                        color: $color-t250;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            //mobile
+            .second-row-mobile {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                margin: 16px 0 0 0;
+
+                @include maxpoint($desktop) {
+                    display: none;
+                }
+
+                .order-summary-list {
+                    width: 100%;
+
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 0 0 16px 0;
+                        color: $color-t250;
+
+                        &.item-indent {
+                            padding-left: 16px;
+                            @include maxpoint($tablet) {
+                                padding-left: 35px;
+                            }
+                        }
+                    }
+
+                    li:last-child {
+                        margin: 0;
+                    }
+                }
+
+                .remove {
+                    color: $color-t250;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .order-total {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                padding: 32px 0 35px 0;
+                
+
+                @include maxpoint($desktop) {
+                    padding: 32px 68px 32px 48px;
+                }
+
+                .price {
+                    display: flex;
+                    font-family: $secondary-font;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 21px;
+                    line-height: 27px;
+                    letter-spacing: -0.02em;
+                    color: $color-t250;
+
+                    @include maxpoint($desktop) {
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+
+                    .js-total {
+                        color: $color-t250;
+                        margin: 0 0 0 5px;
+                    }
+                }
+            }
+
+            &__instructions {
+                display: flex;
+                justify-content: center;
+
+                @include maxpoint($desktop) {
+                    justify-content: flex-end;
+                }
+                
+                .instructions {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    
+                    @include maxpoint($desktop) {
+                        width: 568px;
+                    }
+
+                    &__title {
+                        color: $color-t250;
+                        margin: 0 0 8px 0;
+                    }
+
+                    &__textarea {
+                        height: 172px;
+                        background: $color-n000;
+                        border: 1px solid $color-t50;
+                        box-sizing: border-box;
+                        border-radius: 4px;
+                        color: $color-t250;
+                        padding: 15px 16px 0 16px;
+                        margin: 0 0 48px 0;
+                        resize: none;
+                    }
+
+                    &__textarea::placeholder {
+                        color: $color-t150;
+                    }
+
+                    &__buttons {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        justify-content: space-between;
+
+                        @include maxpoint($desktop) {
+                            flex-direction: row;
+                        }
+                        
+                        .o-button {
+                            width: 100%;
+
+                            @include maxpoint($desktop) {
+                                width: 272px;
+                            }
+                        }
+
+                        .o-button + .o-button {
+                            margin: 0 0 13px 0;
+
+                            @include maxpoint($desktop) {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+.order-egift {
+    padding: 32px 0px 8px;
+    border-bottom: 1px dashed #000000;
+    h6 {
+        font-family: $secondary-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #000614;
+
+        margin-bottom: 8px;
+    }
+    p {
+        margin-top: 16px;
+        font-family: $secondary-font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: #202020;
+        a {
+            padding-bottom: 2px;
+            border-bottom: 1px solid #F5B335;
+            color: #F5B335;
+        }
+    }
+    @include maxpoint($desktop){
+        padding: 48px;
+        padding-bottom: 21px;
+        padding-right: 67px;
+        p {
+            margin-top: 24px;
+        }
+    }
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        input {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            color: #000614;
+
+            background: #FFFFFF;
+            border: 1px solid #E7E7E7;
+            box-sizing: border-box;
+            border-radius: 4px;
+            height: 48px;
+            padding: 15px 16px;
+            width: 100%;
+            margin-bottom: 0px;
+            &::placeholder {
+                color: #979797;
+            }
+            &.error {
+                border: 1px solid #FF4127;
+            }
+        }
+        button {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 19px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+
+            background: #D9D9D6;
+            outline: 0;
+            border: 0;
+            width: 100%;
+            padding: 15px;
+        }
+        &-field {
+            width: 100%;
+            margin-bottom: 19px;
+        }
+        &.active {
+            button {
+                color: #202020;
+                background: #F5B335;
+            }
+        }
+        @include maxpoint($desktop){
+            flex-direction: row;
+            button {
+                width: 45%;
+                max-width: 260px;
+            }
+            &-field {
+                width: 50%;
+                max-width: 307px;
+                margin-right: 19px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &__error {
+        margin-top: 8px;
+        display: none;
+        &.error {
+            max-width: 272px;
+            display: block;
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            color: #FF4127;
+        }
+    }
+    &__subtotal { 
+        margin-top: 32px;
+        display: flex;
+        flex-direction: row;
+        &-left {
+            width: 50%;
+        }
+        &-right {
+            width: 50%;
+        }
+        h5 {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            color: #202020;
+        }
+        p {
+            margin-top: 0px;
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: right;
+            color: #202020;
+        }
+        @include maxpoint($desktop){
+            margin-top: 50px;
+        }
+    }
+    &__total { 
+        margin-top: 10px;
+        display: none;
+        flex-direction: row;
+        &.active {
+            display: flex;
+        }
+        &-left {
+            width: 50%;
+        }
+        &-right {
+            width: 50%;
+        }
+        h5 {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            color: #202020;
+        }
+        p {
+            margin-top: 0px;
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: right;
+            color: #202020;
+        }
+    }
+    &__items { 
+        margin-bottom: 16px;
+        @include maxpoint($desktop){
+            margin-bottom: 3px;
+        }
+    }
+    &__item { 
+        margin-top: 16px;
+        display: flex;
+        flex-direction: row;
+        &-left {
+            width: 50%;
+        }
+        &-right {
+            width: 50%;
+        }
+        h5 {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 130%;
+            color: #202020;
+            padding-left: 17px;
+            img {
+                margin-right: 4px;
+                vertical-align: middle;
+                margin-top: -3px;
+            }
+            span {
+                font-family: $secondary-font;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+                color: #F5B335;
+            }
+            > span {
+                display: block;
+                margin-top: 8px;
+                cursor: pointer;
+            }
+        }
+        p {
+            margin-top: 0px;
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: right;
+            color: #202020;
+        }
+        @include maxpoint($desktop){
+            margin-top: 10px;
+            h5 {
+                > span {
+                    display: inline-block;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}

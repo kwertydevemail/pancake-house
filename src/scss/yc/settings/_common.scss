@@ -1,0 +1,234 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: $primary-font,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body.modal-open.os-win {
+    padding-right: 17px;
+}
+
+body.os-mac {
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (min--moz-device-pixel-ratio: 3),
+        only screen and (-o-min-device-pixel-ratio: 3/1),
+        only screen and (min-device-pixel-ratio: 3),
+        only screen and (min-resolution: 458dpi),
+        only screen and (min-resolution: 3dppx) {
+        select,
+        textarea,
+        input[type='text'],
+        input[type='password'],
+        input[type='datetime'],
+        input[type='datetime-local'],
+        input[type='date'],
+        input[type='month'],
+        input[type='time'],
+        input[type='week'],
+        input[type='number'],
+        input[type='email'],
+        input[type='tel'],
+        input[type='url'] {
+            font-size: 16px;
+        }
+    }
+    // for iphone XR, 8, 7, SE
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 326dpi),
+        only screen and (min-resolution: 2dppx) {
+        select,
+        textarea,
+        input[type='text'],
+        input[type='password'],
+        input[type='datetime'],
+        input[type='datetime-local'],
+        input[type='date'],
+        input[type='month'],
+        input[type='time'],
+        input[type='week'],
+        input[type='number'],
+        input[type='email'],
+        input[type='tel'],
+        input[type='url'] {
+            font-size: 16px;
+        }
+    }
+}
+
+body.modal-open, body.opened {
+    overflow: hidden;
+}
+
+main {
+    min-height: 100%;
+}
+
+.main-wrapper {
+    padding-top: 98px;
+    @include maxpoint($tablet) {
+        padding-top: 0;
+    }
+    &.with-address {
+        padding-top: 158px;
+        @include maxpoint($tablet) {
+            padding-top: 0;
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+figure {
+    margin: 0;
+    img {
+        width: 100%;
+    }
+}
+
+ol, ul {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    position: relative;
+    padding: 64px 0;
+}
+
+.ic-registered-sm {
+    content: url('images/ic-registered.svg');
+    width: 10px;
+    height: 12px;
+    margin-bottom: 8.76px;
+}
+.ic-registered {
+    width: 26px;
+    transform: rotate(5deg);
+    margin: 0 -2px 5px;
+    content: url('images/ic-registered-tb.svg');
+    @include maxpoint($tablet) {
+        margin: 0px 5px 30px;
+    }
+}
+.ic-registered-sm {
+    content: url('images/ic-registered-sm.svg');
+    width: 14px;
+}
+.ic-cart {
+    content: url('images/ic-cart.svg');
+}
+.ic-plus {
+    content: url('images/ic-plus.svg');
+}
+.ic-minus {
+    content: url('images/ic-minus.svg');
+}
+.ic-back-arrow {
+    content: url('images/ic-back-arrow.svg');
+}
+.ic-edit {
+    content: url('images/ic-edit.svg');
+}
+.ic-close {
+    content: url('images/ic-close.svg');
+}
+.ic-person {
+    content: url('images/ic-person.svg');
+}
+.ic-check {
+    content: url('images/ic-check.svg');
+}
+
+.pointer-hand {
+    cursor: url('images/hand-pointer.png'), auto;
+}
+
+.ic-password-hide {
+    content: url('images/ic-password-iv.svg');
+}
+
+.ic-password-show {
+    content: url('images/ic-password-v.svg');
+}
+
+.ic-modal-cart {
+    content: url('images/ic-modal-cart.svg');
+}
+.ic-clock {
+    content: url('images/ic-clock.svg');
+}
+
+.ic-pizza {
+    content: url('images/ic-pizza.svg');
+}
+
+.ic-caret-left-mb {
+    content: url('images/ic-caret-left-mb.svg');
+}
+.ic-caret-right-mb {
+    content: url('images/ic-caret-right-mb.svg');
+}
+.ic-user-c {
+    content: url('images/ic-user-c.svg');
+}
+.ic-card-c {
+    content: url('images/ic-card-c.svg');
+}
+.ic-magnify {
+    content: url('images/ic-magnify.svg');
+    width: 16px;
+    height: 16px;
+}
+.ic-check-c-green {
+    content: url('images/ic-check-c-green.svg');
+}
+.ic-edit-yellow {
+    content: url('images/ic-edit-yellow.svg');
+}
+.ic-caret-down-lg {
+    content: url('images/ic-caret-down-lg.svg');
+}
+.ic-refresh {
+    content: url('images/ic-refresh.svg');
+}
+.ic-delivery {
+    content: url('images/ic-delivery.svg');
+}
+.ic-pickup {
+    content: url('images/ic-pickup.svg');
+}
+.text-registered {
+    position: absolute;
+    top: -3px;
+    right: 0;
+}
+.ic-slider-prev {
+    content: url('images/ic-slider-prev.svg');
+}
+.ic-slider-next {
+    content: url('images/ic-slider-next.svg');
+}

@@ -1,0 +1,435 @@
+.c-store-list {
+    padding: 0;
+
+    &::before{
+        content: '';
+        background: url('images/layout/store-list-bg-mb.png') no-repeat;
+        background-size: contain;
+        background-position-y: 75px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        @include maxpoint($tablet){
+            background: url('images/layout/store-list-bg-dt.png');
+            background-size: cover;
+            background-position-y: 50px;
+            height: 540px;
+        }
+    }
+
+    .o-container {
+        padding: 0;
+        @include maxpoint($tablet){
+            padding: 64px 64px 0 64px;
+        }
+    }
+
+    .c-breadcrumbs{
+        background: #FEFDF4;
+        padding: 18px 16px 0;
+        margin-top: -20px;
+        margin-bottom: 40px;
+
+        @include maxpoint($tablet){
+            padding: 16px 0 18px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .o-container{
+            > a{
+                padding: 0;
+            }
+            > ul{
+                align-items: center;
+                li{
+                    &:first-child{
+                        padding-right: 8px;
+                        &::before{
+                            top: 58%;
+                        }
+                        > a{
+                            top: -2px;
+                            position: relative;
+                        }
+                    }
+                    &:nth-child(3) {
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    &:nth-child(4) {
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    &:nth-child(5) {
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    &:last-child{
+                        padding-left: 13px;
+                    }
+                    > a{
+                        font-weight: 900;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: #241F20;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-standard-layout-content {
+        &_display {
+            @media only screen and (max-width: 820px) and (min-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+
+
+    &-hotline {
+        margin-bottom: 32px;
+        padding: 40px 16px 47px;
+        border-radius: 0px;
+        @include maxpoint($tablet) {
+            padding: 64px 40px 47px;
+        }
+        .c-ordernow-title {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 110%;
+            color: #FC0000;
+            margin-bottom: 16px;
+            @include maxpoint($tablet) {
+                margin-bottom: 24px;
+                font-size: 29px;
+            }
+        }
+        &_panel {
+            margin: 0 -8px -16px;
+            &--card {
+                padding: 0 8px;
+                text-align: center;
+                margin-bottom: 16px;
+                &__detail {
+                    background-color: #FFFFFF;
+                    border-radius: 8px;
+                    border: 1px solid #FC0000;
+                    padding: 16px 7px;
+                    width: 100%;
+                    height: 49px;
+                    @include maxpoint($tablet) {
+                        padding: 16px 16px;
+                        width: 162px;
+                        height: 49px;
+                    }
+                    .h5 {
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        line-height: 17.71px;
+                        font-weight: 400;
+                        letter-spacing: 0.09em;
+                        font-weight: bold;
+                    }
+                    span {
+                        font-family: $secondary-font;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: #363330;
+                    }
+                }
+            }
+        }
+    }
+    &-stores {
+        padding: 40px 16px 33px;
+        border-radius: 0px;
+        @include maxpoint($tablet) {
+            padding: 64px 64px 63px;
+        }
+        .c-ordernow-title {
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: -0.02em;
+            color: #FC0000;
+            margin-bottom: 20px;
+            @include maxpoint($tablet) {
+                margin-bottom: 0;
+                font-size: 50px;
+                line-height: 105%;
+            }
+        }
+        &_header {
+            max-width: 592px;
+            width: 100%;
+            margin-right: auto;
+            @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+                max-width: 370px;
+            }
+            .o-divider {
+                border-top: 1px solid #CAC7C4;
+                margin: 24px 0 0;
+            }
+        }
+        form {
+            width: 100%;
+            @include maxpoint($tablet) {
+                width: unset;
+            }
+            .o-form-group {
+                padding: 0 0 16px;
+                @include maxpoint($tablet) {
+                    padding: 0;
+                }
+                label {
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 120%;
+                    color: #241F20;
+                    margin-bottom: 12px;
+                    @include maxpoint($tablet) {
+                        margin-bottom: 8px;
+                    }
+                }
+                &:first-child {
+                    margin-right: 16px;
+                    width: 100%;
+                    @include maxpoint($tablet) {
+                        width: 246px;
+                    }
+                }
+                &:last-child {
+                    width: 100%;
+                    padding-bottom: 32px;
+                    @include maxpoint($tablet) {
+                        padding-bottom: 0;
+                        width: 120px;
+                    }
+                }
+                .o-form-dropdown_input {
+                    padding-left: 0;
+                    ul {
+                        overflow: hidden;
+                        li {
+                            padding: 17px 16.5px 16px;
+                        }
+                    }
+                    &--item {
+                        width: 100%;
+                    }
+
+                    input {
+                        font-weight: 900;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: #241F20;
+
+                        &::placeholder {
+                            font-weight: 300;
+                            font-size: 14px;
+                            line-height: 130%;
+                            color: #9C9892;
+                        }
+                    }
+                }
+                .o-form-group_standard {
+                    padding-left: 0;
+
+                    .o-form-group_input {
+                        border: 1px solid #E8E7E6;
+                        font-weight: 900;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: #241F20;
+
+                        &::placeholder{
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 130%;
+                            color: #9C9892;
+                        }
+                    }
+                }
+            }
+        }
+        &_contacts {
+            width: 100%;
+            margin-bottom: 32px;
+            border-top: 1px solid #CAC7C4;
+            @include maxpoint($tablet) {
+                margin-bottom: 46px;
+                border-top: unset
+            }
+            &--item {
+                padding: 32px 0 0;
+                @include maxpoint($tablet) {
+                    padding: 30px 0 0;
+                }
+                @media only screen and (max-width: 820px) and (min-width: 768px) {
+                    flex-direction: row !important;
+                }
+                &.hide{
+                    display: none;
+                }
+                &.searched {
+                    display: flex;
+                }
+                .o-divider {
+                    margin: 24px auto 0;
+                    max-width: 1078px;
+                }
+                &__content {
+                    .h4 {
+                        font-weight: 900;
+                        font-size: 24px;
+                        line-height: 100%;
+                        color: #202020;
+                        text-transform: unset;
+
+                        margin-bottom: 24px;
+                        @include maxpoint($tablet) {
+                            margin-bottom: 22px;
+                        }
+                    }
+                    .store-legend {
+                        margin-bottom: 24px;
+                        @include maxpoint($tablet) {
+                            margin-bottom: 0;
+                        }
+                        li {
+                            &:first-child {
+                                margin-right: 20px;
+                                max-width: 255px;
+                                width: 100%;
+                                @include maxpoint($tablet) {
+                                    margin-right: 66px;
+                                    width: 155px;
+                                    max-width: unset;
+                                    align-items: start;
+                                }
+                            }
+                            &:last-child {
+                                max-width: 255px;
+                                width: 100%;
+                                @include maxpoint($tablet) {
+                                    width: 272px;
+                                    max-width: unset;
+                                }
+                            }
+                            i {
+                                margin-top: -2px;
+                                margin-right: 9.33px;
+                            }
+                            span {
+                                font-family: $secondary-font;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #5B5853;
+                                position: relative;
+                                @include maxpoint($tablet) {
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+                .contact-panel {
+                    margin: 0 -8px -16px;
+                    max-width: 534px;
+                    justify-content: flex-end;
+
+                    @media only screen and (max-width: 820px) and (min-width: 768px) {
+                        max-width: 200px;
+                    }
+                    @media only screen and (max-width: 1050px) and (min-width: 1024px) {
+                        max-width: 200px;
+                    }
+
+                    &_card {
+                        padding: 0 8px;
+                        width: 100%;
+                        margin-bottom: 16px;
+                        @include maxpoint($tablet) {
+                            width: unset;
+                        }
+                        &--detail {
+                            text-align: center;
+                            width: 100%;
+                            padding: 16px;
+
+                            background: #FFFFFF;
+                            border: 1px solid #FC0000;
+                            border-radius: 8px;
+
+                            @include maxpoint($tablet) {
+                                padding: 15px 0;
+                                width: 161px;
+                            }
+                            .h5 {
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #363330;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-paginate {
+        .c-paginate-nav {
+            a {
+                font-weight: 900;
+                font-size: 16px;
+                line-height: 120%;
+                color: #252932;
+                letter-spacing: unset;
+                &.c-paginate-nav_carets {
+                    background-color: #939598;
+                    border-radius: 4px;
+                    margin-right: 4px;
+                    margin-left: 4px;
+                }
+                &.active {
+                    background: #F3F2F2;
+                    border-radius: 4px;
+                }
+            }
+            
+        }
+    }
+    .store-list-paginate {
+        width: auto;
+        display: none;
+        @include maxpoint($tablet) {
+            display: none;
+        }
+        .o-form-group.for-store-page {
+            padding-top: 0;
+            width: 140px;
+            padding-bottom: 10px;
+            margin-right: 0;
+            .o-form-dropdown_input {
+                height: 40px;
+                &::after {
+                    bottom: 11px;
+                }
+            }
+        }
+    }
+}

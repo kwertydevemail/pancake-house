@@ -1,0 +1,903 @@
+.c-review-order {
+    // padding: 0;
+    // background-image: url(images/layout/section-combine-layout.png);
+
+    // .c-breadcrumbs {
+    //     padding: 38px 0 37px 0;
+    //     display: flex;
+    // }
+
+    .o-container {
+        padding: 40px 0;
+
+        @include maxpoint($tablet) {
+            padding: 80px 64px 64px 64px;
+        }
+    }
+
+    .figure_icon {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        .ic-remove-order-right {
+            margin-right: -16px;
+        }
+
+        @include maxpoint($desktop) {
+            justify-content: unset;
+            width: unset;
+            .ic-remove-order {
+                margin-left: -46px;
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .figure_with_title {
+        display: flex;
+        align-items: center;
+
+        .title {
+            color: #241F20;
+            font-size: 18px;
+            line-height: 110%;
+        }
+    }
+
+    .for-desktop {
+        display: none !important;
+        @include maxpoint($desktop) {
+            display: flex !important;
+        }
+    }
+
+    .for-mobile {
+        display: flex !important;
+        @include maxpoint($desktop) {
+            display: none !important;
+        }
+    }
+
+    .divider {
+        border-top: 1px dashed #ABA8A3;
+        width: 100%;
+        margin-top: 24px;
+        @include maxpoint($desktop) {
+            margin-top: 16px;
+        }
+    }
+
+    &__content {
+        background-color: $color-n000;
+        height: 100%;
+        position: relative;
+        padding: 74px 16px 40px 16px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+        @include maxpoint(375px) {
+            padding: 40px 16px 40px 16px;
+        }
+
+        @include maxpoint($desktop) {
+            padding: 56px 32px 40px 32px;
+        }
+
+        .o-header-title-slant {
+            top: -13px;
+            left: 16px;
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 110%;
+
+            @include maxpoint(375px) {
+                left: 24px;
+            }
+            
+            @include maxpoint($desktop) {
+                top: -20px;
+                left: 32px;
+                font-size: 34px;
+            }
+        }
+        
+        .o-button-white {
+            span {
+
+                font-weight: 900;
+                font-size: 14px;
+                line-height: 100%;
+                color: #241F20;
+                padding-top: 0px;
+            }
+        }
+
+        .order-item {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #CAC7C4;
+            padding: 24px 0 24px 0;
+            
+            @include maxpoint($desktop) {
+                flex-wrap: nowrap;
+                padding: 40px 24px 40px 14px;
+            }
+            & > .order-item__image {
+                width: 120px;
+                height: 150px;
+                margin: 0 16px 0 0;
+                @include maxpoint($desktop) {
+                    margin: 0 24px 0 0;
+                }
+            }
+
+            .order-item__image {
+                width: 74px;
+                height: 74px;
+                margin: 0 16px 0 0;
+                border-radius: 8px;
+                
+                @include maxpoint(375px) {
+                    width: 74px;
+                }
+
+                @include maxpoint($desktop) {
+                    width: 179px;
+                    height: 179px;
+                    margin: 0 24px 0 16px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+
+            .order-item__list {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                align-items: center;
+                @include maxpoint($tablet) {
+                    width: calc(100% - 150px);
+                }
+                
+                @include maxpoint($desktop) {
+                    width: calc(100% - 201px);
+                }
+                .first-row {
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    @include maxpoint($tablet) {
+                        flex-wrap: nowrap;
+                        width: 100%;
+                    }
+
+                    @include maxpoint($desktop) {
+                        // width: calc(100% - 150px);
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        min-height: unset;
+                        height: 30px;
+                    }
+
+                    .title {
+                        color: #241F20;
+                        margin: 0 0 24px 0;
+                        width: 100%;
+                        font-size: 18px;
+                        line-height: 110%;
+                        font-weight: 700;
+                        @include maxpoint($tablet) {
+                            font-weight: 700;
+                            font-size: 20px;
+                            margin: 0 auto 0 0;
+                            width: auto;
+                        }
+                    }
+
+                    .o-form-group {
+                        width: 150px;
+                        padding: 0;
+
+                        @include maxpoint(375px) {
+                            width: auto;
+                        }
+                    }
+
+                    .button-price {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        width: 100%;
+                        justify-content: space-between;
+
+                        &.spacing {
+                            margin-top: 24px;
+                        }
+
+                        @include maxpoint($desktop) {
+                            align-items: flex-end;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 337px;
+                        }
+
+                        .o-form-operator {
+                            // margin: 0 0 24px 0; 
+
+                            .o-button {
+                                &.ic-only {
+                                    height: 40px;
+                                }
+                            }
+
+                            align-items: center;
+
+                            @include maxpoint($desktop) {
+                                margin: 0 0 24px 0; 
+                                margin: 0;
+                                align-items: center;
+                            }
+                            
+                            input[type=number]::-webkit-outer-spin-button,
+                            input[type=number]::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+
+                            input[type=number] {
+                                -moz-appearance: textfield;
+                            }
+
+                            .o-form-group_input {
+                                font-weight: 900;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #241F20;
+                                letter-spacing: unset;
+
+                                max-width: 70px; 
+                                height: 49px;
+                                border: 1px solid #E8E7E6;
+
+                                @include maxpoint($desktop) {
+                                    max-width: 70px; 
+                                    height: 49px;
+                                }
+                            }
+                        }
+
+                        .price {
+                            display: flex;
+                            font-family: $secondary-font;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 110%;
+                            color: #241F20;
+
+                            @include maxpoint($desktop) {
+                                font-size: 18px;
+                                line-height: 110%;
+                                font-weight: 700;
+                            }
+
+                            .js-price, .js-total {
+                                color: #241F20;
+                                margin: 0 0 0 5px;
+                                font-size: 18px;
+                                line-height: 110%;
+
+                                @include maxpoint($desktop) {
+                                    font-size: 18px;
+                                    line-height: 110%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .second-row {
+                    display: flex;
+                    width: 100%;
+                    margin: 24px 0 0 0;
+                    @include maxpoint($tablet) {
+                        margin: 16px 0 0 0;
+                    }
+
+                    .order-summary-list {
+                        width: 100%;
+
+                        li {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 0 0 8px 0;
+                            font-weight: 500;
+                            color: #241F20;
+                            line-height: 120%;
+
+                            @include maxpoint($tablet) {
+                                font-weight: 500;
+                                margin: 0 0 8px 0;
+                            }
+
+                            &.item-indent {
+                                padding-left: 16px;
+                                @include maxpoint($tablet) {
+                                    padding-left: 35px;
+                                }
+                            }
+
+                            .item-price {
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 120%;
+                                color: #9C9892;
+
+                                @include maxpoint($tablet) {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                        li:last-child {
+                            margin: 0;
+                        }
+                    }
+
+                    .remove {
+                        color: $color-t250;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            //mobile
+            .second-row-mobile {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                margin: 16px 0 0 0;
+
+                @include maxpoint($desktop) {
+                    display: none;
+                }
+
+                .order-summary-list {
+                    width: 100%;
+
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 0 0 16px 0;
+                        color: $color-t250;
+
+                        &.item-indent {
+                            padding-left: 16px;
+                            @include maxpoint($tablet) {
+                                padding-left: 35px;
+                            }
+                        }
+                    }
+
+                    li:last-child {
+                        margin: 0;
+                    }
+                }
+
+                .remove {
+                    color: $color-t250;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .order-total {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                // justify-content: end;
+                padding: 24px 16px;
+                margin-left: -16px;
+                margin-right: -16px;
+                // background: #FFCC00;
+                background: url(images/layout/max-total-background-mb.png);
+
+                h6 {
+                    margin-right: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 110%;
+                    color: #241F20;
+
+                    @include maxpoint($desktop) {
+                        font-weight: 700;
+                    }
+                }
+                
+                
+
+                @include maxpoint($desktop) {
+                    justify-content: end;
+                    padding: 24px 56px;
+                    margin-left: -32px;
+                    margin-right: -32px;
+                    background: url(images/layout/max-total-background-dt.png);
+                }
+
+                .price {
+                    display: flex;
+                    font-family: $secondary-font;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 110%;
+                    letter-spacing: unset;
+                    color: #241F20 !important;
+
+                    @include maxpoint($desktop) {
+                        font-size: 20px !important;
+                        line-height: 110% !important;
+                        font-weight: 700;
+                    }
+
+                    .js-total {
+                        color: #241F20;
+                        margin: 0 0 0 5px;
+                        @include maxpoint($desktop) {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            &__instructions {
+                display: flex;
+                justify-content: center;
+                margin-top: 24px;
+
+                @include maxpoint($desktop) {
+                    justify-content: flex-end;
+                    margin-top: 24px;
+                }
+                
+                .instructions {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .overline {
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 110%;
+                        text-transform: unset;
+                        @include maxpoint($desktop) {
+                            font-weight: 700;
+                        }
+                    }
+                    
+                    @include maxpoint($desktop) {
+                        width: 568px;
+                    }
+
+                    &__title {
+                        color: #241F20;
+                        margin: 0 0 8px 0;
+                    }
+
+                    &__textarea {
+                        height: 172px;
+                        background: $color-n000;
+                        border: 1px solid #E8E7E6;
+                        box-sizing: border-box;
+                        border-radius: 4px;
+                        color: #241F20;;
+                        padding: 15px 16px 0 16px;
+                        margin: 0 0 24px 0;
+                        resize: none;
+
+                        font-weight: normal !important;
+                        font-size: 14px !important;
+                        line-height: 130% !important;
+
+                        @include maxpoint($desktop) {
+                            margin: 0 0 48px 0;
+                        }
+                    }
+
+                    &__textarea::placeholder {
+                        color: #9C9892;;
+                    }
+
+                    &__buttons {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        justify-content: space-between;
+
+                        @include maxpoint($desktop) {
+                            flex-direction: row;
+                        }
+
+                        .ic-check {
+                            content:url(images/ic-check-c-white.svg);
+                            max-height: 16px;
+                            max-width: 16px;
+                        }
+                        
+                        .o-button {
+                            width: 100%;
+
+                            @include maxpoint($desktop) {
+                                width: 272px;
+                            }
+                        }
+
+                        .o-button-active {
+                            background-color: #FC0000;;
+                        }
+
+                        .o-button.o-button-lg {
+                            padding: 16px 0;
+                        }
+
+                        .o-button + .o-button {
+                            margin: 0 0 13px 0;
+
+                            @include maxpoint($desktop) {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+.order-egift {
+    padding: 32px 0px 40px;
+    // border-bottom: 1px dashed #000000;
+
+    display: row;
+    width: 100%;
+    justify-content: space-between;
+
+    .left {
+        width: 100%;
+        @include maxpoint($desktop){
+            width: 50%;
+        }
+    }
+
+    .right {
+        width: 100%;
+        @include maxpoint($desktop){
+            width: 50%;
+        }
+    }
+
+    h6 {
+        font-family: $secondary-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 110%;
+        // letter-spacing: 0.09em;
+        // text-transform: uppercase;
+        color: #241F20;
+
+        margin-bottom: 16px;
+        @include maxpoint($desktop){
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+    }
+    p {
+        margin-top: 32px;
+        font-family: $secondary-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        // letter-spacing: -0.01em;
+        color: #5B5853;
+        a {
+            padding-bottom: 2px;
+            border-bottom: 1px solid #F5B335;
+            color: #F5B335;
+        }
+    }
+    @include maxpoint($desktop){
+        padding: 40px 24px;
+        display: flex;
+        p {
+            margin-top: 32px;
+        }
+    }
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        input {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 120%;
+            // letter-spacing: -0.01em;
+            color: #241F20;;
+
+            background: #FFFFFF;
+            border: 1px solid #E8E7E6;
+            box-sizing: border-box;
+            border-radius: 4px;
+            height: 48px;
+            padding: 15px 16px;
+            width: 100%;
+            margin-bottom: 0px;
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 130%;
+                color: #9C9892;
+            }
+            &:not(:placeholder-shown) {
+                border: 1px solid #7D7871;
+            }
+            &.error {
+                border: 1px solid #A2000F;
+                color: #FC0000;
+            }
+        }
+        button {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 100%;
+            text-align: center;
+            // text-transform: uppercase;
+            color: #FFFFFF;
+
+            background: #FC0000;
+            border-radius: 12px;
+            outline: 0;
+            border: 0;
+            width: 100%;
+            padding: 15px;
+        }
+        &-field {
+            width: 100%;
+            margin-bottom: 19px;
+        }
+        &.active {
+            button {
+                color: #FFFFFF;
+                background: #FC0000;
+            }
+        }
+        @include maxpoint($desktop){
+            flex-direction: row;
+            button {
+                width: 45%;
+                max-width: 177px;
+                margin-top: 3px;
+            }
+            &-field {
+                width: 50%;
+                max-width: 307px;
+                margin-right: 16px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &__error {
+        margin-top: 8px;
+        display: none;
+        &.error {
+            max-width: 272px;
+            display: block;
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            // letter-spacing: -0.01em;
+            color: #A2000F;
+        }
+    }
+    &__subtotal { 
+        margin-top: 32px;
+        display: flex;
+        flex-direction: row;
+        &-left {
+            width: 50%;
+            text-align: left;
+
+            @include maxpoint($desktop){
+                width: 80%;
+                text-align: right;
+            }
+        }
+        &-right {
+            width: 50%;
+
+            @include maxpoint($desktop){
+                width: 20%;
+            }
+        }
+        h5 {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 110%;
+            color: #241F20;
+            @include maxpoint($desktop){
+                font-weight: 700;
+            }
+        }
+        p {
+            margin-top: 0px;
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 110%;
+            text-align: right;
+            color: #241F20;
+            @include maxpoint($desktop){
+                font-weight: 700;
+            }
+        }
+        @include maxpoint($desktop){
+            margin-top: 50px;
+        }
+    }
+    &__total { 
+        margin-top: 10px;
+        @include maxpoint($desktop){
+            margin-top: 16px;
+        }
+        display: none;
+        flex-direction: row;
+        &.active {
+            display: flex;
+        }
+        &-left {
+            width: 50%;
+            text-align: left;
+
+            @include maxpoint($desktop){
+                width: 80%;
+                text-align: right;
+            }
+        }
+        &-right {
+            width: 50%;
+            @include maxpoint($desktop){
+                width: 20%;
+            }
+        }
+        h5 {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 120%;
+            color: #241F20;
+        }
+        p {
+            margin-top: 0px;
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            text-align: right;
+            color: #9C9892;
+        }
+    }
+    &__items { 
+        margin-bottom: 16px;
+        @include maxpoint($desktop){
+            margin-bottom: 3px;
+        }
+    }
+    &__item { 
+        margin-top: 16px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        &-left {
+            width: 50%;
+            text-align: left;
+
+            @include maxpoint($desktop){
+                width: 80%;
+                text-align: right;
+            }
+        }
+        &-right {
+            width: 50%;
+
+            @include maxpoint($desktop){
+                width: 20%;
+                margin-top: 6px;
+            }
+        }
+        h5 {
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            color: #241F20;
+            padding-left: 0px;
+
+            display: flex;
+            align-items: center;
+
+            @include maxpoint($desktop){
+                padding-left: 17px;
+                display: unset;
+            }
+
+            img {
+                margin-right: 4px;
+                vertical-align: middle;
+                margin-top: -3px;
+            }
+            span {
+                font-family: $secondary-font;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+                color: #F5B335;
+            }
+            > span {
+                display: block;
+                margin-top: -8px;
+                cursor: pointer;
+
+                @include maxpoint($desktop){
+                    display: block;
+                    margin-top: 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+        p {
+            margin-top: 0px;
+            font-family: $secondary-font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            text-align: right;
+            color: #9C9892;
+        }
+        @include maxpoint($desktop){
+            margin-top: 16px;
+            h5 {
+                > span {
+                    display: inline-block;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}

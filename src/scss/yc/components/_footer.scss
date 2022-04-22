@@ -1,0 +1,314 @@
+.c-footer {
+    display: flex;
+    flex-direction: column;
+    color: $color-n000;
+
+    &__main {
+        background-color: $color-footer-bg;
+
+        @include maxpoint($desktop) {
+            padding: 0;
+        }
+
+        .o-container {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 24px 42px;
+            @include maxpoint($tablet) {
+                padding: 0 64px;
+            }
+
+            .footer-logo {
+                width: 143px;
+                height: 69.69px;
+                margin: 0;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include maxpoint($tablet) {
+                    margin: 64px 0 0;
+                }
+            }
+
+            .footer-content {
+                display: flex;
+                flex-direction: column-reverse;
+
+                @include maxpoint($tablet) {
+                    flex-direction: row;
+                    margin: 32px 0 82px;
+                }
+                @include maxpoint($desktop) {
+                    margin: 32px 40px 82px 0;
+                }
+                .content-left {
+                    width: 100%;
+    
+                    @include maxpoint($desktop) {
+                        width: 45%;
+                    }
+    
+                    .footer-desc {
+                        margin: 32px 0 0 0;
+                        @include maxpoint($tablet) {
+                            margin: 0;
+                        }
+    
+                        @include maxpoint($desktop) {
+                            margin: 32px 0 0 0;
+                            padding-right: 40px;
+                            border-right: 1px solid white;
+                            border-bottom: none;
+                            margin: 0;
+                        }
+
+                        .body-1 {
+                            color: $color-n000;
+                            font-weight: 300;
+                        }
+
+                        .body-1 + .body-1 {
+                            margin: 18px 0 0 0;
+                        }
+                    }
+                }
+    
+                .content-right {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    padding: 0 0 16px 0;
+                    border-bottom: 1px solid white;
+                    align-self: flex-start;
+                    @include maxpoint($tablet) {
+                        margin-left: 16px;
+                    }
+    
+                    @include maxpoint($desktop) {
+                        width: 55%;
+                        padding: 0 0 0 55px;
+                        flex-direction: column;
+                        border-bottom: none;
+                    }
+                    
+                    .delivery-contact {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+
+                        .overline {
+                            color: $color-n000;
+                            margin: 0 0 32px 36px;
+                            
+                            @include maxpoint($desktop) {
+                                margin: -44px 0 24px 0;
+                            }
+                        }
+
+                        .overline::before {
+                            position: absolute;
+                            content: '';
+                            width: 17.81px;
+                            height: 17.81px;
+                            background: url("/src/images/footer/actions/phone.png") no-repeat;   
+                            top: 0;
+                            left: 0;
+
+                            @include maxpoint($desktop) {
+                                top: -42px;
+                                left: -36px;
+                            } 
+                        }
+
+                        .delivery-numbers {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            a {
+                                color: $color-n000;
+                            }
+                        }
+        
+                        .delivery-numbers > .number-per-city {
+                            width: 50%;
+                            margin: 0 0 16px 0;
+
+                            @include maxpoint(768px) {
+                                width: 25%;
+                            }
+
+                            .body-1 {
+                                color: $color-n000;
+                            }
+                        }
+
+                        .delivery-numbers > .number-per-city > p {
+                            margin: 0;
+                        }
+                    }
+                    
+                    .delivery-service {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin: 32px 0;
+
+                        @include maxpoint(768px) {
+                            justify-content: flex-start;
+                        }
+
+                        @include maxpoint($tablet) {
+                            justify-self: unset;
+                            margin: 0;
+                        }
+
+                        .delivery-desc {
+                            width: 58%;
+                            margin: 0 16px 0 0;
+
+                            @include maxpoint($desktop) {
+                                width: calc(100% - 132px);
+                            }
+                        }
+
+                        .body-1 {
+                            color: $color-n000;
+                        }
+    
+                        .delivery-img {
+                            width: 112px;
+                            height: 77.05px;
+    
+                            @include maxpoint($desktop) {
+                                width: 116.04px;
+                                height: 79.83px;
+                            }
+
+                            img {
+                                object-fit: cover;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__secondary {
+        background-color: $color-p100;
+        padding: 28px 0;
+
+        .o-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include maxpoint($desktop) {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .links {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                margin: 0 0 21px 0;
+
+                @include maxpoint($desktop) {
+                    flex-direction: row;
+                    margin: 0;
+                }
+
+                .overline {
+                    color: $color-n225;
+                }
+    
+                a + a {
+                    margin: 19px 0 0 0;
+                    
+                    @include maxpoint($desktop) {
+                        margin: 0 0 0 32px;
+                    }
+                }
+            }
+
+            .links-icon {
+                display: flex;
+                flex-direction: column;
+                
+                @include maxpoint($desktop) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                .feedback {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 100%;
+                    margin: 0 0 22px 0;
+
+                    @include maxpoint($desktop) {
+                        margin: 0 57.2px 0 0;
+                    }
+
+                    .overline {
+                        margin: 0;
+                        color: $color-n250;
+
+                        @include maxpoint($desktop) {
+                            margin-right: 17.2px;
+                        }
+                    }
+
+                    .send-img {
+                        width: 21.6px;
+                        height: 14.4px;
+                    }
+
+                    .send-img > img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+                .social-media {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    @include maxpoint($desktop) {
+                        justify-content: center;
+                    }
+
+                    .overline {
+                        margin: 0;
+                        color: $color-n250;
+
+                        @include maxpoint($desktop) {
+                            margin: 0 34px 0 0;
+                        }
+                    }
+
+                    .social-media-links {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .social-media-links > li {
+                        margin: 0 36px 0 0;
+                    }
+
+                    .social-media-links > li:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

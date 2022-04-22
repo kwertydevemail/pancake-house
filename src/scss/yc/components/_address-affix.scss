@@ -1,0 +1,86 @@
+.c-address-affix {
+    background-color: $color-p250;
+    padding: 18px 0 14px;
+    @include maxpoint($tablet) {
+        padding: 14px 0;
+    }
+    &.active {
+        z-index: 4;
+        left: 0;
+        right: 0;
+        position: fixed;
+        top: 98px;
+        @include maxpoint($tablet) {
+            top: unset;
+            position: relative;
+        }
+    }
+    .o-container {
+        height: 100%;
+    }
+    &_holder {
+        height: 100%;
+        padding: 20px 0 0 0;
+        @include maxpoint($desktop) {
+            padding: 0 0 0 210px;
+        }
+        i {
+            margin-right: 8px;
+        }
+        .h5 {
+            color: $color-n000;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            margin: 0 0 2px;
+            width: 113px;
+            font-size: 13px;
+            line-height: 16.44px;
+            @include maxpoint($tablet) {
+                font-size: 14px;
+                line-height: 17.71px;
+                margin: 0 8px 0 0;
+            }
+        }
+        &--details {
+            & > span {
+                display: block;
+                background-color: transparent;
+                border: 0;
+                font-weight: normal;
+                font-family: $secondary-font;
+                padding: 0;
+                color: $color-n000;
+                font-weight: 300;
+                max-width: 436px;
+                width: 100%;
+                color: $color-p100;
+                margin-bottom: 2px;
+                font-size: 14px;
+                line-height: 18.2px;
+                letter-spacing: -0.01em;
+                @include maxpoint($tablet) {
+                    letter-spacing: -0.02em;
+                    font-size: 16px;
+                    line-height: 20.8px;
+                    margin-bottom: 0;
+                    margin-right: 32px;
+                }
+                &:focus {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+        .o-button {
+            background-color: transparent;
+            padding: 0;
+            width: 115px;
+            span {
+                color: $color-n000;
+            }
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+}

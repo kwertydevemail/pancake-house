@@ -1,0 +1,665 @@
+.search-container {
+    position: fixed;
+    background: rgba(0, 6, 20, 0.3);
+    top: 0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    transition: .2s ease;
+    z-index: 1000;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.animate {
+        .search-content {
+            top: 97px;
+
+            @include maxpoint($desktop){
+                top: 80px;
+            }
+        }
+    }
+
+    .search-content {
+        background: #FEFDF4;
+        max-width: 100%;
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        max-height: 166px;
+        transition: top 0.5s ease;
+        
+        @include maxpoint($desktop){
+            height: 100%;
+            max-height: 260px;
+            top: -8%;
+        }
+    }
+
+    &--search{
+        &-details {
+            .o-header-title {
+                font-weight: 900;
+                font-size: 21px;
+                line-height: 100%;
+                color: #FC0000;
+                padding: 36px 0 24px 16px;
+
+                @include maxpoint($desktop){
+                    padding: 80px 0 30px 159px;
+                    font-size: 24px;
+                }
+            }
+            
+            .group-input {
+                position: relative;
+                display: flex;
+                padding: 0 16px 36px 17px;
+                
+                @include maxpoint($desktop){
+                    padding: 0 161px 80px;
+                    align-items: baseline;
+                }
+
+                &.border {
+                    .group-input-content {
+                        border-bottom: 1px solid #7D7871; 
+                        border-radius: 0px 0px 4px 4px;
+                        max-width: unset;
+
+                        @include maxpoint($desktop){
+                            max-width: 749px;
+                        }
+                    }
+                    
+                    #search-input {
+                        border-radius: 4px 4px 0px 0px;
+
+                        @include maxpoint($desktop){
+                            border-radius: 4px 4px 0px 0px;
+                        }
+                    }
+
+                    .o-button {
+                        border-radius: 0px 4px 0px 0px;
+                        border-bottom: 1px solid #7D7871;
+
+                        position: absolute;
+                        top: 0px;
+                        right: 16.5px;
+
+                        @include maxpoint($desktop){
+                            border-radius: 12px;
+                            border-bottom: unset;
+
+                            position: unset;
+                            top: unset;
+                            right: unset;
+                        }
+                    }
+                }
+            
+                &-content {
+                    width: 100%;
+                    max-width: 292px;
+                    overflow: auto;
+                    z-index: 1;
+
+                    @include maxpoint($desktop){
+                        margin-right: 16px;
+                        max-width: 749px;
+                        background: #FFFFFF;
+                    }
+
+                    #search-input {
+                        background-color: #FFFFFF;
+                        border: 1px solid #7D7871;
+                        box-sizing: border-box;
+                        border-radius: 4px 0px 0px 4px;
+                        height: 49px;
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: #241F20;
+                        padding: 16px;
+
+                        @include maxpoint($desktop){
+                            background-image: url('images/ic-max-search-black.svg');
+                            background-position: 14px 14px;
+                            background-repeat: no-repeat;
+
+                            height: 46px;
+                            padding: 14.5px 0 14.5px 42px;
+                            border-radius: 4px 4px 0px 0px;
+                        }
+                    
+                        &:placeholder-shown {
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 120%;
+                            color: #9C9892;
+                            border: 1px solid #E8E7E6;
+
+                            @include maxpoint($desktop){
+                                background-image: url('images/ic-max-search-grey.svg');
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+            
+                    a {
+                        background: #FFFFFF;
+                        border-left: 1px solid #7D7871;
+                        border-right: 1px solid #7D7871;
+                        display: flex;
+                        align-items: center;
+
+                        i {
+                            margin-left: 16px;
+                            margin-right: 8px;
+                            margin-top: -5px;
+                        }
+
+                        span {
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 130%;
+                            color: #252932;
+                            padding: 18px 0 18px 0;
+                        }
+
+                        &:hover {
+                            background: #FEFDF4;
+                            span {
+                                font-weight: 500;
+                                line-height: 120%;
+                                padding: 18px 0 19px 0;
+                            }
+                        }
+                    }
+                }
+            
+                .o-button {
+                    background: #FC0000;
+                    border-radius: 0px 4px 4px 0px;
+                    width: 100%;
+                    max-width: 50px;
+                    height: 49px;
+                    justify-content: center;
+                    z-index: 2;
+
+                    span {
+                        font-weight: 900;
+                        font-size: 14px;
+                        line-height: 100%;
+                        color: #FFFFFF;
+                    }
+
+                    i {
+                        margin-left: unset;
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                    @include maxpoint($desktop){
+                        max-width: 193px;
+                        height: 46px;
+                        border-radius: 12px;
+                    }
+            
+                    &:hover {
+                        background: #E60000;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+//Special Modifier
+@include maxpoint($desktop){
+    .with-address + .search-container > .search-content {
+        top: 260px;
+        bottom: unset;
+    }
+}
+
+.c-search {
+    background: #FEFDF4;
+    padding: 40px 0 32px 0;
+
+    @include maxpoint($tablet){
+        padding: 64px 0;
+
+    }
+    &::before{
+        content: '';
+        background: url('images/layout/max-search-bg-mb.png') no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        @include maxpoint($tablet){
+            background: url('images/layout/max-search-bg-dt.png');
+            background-size: cover;
+            height: 862px;
+        }
+    }
+
+    .o-container {
+        &.search {
+            padding: 0 0 32px 0;
+
+            @include maxpoint($tablet){
+                padding: 0px 64px 64px 64px;
+            }
+        }
+
+        &.store-list {
+            padding: 32px 0 0 0;
+
+            @include maxpoint($tablet){
+                padding: 0px 64px;
+            }
+
+            // display: none;
+        }
+
+        &.product-list {
+            padding: 0;
+
+            @include maxpoint($tablet){
+                padding: 0px 64px 64px 64px;
+            }
+
+            // display: none;
+        }
+
+        &.no-results {
+            padding: 0;
+
+            @include maxpoint($tablet){
+                padding: 0px 64px;
+            }
+
+             display: none;
+        }
+    }
+
+    .c-search-container {
+        padding: 32px 16px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        position: relative;
+
+        @include maxpoint($desktop){
+            padding: 64px;
+        }
+
+        .o-header-title {
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 100%;
+            color: #FC0000;
+            padding: 0 0 16px 0;
+
+            @include maxpoint($desktop){
+                padding: 0 0 24px 0;
+                font-size: 24px;
+            }
+        }
+
+        .text-result {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 110%;
+            color: #241F20;
+
+            @include maxpoint($desktop){
+                font-size: 18px;
+            }
+        }
+
+        .group-input {
+            position: relative;
+            display: flex;
+            padding: 0 0 16px 0;
+            
+            @include maxpoint($desktop){
+                padding: 0 0 16px 0;
+                align-items: baseline;
+            }
+
+            &-content {
+                width: 100%;
+                max-width: 292px;
+                overflow: auto;
+                z-index: 1;
+
+                @include maxpoint($desktop){
+                    margin-right: 16px;
+                    max-width: 825px;
+                    background: #FFFFFF;
+                }
+
+                @media only screen and (max-width: 924px) and (min-width: 768px) {
+                    max-width: 100%;
+                }
+
+                #input-search {
+                    background-color: #FFFFFF;
+                    border: 1px solid #7D7871;
+                    box-sizing: border-box;
+                    border-radius: 4px 0px 0px 4px;
+                    height: 49px;
+                    width: 100%;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 120%;
+                    color: #241F20;
+                    padding: 16px;
+
+                    @include maxpoint($desktop){
+                        background-image: url('images/ic-max-search-black.svg');
+                        background-position: 14px 14px;
+                        background-repeat: no-repeat;
+
+                        height: 46px;
+                        padding: 14.5px 0 14.5px 42px;
+                        border-radius: 4px;
+                    }
+                
+                    &:placeholder-shown {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 120%;
+                        color: #9C9892;
+                        border: 1px solid #E8E7E6;
+
+                        @include maxpoint($desktop){
+                            background-image: url('images/ic-max-search-grey.svg');
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        
+            .o-button {
+                background: #FC0000;
+                border-radius: 0px 4px 4px 0px;
+                width: 100%;
+                max-width: 50px;
+                height: 49px;
+                justify-content: center;
+                z-index: 2;
+
+                span {
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 100%;
+                    color: #FFFFFF;
+                }
+
+                i {
+                    margin-left: unset;
+                    width: 18px;
+                    height: 18px;
+                }
+
+                @include maxpoint($desktop){
+                    max-width: 183px;
+                    height: 46px;
+                    border-radius: 12px;
+                }
+        
+                &:hover {
+                    background: #E60000;
+                }
+            }
+        }
+    }
+
+    .c-product-content {
+        filter: unset;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+
+        &_panel {
+            width: 100%;
+
+            &.for-standard {
+                padding: 40px 16px;
+
+                @include maxpoint($desktop){
+                    padding: 64px 64px 28.5px;
+                }
+            }
+        }
+
+        .product-header {
+            width: 100%;
+            max-width: 100%;
+            .title {
+                margin-bottom: 0;
+                font-weight: 900;
+                font-size: 32px;
+                line-height: 100%;
+                letter-spacing: -0.02em;
+                color: #FC0000;
+
+                @include maxpoint($desktop){
+                    font-size: 50px;
+                    line-height: 105%;
+                }
+            }
+
+            .o-divider {
+                border-top: 1px solid #CAC7C4;
+                margin: 20px 0 22px;
+                width: 100%;
+
+                @include maxpoint($desktop){
+                    margin: 24px 0 0;
+                }
+            }
+        }
+
+        .c-explore-cards {
+            @media only screen and (max-width: 1740px) and (min-width: 1280px) {
+                margin: unset;
+                .c-explore-cards-card {
+                    width: 199px;
+                    margin: 0px 76px 40px 0;
+                    padding: unset;
+        
+                    &:nth-child(4n+4) {
+                        margin: 0 0 0 0;
+                    }
+        
+                    .c-explore-cards-card_item {
+                        width: 199px;
+                    }
+                }
+            }
+        }
+
+        .c-explore-cards-card {
+            &.hide {
+                display: none;
+            }
+            &.searched {
+                display: flex;
+            }
+        }
+    }
+
+    .c-store-list {
+        &::before {
+            display: none;
+        }
+
+        .c-store-list-stores_header {
+            max-width: 100%;
+        }
+
+        .c-store-list-paginate {
+            &.show {
+                display: flex;
+            }
+    
+            &.hidden {
+                display: none;
+            }
+        }
+    }
+
+    .c-no-results {
+        padding: 32px 16px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        position: relative;
+        height: 100%;
+        max-height: 502px;
+
+        @include maxpoint($desktop){
+            padding: 64px;
+            max-height: 593px;
+        }
+
+        .o-header-title {
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 110%;
+            text-align: center;
+            color: #241F20;
+            padding: 0 0 25px 0;
+
+            @include maxpoint($desktop){
+                font-size: 34px;
+                padding: 0 0 48px 0;
+            }
+        }
+
+        img {
+            width: 100%;
+            @media only screen and (max-width: 820px) and (min-width: 768px)  {
+                width: 45%;
+                margin: auto;
+            }
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            text-align: center;
+            color: #241F20;
+            width: 100%;
+            padding: 24px 0;
+
+            @include maxpoint($desktop){
+                padding: 48px 0;
+            }
+        }
+
+        .button-group {
+            display: block;
+            justify-content: center;
+            @include maxpoint($tablet) {
+                display: flex;
+            }
+
+            .for-mobile {
+                display: block;
+                @include maxpoint($tablet) {
+                    display: none
+                }
+            }
+
+            .for-desktop {
+                display: none;
+                @include maxpoint($tablet) {
+                    display: contents
+                }
+            }
+
+            .o-button{
+                max-width: 100%;
+                width: 100%;
+                height: 46px;
+                padding: 16px;
+
+                > span{
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 100%;
+                    color: #241F20;
+                    width: 180px;
+                    max-width: 200px;
+                }
+
+                &:first-child {
+                    background-color: #FC0000;
+                    > span {
+                        color: #FFFFFF;
+                    }
+                }
+
+                &:last-child {                            
+                    background-color: transparent;
+                    margin-top: 16px;
+
+                    > span {
+                        color: #241F20;
+                    }
+
+                    @include maxpoint($tablet){
+                        margin-left: 24px;
+                        margin-top: unset;
+                    }
+                }
+
+                @include maxpoint($tablet){
+                    max-width: 334px;
+                    width: 100%;
+                    
+                    &:first-child {
+                        background-color: transparent;
+                        > span {
+                            color: #241F20;;
+                        }
+
+                        &:hover {
+                            background: #FC0000;
+                            > span {
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+
+                    &:last-child {  
+                        background-color: #FC0000;
+                        > span {
+                            color: #FFFFFF;
+                        }
+
+                        &:hover {
+                            background: #E60000;
+                        }
+                     }
+                }
+            }
+        }
+    }
+}

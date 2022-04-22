@@ -1,0 +1,89 @@
+// @import url('https://fonts.googleapis.com/css?family=Asap');
+// $primary-font: 'asap', san-serif;
+
+$primary-font: "New Transport", sans-serif;
+$secondary-font: "New Transport", sans-serif;
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-Italic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Transport';
+    src: url('../dist/fonts/NewTransport-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
